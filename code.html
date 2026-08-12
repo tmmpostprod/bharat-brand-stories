@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bharat Brand Stories - Modern Indian Majesty</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "tertiary": "#ffc290",
+                        "surface-variant": "#38342b",
+                        "inverse-surface": "#eae1d4",
+                        "on-background": "#eae1d4",
+                        "on-tertiary-fixed-variant": "#6d3a00",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "surface-container-high": "#2d2a21",
+                        "on-tertiary-fixed": "#2e1500",
+                        "error-container": "#93000a",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-container": "#554300",
+                        "secondary-fixed": "#e3e2e2",
+                        "secondary": "#c6c6c6",
+                        "surface-bright": "#3d392f",
+                        "surface": "#16130b",
+                        "tertiary-container": "#ff9b39",
+                        "on-primary-fixed-variant": "#574500",
+                        "surface-tint": "#e9c349",
+                        "outline-variant": "#4d4635",
+                        "surface-dim": "#16130b",
+                        "on-error": "#690005",
+                        "on-primary": "#3c2f00",
+                        "secondary-container": "#484949",
+                        "on-secondary": "#2f3131",
+                        "surface-container-highest": "#38342b",
+                        "tertiary-fixed": "#ffdcc2",
+                        "on-secondary-container": "#b8b8b8",
+                        "error": "#ffb4ab",
+                        "primary-container": "#d4af37",
+                        "inverse-on-surface": "#343027",
+                        "tertiary-fixed-dim": "#ffb77a",
+                        "inverse-primary": "#735c00",
+                        "surface-container-low": "#1f1b13",
+                        "on-tertiary": "#4c2700",
+                        "on-tertiary-container": "#6a3800",
+                        "outline": "#99907c",
+                        "on-secondary-fixed-variant": "#464747",
+                        "surface-container-lowest": "#110e07",
+                        "on-primary-fixed": "#241a00",
+                        "background": "#16130b",
+                        "on-surface-variant": "#d0c5af",
+                        "on-surface": "#eae1d4",
+                        "primary-fixed": "#ffe088",
+                        "primary": "#f2ca50",
+                        "surface-container": "#231f17",
+                        "primary-fixed-dim": "#e9c349"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "stack-lg": "48px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "stack-sm": "12px",
+                        "stack-md": "24px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Manrope"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-md": ["Manrope"],
+                        "headline-md": ["Montserrat"],
+                        "headline-display": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.03em", "fontWeight": "500" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-display": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0A0A0B;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 153, 51, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(19, 136, 8, 0.05) 0%, transparent 40%);
+            background-attachment: fixed;
+            color: #eae1d4;
+        }
+        .glass-panel {
+            background: rgba(22, 19, 11, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gold-border {
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .silver-border {
+            border: 1px solid rgba(198, 198, 198, 0.3);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+            color: #1a1c1c;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, #ffe088 0%, #e9c349 100%);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: inherit;
+        }
+        .btn-primary:hover::before {
+            opacity: 1;
+        }
+        .btn-primary:hover {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid rgba(198, 198, 198, 0.5);
+            color: #c6c6c6;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, rgba(198, 198, 198, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+            border-color: #ffffff;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+        .jaali-watermark {
+            background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 0l20 20-20 20L0 20z" fill="rgba(255,255,255,0.02)" fill-rule="evenodd"/></svg>');
+        }
+        .tiranga-glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,153,51,0.15) 0%, rgba(255,255,255,0.1) 50%, rgba(19,136,8,0.15) 100%);
+            filter: blur(50px);
+            z-index: -1;
+            border-radius: 50%;
+        }
+        .input-field {
+            background-color: #1A1A1D;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #eae1d4;
+            transition: all 0.3s ease;
+        }
+        .input-field:focus {
+            border-color: #d4af37;
+            box-shadow: inset 0 0 10px rgba(212, 175, 55, 0.2);
+            outline: none;
+        }
+        .divider-fade {
+            height: 1px;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 backdrop-blur-xl docked full-width top-0 sticky z-50 border-b border-outline-variant/20 shadow-lg shadow-primary/10">
+<div class="flex justify-between items-center w-full px-margin-desktop py-unit max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-4">
+<img alt="Bharat Brand Stories official logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE7vDYkase1T2gBG6IVuZoqnCYNr0adqcQ8nGzFg8nCcxrK8VA-ftcfgiEWatYNOMPdPmTz2a44TUM5KtwJafSI4bBfVk5dgR2CpN9SIUFLCknGfFGJfMKidFnXM-pwFBpjB9O4aGMnWen28JYHARqCa2FIrSoECIES9mfVDSTokXvTVpd1guEg7EqUTik03jSy_GLsxv_qFPMfEQu8eBhZtmyz5T9O7hf4SNfzAwL8OxE5mIj4CGAHv9hFiOuVPBZbFc"/>
+<span class="font-headline-md text-headline-md font-bold bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent hidden lg:block tracking-wide">
+                    Bharat Brand Stories
+                </span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:bg-primary/10 hover:text-primary rounded-lg px-3 py-2 transition-all" href="#">Episode Vault</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:bg-primary/10 hover:text-primary rounded-lg px-3 py-2 transition-all" href="#">Partnerships</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Season 2</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:bg-primary/10 hover:text-primary rounded-lg px-3 py-2 transition-all" href="#">Impact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block font-label-md text-label-md btn-secondary px-6 py-2 rounded-lg scale-95 active:scale-90 transition-transform">Partner Hub</button>
+<button class="font-label-md text-label-md btn-primary px-6 py-2 rounded-lg scale-95 active:scale-90 transition-transform font-bold tracking-wide">Nominate Now</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[85vh] flex items-center justify-center px-margin-desktop py-stack-lg overflow-hidden">
+<div class="tiranga-glow top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-70"></div>
+<div class="relative z-10 max-w-container-max mx-auto text-center flex flex-col items-center gap-stack-md">
+<img alt="Bharat Brand Stories Logo Large" class="w-64 md:w-96 lg:w-[500px] object-contain drop-shadow-2xl mb-8 filter brightness-110 contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzJPxZ29bk1sfrIIkZM4smTbSwdx_N5VaCHOFyPbFSPxQrjbbJ47FUKxxboRPMPr6Pm-Y6JeleFIBwS8OKt3arMIvYVdVuZG5f6PxTciOGDL_pCyX2yt-Wm0qvg5xtsNYtmdCi9QXBMLDRJbJKHuu5ZtTGFaq9-q5Zr9eslNygG1v6dOAsdakgv2EaYDDZDzPFz0oennG-AjArD7dbsuJrdjY3uay-S-jt5YtGxQkfq6IOBOx5Mfepz_P-f-CUi5aOWEI"/>
+<h1 class="font-headline-display text-headline-lg-mobile md:text-headline-display text-on-surface max-w-4xl tracking-tight leading-tight">
+                Celebrating the Legends Building Modern Bharat.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed mt-4">
+                15 Iconic Journeys of Grit &amp; Glory.<br/>
+<span class="text-tertiary font-semibold">Season 1 Concluded</span> | <span class="text-primary font-semibold">Season 2 Unveiling Soon on Republic Bharat.</span>
+</p>
+<div class="flex flex-col sm:flex-row gap-6 mt-8">
+<button class="btn-primary font-label-md text-label-md px-8 py-4 rounded-xl flex items-center justify-center gap-2 font-bold text-lg">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+                    Watch Season 1 Highlights
+                </button>
+<button class="btn-secondary font-label-md text-label-md px-8 py-4 rounded-xl flex items-center justify-center gap-2 font-bold text-lg">
+                    Apply for Season 2
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</header>
+<div class="divider-fade max-w-container-max mx-auto"></div>
+<!-- Impact Stats -->
+<section class="py-stack-lg px-margin-desktop relative">
+<div class="max-w-container-max mx-auto glass-panel rounded-xl p-8 gold-border jaali-watermark relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent skew-x-[-20deg] animate-pulse"></div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center relative z-10">
+<div class="flex flex-col gap-2">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">15+</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">National Success Stories</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-headline-lg text-headline-lg text-secondary font-bold">1</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Landmark Season</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-headline-lg text-headline-lg text-tertiary font-bold">Millions</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Of Viewers</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">Prime</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Sunday Slot</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Episode Vault (Bento Grid) -->
+<section class="py-stack-lg px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4">The Episode Vault</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Witness the cinematic journeys of founders who redefined their industries. Handpicked stories of resilience, scale, and uncompromising vision.</p>
+</div>
+<button class="btn-secondary font-label-md text-label-md px-6 py-2 rounded-lg whitespace-nowrap">View All Episodes</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+<!-- Featured Large Card -->
+<div class="md:col-span-2 md:row-span-2 glass-panel rounded-xl overflow-hidden group relative gold-border cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-60" data-alt="Cinematic high-contrast portrait of an Indian business founder standing confidently in a modern glass-walled boardroom overlooking a glowing cityscape at night. The lighting is dramatic, with deep shadows and warm gold highlights illuminating their face, conveying power, resilience, and vision. Royal Indian aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAtGM5nGe1HmTnjM0wXxSV1QokA0abz3OOsmmn6rjWXkR1LBLitrgA75ECdDVASgOx-HgJYN_lcsshfbsH908yBX9xSq3P-LldQFqmcaXGcqybOugmErDM7SDDFw0lRCLnuJqErGe6j-Wxp-f5E0Q0YHTTz7gSA2PJt3A6LNu87V_kUYEbWdxN7tZ-jCaWBXEU6UHdHzSDjzKIjKnU3ph78AlzE-4rGoWmfhuLhHH5FHgSunD51pDWCpQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+<div class="absolute inset-0 border border-transparent group-hover:border-[#ff9933]/50 transition-colors duration-300 rounded-xl"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<div class="inline-block px-3 py-1 rounded-full border border-[#ff9933] text-[#ff9933] font-label-sm text-label-sm mb-4 bg-black/40 backdrop-blur-sm">Season Finale Spotlight</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-2 group-hover:text-primary transition-colors">Visionary Technologies Pvt Ltd</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">"From a garage in Bengaluru to a global tech powerhouse."</p>
+<div class="flex items-center gap-4 mt-6">
+<div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional headshot of a mature, confident Indian male tech founder with a neat beard, wearing a sharp dark suit, against a dark metallic background. High resolution, premium corporate style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzNGygYHDEUlCXhazqdp5CrTF6xsaNrQVJpI1zDKvFwJtb3I0yc-QTBvN42ajclzJMSqDcx3--R3HYazbYnDwQ_E8CBGZ1cMHRTFwgo-GRaH5E9rzLMd82VhLbZZBBok4K0hAQxnRQ8pxowMFaAlvv6J4D7s-7XJw171K_T2j8MLCconR5VvEqSjktKD1bf8p5gIkSLr9smpyR-YHgJOMIOMqzWBkL83pKrIULrKcLjdBS8HPoL-WT7A"/>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Rohan Mehta</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Founder &amp; CEO</p>
+</div>
+<span class="material-symbols-outlined ml-auto text-primary opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-2 duration-300" style="font-variation-settings: 'FILL' 1;">arrow_circle_right</span>
+</div>
+</div>
+</div>
+<!-- Standard Cards -->
+<div class="glass-panel rounded-xl overflow-hidden group relative silver-border cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-40 mix-blend-luminosity" data-alt="A modern, automated manufacturing facility floor in India, bathed in cool blue and silver industrial lighting, with sparks flying in the background. High-tech, clean, cinematic composition showing scale and precision." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZVjYF3XEqS5QfEm92xX5v_Y94PQpBU91ZT0K9yLvIvyc-ySQyVhlDKwJWaTbklL0hcC8eZFb142TjAWI8Oanku6cCqUWYW8wKbfmxoSaBhJTf1W1kphDP5lOK0_r6P09_MM9E9Hf2upqM1yIPfnWxTQticoD2zkUU4PR7gSjX0FpHJOnsM_LbWGee-HgXT1sb3b8VcI6RsFqGw706Y_t2DUzCIOE-V-pYjO7t1lTQ4GukhUMMZNQs1Q')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+<div class="absolute inset-0 border border-transparent group-hover:border-primary/50 transition-colors duration-300 rounded-xl"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-1 text-lg group-hover:text-primary transition-colors">Apex Manufacturing</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant italic mb-4">"Building the infrastructure of tomorrow."</p>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full border border-secondary overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of an Indian female industrialist wearing a hard hat and protective glasses, looking commanding in a factory setting. Dramatic industrial lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrih54VRaAH-aBumGR4E06U8mBf3NxVBkyYxK9URBRFQvBUrlTLA1oydpBaWrV_kVqa1-q7-_ib_JmgZ11w-w-w-yJPfc2lekBAwoTnYoPAzYorg4zs36Dg4z2NGZADI0qLz4Qdd7vzSMoTIHuPB0ZTzfSv5aoud43qwMqdQGeAd3Yixziq5E9Gqf3e1E3QsjlylWbYtUNj6J1Mr7hxGGN7L68COISRnU2oJDBT6onqUMIYq5mHhQzgw"/>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface">Priya Sharma</p>
+</div>
+</div>
+</div>
+<div class="glass-panel rounded-xl overflow-hidden group relative silver-border cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-40 mix-blend-luminosity" data-alt="A sprawling organic farm in India at golden hour sunset. The warm golden light hits the lush green crops. Cinematic, majestic, showing agricultural wealth and scale." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQCMOiGQqhSoXVwrg5lF6Mme7s7Zfy3IYR7aXlbyTrUhBqcs4WQco7kfvU4HQtPD7LhH-1h2EwEV__rtVEBAadV7vlFfaE18PpfNQDLKdSzJ_dsYe5Q4-mKzh6LKFnKEVPb0E9XCWHgwfQPHuPPCD9_WeEucHD0Hrup00AMuQo65txoez6QR9T5lKAizYEmdFfuETlL-lLUFmR36Z853BF9_Nal_I5K3_tesct85BnpoqYo2EerZ-J1Q')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+<div class="absolute inset-0 border border-transparent group-hover:border-[#138808]/50 transition-colors duration-300 rounded-xl"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-1 text-lg group-hover:text-primary transition-colors">GreenEarth Organics</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant italic mb-4">"Rooted in tradition, growing globally."</p>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full border border-secondary overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young Indian male agritech founder standing in a field, casual but confident, warm sunset lighting on his face." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-xwI4f4fZX0U7aa59Rg_QKdIAsE1QBehdmLRDmUa9LX5eJAKzEB5Uo8yRhL22rActnbaw2Xkv-HUgbnl_2dKVuuZObKRdx9vcVlRaZSQu8sppZ2T15iT_yUbAdT8yqdZIj9mN52xZm1glpu4ZJaJjm3n8VLSr0Li_jAXdPV7KC9oFret9l_dvcw4egXUEz358ju_Tx-9bI-TQiBTyw8uYMBgGegPshi2zheCzkCMkJeiu3AzjbqRY4g"/>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface">Vikram Singh</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="divider-fade max-w-container-max mx-auto my-8"></div>
+<!-- Dual Form Section (Sponsorship & Nomination) -->
+<section class="py-stack-lg px-margin-desktop max-w-container-max mx-auto">
+<div class="grid lg:grid-cols-2 gap-12">
+<!-- Sponsorship Hub -->
+<div class="glass-panel rounded-2xl p-8 md:p-12 silver-border relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-64 h-64 bg-[#c6c6c6] opacity-5 blur-[100px] rounded-full group-hover:opacity-10 transition-opacity"></div>
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-4xl text-secondary">handshake</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Partner with Bharat’s Premier Business Platform</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Align your brand with the nation's most prestigious business storytelling platform. Secure your tier for Season 2.</p>
+<div class="flex flex-wrap gap-3 mb-8">
+<span class="px-4 py-1.5 rounded-full border border-[#ff9933] text-[#ff9933] font-label-sm text-label-sm bg-black/40">Title Sponsor</span>
+<span class="px-4 py-1.5 rounded-full border border-secondary text-secondary font-label-sm text-label-sm bg-black/40">Powered By</span>
+<span class="px-4 py-1.5 rounded-full border border-[#138808] text-[#138808] font-label-sm text-label-sm bg-black/40">Associate Partners</span>
+</div>
+<form class="flex flex-col gap-5 relative z-10">
+<div class="grid grid-cols-2 gap-5">
+<input class="input-field rounded-lg px-4 py-3 font-body-md w-full" placeholder="Full Name" type="text"/>
+<input class="input-field rounded-lg px-4 py-3 font-body-md w-full" placeholder="Brand Name" type="text"/>
+</div>
+<input class="input-field rounded-lg px-4 py-3 font-body-md w-full" placeholder="Corporate Email Address" type="email"/>
+<select class="input-field rounded-lg px-4 py-3 font-body-md w-full appearance-none">
+<option disabled="" selected="" value="">Select Partnership Tier</option>
+<option value="title">Title Sponsor</option>
+<option value="powered">Powered By</option>
+<option value="associate">Associate Partner</option>
+</select>
+<div class="flex gap-4 mt-4">
+<button class="btn-secondary font-label-md text-label-md px-6 py-3 rounded-lg flex-1 font-semibold flex justify-center items-center gap-2" type="button">
+<span class="material-symbols-outlined text-sm">download</span> Media Kit
+                        </button>
+<button class="btn-primary font-label-md text-label-md px-6 py-3 rounded-lg flex-1 font-bold" type="submit">Submit Pitch</button>
+</div>
+</form>
+</div>
+<!-- Get Featured Section -->
+<div class="glass-panel rounded-2xl p-8 md:p-12 gold-border relative overflow-hidden group jaali-watermark">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary opacity-5 blur-[100px] rounded-full group-hover:opacity-10 transition-opacity"></div>
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Are You the Next Brand Story of Bharat?</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">We are searching for Season 2's legends. If you've built a scalable, impactful business that defines modern India, nominate yourself.</p>
+<form class="flex flex-col gap-5 relative z-10">
+<div class="grid grid-cols-2 gap-5">
+<input class="input-field rounded-lg px-4 py-3 font-body-md w-full" placeholder="Founder Name(s)" type="text"/>
+<input class="input-field rounded-lg px-4 py-3 font-body-md w-full" placeholder="Company Name" type="text"/>
+</div>
+<select class="input-field rounded-lg px-4 py-3 font-body-md w-full appearance-none">
+<option disabled="" selected="" value="">Current Revenue Scale</option>
+<option value="10-50">₹10Cr - ₹50Cr</option>
+<option value="50-100">₹50Cr - ₹100Cr</option>
+<option value="100+">₹100Cr+</option>
+</select>
+<textarea class="input-field rounded-lg px-4 py-3 font-body-md w-full resize-none" placeholder="What was the biggest hurdle you overcame to build this brand? (Max 50 words)" rows="3"></textarea>
+<button class="btn-primary font-label-md text-label-md px-6 py-4 rounded-lg w-full font-bold mt-2 text-lg shadow-[0_0_20px_rgba(212,175,55,0.2)]" type="submit">Nominate Story</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest full-width py-stack-lg border-t border-outline-variant/30 flex flex-col items-center gap-stack-md px-margin-desktop w-full max-w-container-max mx-auto mt-stack-lg relative overflow-hidden">
+<div class="absolute bottom-0 w-full h-1 bg-gradient-to-r from-[#ff9933] via-white to-[#138808] opacity-50"></div>
+<img alt="Bharat Brand Stories official logo" class="h-16 w-auto object-contain mb-4 filter grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQZFFjeoDc92tYuWAH_PN0gttIx99jpb3B6PxwTDgbNYTSYifbMvWbK80gWxVO6_efTgHiRUb9779Ec2FKDiMpqUyT2-W6fVHZ1ryuvlAFH8ULiD5X71JpCJ-qPu8XspRlNFYmGBJoE9xlG_5BYRx20R8HHBjHtHMDonJUC4p_NVYb8Iv5rQzfmtqvR4ArwtSXqWae08Whx_UnNku-XkIDsttb_mj7TwBLxkTiolKcA8d8rqZk4C6xa04oZHlJ62tZX4M"/>
+<span class="font-headline-md text-headline-md text-on-surface">Bharat Brand Stories</span>
+<div class="flex flex-wrap justify-center gap-6 md:gap-8 my-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Press Kit</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Contact Us</a>
+</div>
+<p class="font-body-md text-body-md text-secondary opacity-60 text-center">
+            © 2024 Bharat Brand Stories. A Tribute to Indian Excellence.
+        </p>
+</footer>
+</body></html>

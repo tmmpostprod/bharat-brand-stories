@@ -1,0 +1,6 @@
+# robots.txt for Bharat Brand Stories
+User-agent: *
+Allow: /
+
+# Sitemap URL (Update domain once deployed on Hostinger)
+Sitemap: https://bharatbrandstories.com/sitemap.xml
