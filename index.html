@@ -829,11 +829,18 @@
         </div>
       </div>
       <div
-        class="p-6 bg-surface-container/90 border-t border-outline-variant/30 flex justify-between items-center shrink-0">
-        <button onclick="openVideoModal('Episode Preview', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')"
-          class="btn-primary px-6 py-2.5 rounded-lg font-bold text-sm flex items-center gap-2">
-          <span class="material-symbols-outlined text-xl">play_circle</span> Watch Episode Teaser
-        </button>
+        class="p-6 bg-surface-container/90 border-t border-outline-variant/30 flex flex-wrap justify-between items-center gap-3 shrink-0">
+        <div class="flex items-center gap-3">
+          <button onclick="openVideoModal('Episode Preview', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')"
+            class="btn-primary px-5 py-2.5 rounded-lg font-bold text-sm flex items-center gap-2">
+            <span class="material-symbols-outlined text-xl">play_circle</span> Preview
+          </button>
+          <a id="epModalNewTabLink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer"
+            class="btn-secondary px-5 py-2.5 rounded-lg font-bold text-sm flex items-center gap-2 text-primary border border-primary/40 hover:bg-primary/10">
+            <span>Watch in New Tab</span>
+            <span class="material-symbols-outlined text-lg">open_in_new</span>
+          </a>
+        </div>
         <button onclick="closeEpisodeModal()"
           class="btn-secondary px-6 py-2.5 rounded-lg font-semibold text-sm">Close</button>
       </div>
@@ -1146,6 +1153,10 @@
       document.getElementById('epMetric1').innerText = ep.metric1;
       document.getElementById('epMetric2').innerText = ep.metric2;
       document.getElementById('epMetric3').innerText = ep.metric3;
+      const newTabBtn = document.getElementById('epModalNewTabLink');
+      if (newTabBtn) {
+        newTabBtn.href = ep.videoUrl || "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+      }
 
       const modal = document.getElementById('episodeModal');
       modal.classList.remove('hidden');
