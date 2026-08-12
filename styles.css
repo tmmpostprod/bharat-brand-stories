@@ -1,0 +1,194 @@
+/* Bharat Brand Stories - Modern Indian Majesty Custom Styles */
+
+:root {
+  --color-surface: #16130b;
+  --color-surface-dim: #16130b;
+  --color-surface-bright: #3d392f;
+  --color-primary: #f2ca50;
+  --color-primary-container: #d4af37;
+  --color-secondary: #c6c6c6;
+  --color-tertiary: #ffc290;
+  --color-saffron: #ff9933;
+  --color-green: #138808;
+  --color-on-surface: #eae1d4;
+  --color-on-surface-variant: #d0c5af;
+}
+
+body {
+  background-color: #0A0A0B;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(255, 153, 51, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(19, 136, 8, 0.06) 0%, transparent 45%);
+  background-attachment: fixed;
+  color: var(--color-on-surface);
+  font-family: 'Manrope', sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, .font-headline {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Glassmorphism Panels */
+.glass-panel {
+  background: rgba(22, 19, 11, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-hover {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.4s ease;
+}
+
+.glass-panel-hover:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 16px 48px rgba(212, 175, 55, 0.12), 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.gold-border {
+  border: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+.silver-border {
+  border: 1px solid rgba(198, 198, 198, 0.35);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+  color: #1a1c1c;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, #ffe088 0%, #e9c349 100%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(198, 198, 198, 0.5);
+  color: #c6c6c6;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, rgba(198, 198, 198, 0.12) 0%, rgba(255, 255, 255, 0.12) 100%);
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.jaali-watermark {
+  background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 0l20 20-20 20L0 20z" fill="rgba(255,255,255,0.025)" fill-rule="evenodd"/></svg>');
+}
+
+.tiranga-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,153,51,0.18) 0%, rgba(255,255,255,0.12) 45%, rgba(19,136,8,0.18) 90%);
+  filter: blur(60px);
+  z-index: -1;
+  border-radius: 50%;
+  animation: floatGlow 12s ease-in-out infinite alternate;
+}
+
+@keyframes floatGlow {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+  50% { transform: translate(-48%, -52%) scale(1.08); opacity: 0.9; }
+  100% { transform: translate(-52%, -48%) scale(0.95); opacity: 0.75; }
+}
+
+.input-field {
+  background-color: #1A1A1D;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #eae1d4;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #d4af37;
+  box-shadow: inset 0 0 10px rgba(212, 175, 55, 0.2), 0 0 8px rgba(212, 175, 55, 0.3);
+  outline: none;
+}
+
+.divider-fade {
+  height: 1px;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 100%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0B;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.6);
+}
+
+/* Modals */
+dialog::backdrop {
+  background: rgba(10, 10, 11, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+dialog[open] {
+  animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Toast Notification */
+.toast-item {
+  animation: slideUp 0.3s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
