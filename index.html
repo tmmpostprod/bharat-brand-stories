@@ -1,933 +1,1161 @@
 <!DOCTYPE html>
 <html class="dark" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Bharat Brand Stories - Modern Indian Majesty</title>
-    <meta name="description" content="Celebrating the legends building modern Bharat. 15 iconic journeys of grit & glory on Republic Bharat."/>
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    
-    <!-- Google Fonts & Material Symbols -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "secondary-fixed-dim": "#c6c6c6",
-                        "tertiary": "#ffc290",
-                        "surface-variant": "#38342b",
-                        "inverse-surface": "#eae1d4",
-                        "on-background": "#eae1d4",
-                        "on-tertiary-fixed-variant": "#6d3a00",
-                        "on-secondary-fixed": "#1a1c1c",
-                        "surface-container-high": "#2d2a21",
-                        "on-tertiary-fixed": "#2e1500",
-                        "error-container": "#93000a",
-                        "on-error-container": "#ffdad6",
-                        "on-primary-container": "#554300",
-                        "secondary-fixed": "#e3e2e2",
-                        "secondary": "#c6c6c6",
-                        "surface-bright": "#3d392f",
-                        "surface": "#16130b",
-                        "tertiary-container": "#ff9b39",
-                        "on-primary-fixed-variant": "#574500",
-                        "surface-tint": "#e9c349",
-                        "outline-variant": "#4d4635",
-                        "surface-dim": "#16130b",
-                        "on-error": "#690005",
-                        "on-primary": "#3c2f00",
-                        "secondary-container": "#484949",
-                        "on-secondary": "#2f3131",
-                        "surface-container-highest": "#38342b",
-                        "tertiary-fixed": "#ffdcc2",
-                        "on-secondary-container": "#b8b8b8",
-                        "error": "#ffb4ab",
-                        "primary-container": "#d4af37",
-                        "inverse-on-surface": "#343027",
-                        "tertiary-fixed-dim": "#ffb77a",
-                        "inverse-primary": "#735c00",
-                        "surface-container-low": "#1f1b13",
-                        "on-tertiary": "#4c2700",
-                        "on-tertiary-container": "#6a3800",
-                        "outline": "#99907c",
-                        "on-secondary-fixed-variant": "#464747",
-                        "surface-container-lowest": "#110e07",
-                        "on-primary-fixed": "#241a00",
-                        "background": "#16130b",
-                        "on-surface-variant": "#d0c5af",
-                        "on-surface": "#eae1d4",
-                        "primary-fixed": "#ffe088",
-                        "primary": "#f2ca50",
-                        "surface-container": "#231f17",
-                        "primary-fixed-dim": "#e9c349"
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    spacing: {
-                        "unit": "8px",
-                        "container-max": "1280px",
-                        "stack-lg": "48px",
-                        "margin-mobile": "16px",
-                        "margin-desktop": "64px",
-                        "gutter": "24px",
-                        "stack-sm": "12px",
-                        "stack-md": "24px"
-                    },
-                    fontFamily: {
-                        "label-sm": ["Manrope", "sans-serif"],
-                        "label-md": ["Manrope", "sans-serif"],
-                        "headline-lg": ["Montserrat", "sans-serif"],
-                        "body-lg": ["Manrope", "sans-serif"],
-                        "headline-lg-mobile": ["Montserrat", "sans-serif"],
-                        "body-md": ["Manrope", "sans-serif"],
-                        "headline-md": ["Montserrat", "sans-serif"],
-                        "headline-display": ["Montserrat", "sans-serif"]
-                    },
-                    fontSize: {
-                        "label-sm": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.03em", "fontWeight": "500" }],
-                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }],
-                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "headline-display": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
-                    }
-                },
-            },
-        }
-    </script>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            background-color: #0A0A0B;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(255, 153, 51, 0.06) 0%, transparent 45%),
-                radial-gradient(circle at 90% 80%, rgba(19, 136, 8, 0.06) 0%, transparent 45%);
-            background-attachment: fixed;
-            color: #eae1d4;
-            font-family: 'Manrope', sans-serif;
-        }
-        .glass-panel {
-            background: rgba(22, 19, 11, 0.7);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .gold-border {
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
-        .silver-border {
-            border: 1px solid rgba(198, 198, 198, 0.3);
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
-            color: #1a1c1c;
-            position: relative;
-            z-index: 1;
-            transition: all 0.3s ease;
-        }
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(135deg, #ffe088 0%, #e9c349 100%);
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            border-radius: inherit;
-        }
-        .btn-primary:hover::before {
-            opacity: 1;
-        }
-        .btn-primary:hover {
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-            transform: translateY(-2px);
-        }
-        .btn-secondary {
-            background: transparent;
-            border: 1px solid rgba(198, 198, 198, 0.5);
-            color: #c6c6c6;
-            transition: all 0.3s ease;
-        }
-        .btn-secondary:hover {
-            background: linear-gradient(135deg, rgba(198, 198, 198, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%);
-            border-color: #ffffff;
-            color: #ffffff;
-            transform: translateY(-2px);
-        }
-        .jaali-watermark {
-            background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 0l20 20-20 20L0 20z" fill="rgba(255,255,255,0.02)" fill-rule="evenodd"/></svg>');
-        }
-        .tiranga-glow {
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(255,153,51,0.18) 0%, rgba(255,255,255,0.1) 50%, rgba(19,136,8,0.18) 100%);
-            filter: blur(55px);
-            z-index: -1;
-            border-radius: 50%;
-        }
-        .input-field {
-            background-color: #1A1A1D;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #eae1d4;
-            transition: all 0.3s ease;
-        }
-        .input-field:focus {
-            border-color: #d4af37;
-            box-shadow: inset 0 0 10px rgba(212, 175, 55, 0.2), 0 0 8px rgba(212, 175, 55, 0.3);
-            outline: none;
-        }
-        .divider-fade {
-            height: 1px;
-            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 100%);
-        }
-        
-        /* Modal & Animations */
-        .modal-backdrop {
-            background: rgba(10, 10, 11, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        .animate-fade-in {
-            animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-        
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #110e07;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #4d4635;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #d4af37;
-        }
-    </style>
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Bharat Brand Stories - Modern Indian Majesty</title>
+  <meta name="description"
+    content="Celebrating the legends building modern Bharat. 15 iconic journeys of grit & glory on Republic Bharat." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Google Fonts & Material Symbols -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "secondary-fixed-dim": "#c6c6c6",
+            "tertiary": "#ffc290",
+            "surface-variant": "#38342b",
+            "inverse-surface": "#eae1d4",
+            "on-background": "#eae1d4",
+            "on-tertiary-fixed-variant": "#6d3a00",
+            "on-secondary-fixed": "#1a1c1c",
+            "surface-container-high": "#2d2a21",
+            "on-tertiary-fixed": "#2e1500",
+            "error-container": "#93000a",
+            "on-error-container": "#ffdad6",
+            "on-primary-container": "#554300",
+            "secondary-fixed": "#e3e2e2",
+            "secondary": "#c6c6c6",
+            "surface-bright": "#3d392f",
+            "surface": "#16130b",
+            "tertiary-container": "#ff9b39",
+            "on-primary-fixed-variant": "#574500",
+            "surface-tint": "#e9c349",
+            "outline-variant": "#4d4635",
+            "surface-dim": "#16130b",
+            "on-error": "#690005",
+            "on-primary": "#3c2f00",
+            "secondary-container": "#484949",
+            "on-secondary": "#2f3131",
+            "surface-container-highest": "#38342b",
+            "tertiary-fixed": "#ffdcc2",
+            "on-secondary-container": "#b8b8b8",
+            "error": "#ffb4ab",
+            "primary-container": "#d4af37",
+            "inverse-on-surface": "#343027",
+            "tertiary-fixed-dim": "#ffb77a",
+            "inverse-primary": "#735c00",
+            "surface-container-low": "#1f1b13",
+            "on-tertiary": "#4c2700",
+            "on-tertiary-container": "#6a3800",
+            "outline": "#99907c",
+            "on-secondary-fixed-variant": "#464747",
+            "surface-container-lowest": "#110e07",
+            "on-primary-fixed": "#241a00",
+            "background": "#16130b",
+            "on-surface-variant": "#d0c5af",
+            "on-surface": "#eae1d4",
+            "primary-fixed": "#ffe088",
+            "primary": "#f2ca50",
+            "surface-container": "#231f17",
+            "primary-fixed-dim": "#e9c349"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          spacing: {
+            "unit": "8px",
+            "container-max": "1280px",
+            "stack-lg": "48px",
+            "margin-mobile": "16px",
+            "margin-desktop": "64px",
+            "gutter": "24px",
+            "stack-sm": "12px",
+            "stack-md": "24px"
+          },
+          fontFamily: {
+            "label-sm": ["Manrope", "sans-serif"],
+            "label-md": ["Manrope", "sans-serif"],
+            "headline-lg": ["Montserrat", "sans-serif"],
+            "body-lg": ["Manrope", "sans-serif"],
+            "headline-lg-mobile": ["Montserrat", "sans-serif"],
+            "body-md": ["Manrope", "sans-serif"],
+            "headline-md": ["Montserrat", "sans-serif"],
+            "headline-display": ["Montserrat", "sans-serif"]
+          },
+          fontSize: {
+            "label-sm": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.03em", "fontWeight": "500" }],
+            "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+            "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+            "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+            "headline-display": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #0A0A0B;
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(255, 153, 51, 0.06) 0%, transparent 45%),
+        radial-gradient(circle at 90% 80%, rgba(19, 136, 8, 0.06) 0%, transparent 45%);
+      background-attachment: fixed;
+      color: #eae1d4;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .glass-panel {
+      background: rgba(22, 19, 11, 0.7);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .gold-border {
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .silver-border {
+      border: 1px solid rgba(198, 198, 198, 0.3);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+      color: #1a1c1c;
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, #ffe088 0%, #e9c349 100%);
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: inherit;
+    }
+
+    .btn-primary:hover::before {
+      opacity: 1;
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid rgba(198, 198, 198, 0.5);
+      color: #c6c6c6;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background: linear-gradient(135deg, rgba(198, 198, 198, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%);
+      border-color: #ffffff;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .jaali-watermark {
+      background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 0l20 20-20 20L0 20z" fill="rgba(255,255,255,0.02)" fill-rule="evenodd"/></svg>');
+    }
+
+    .tiranga-glow {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255, 153, 51, 0.18) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(19, 136, 8, 0.18) 100%);
+      filter: blur(55px);
+      z-index: -1;
+      border-radius: 50%;
+    }
+
+    .input-field {
+      background-color: #1A1A1D;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #eae1d4;
+      transition: all 0.3s ease;
+    }
+
+    .input-field:focus {
+      border-color: #d4af37;
+      box-shadow: inset 0 0 10px rgba(212, 175, 55, 0.2), 0 0 8px rgba(212, 175, 55, 0.3);
+      outline: none;
+    }
+
+    .divider-fade {
+      height: 1px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+    }
+
+    /* Modal & Animations */
+    .modal-backdrop {
+      background: rgba(10, 10, 11, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #110e07;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #4d4635;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d4af37;
+    }
+  </style>
 </head>
+
 <body class="antialiased overflow-x-hidden">
 
-<!-- TopNavBar -->
-<nav class="bg-surface/80 backdrop-blur-xl docked full-width top-0 sticky z-50 border-b border-outline-variant/20 shadow-lg shadow-primary/10">
-    <div class="flex justify-between items-center w-full px-4 md:px-margin-desktop py-unit max-w-container-max mx-auto h-20">
-        <a href="#hero" class="flex items-center gap-4 group">
-            <img alt="Bharat Brand Stories official logo" class="h-12 w-auto object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE7vDYkase1T2gBG6IVuZoqnCYNr0adqcQ8nGzFg8nCcxrK8VA-ftcfgiEWatYNOMPdPmTz2a44TUM5KtwJafSI4bBfVk5dgR2CpN9SIUFLCknGfFGJfMKidFnXM-pwFBpjB9O4aGMnWen28JYHARqCa2FIrSoECIES9mfVDSTokXvTVpd1guEg7EqUTik03jSy_GLsxv_qFPMfEQu8eBhZtmyz5T9O7hf4SNfzAwL8OxE5mIj4CGAHv9hFiOuVPBZbFc"/>
-            <span class="font-headline-md text-headline-md font-bold bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent hidden sm:block tracking-wide">
-                Bharat Brand Stories
-            </span>
-        </a>
-        
-        <div class="hidden md:flex items-center gap-6 lg:gap-8">
-            <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:bg-primary/10 hover:text-primary rounded-lg px-3 py-2 transition-all" href="#vault">Episode</a>
-            <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:bg-primary/10 hover:text-primary rounded-lg px-3 py-2 transition-all" href="#sponsorship">Partnerships</a>
-            <a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="#season2">Season 2</a>
-            <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:bg-primary/10 hover:text-primary rounded-lg px-3 py-2 transition-all" href="#impact">Coming Soon</a>
-        </div>
-        
-        <div class="flex items-center gap-3 md:gap-4">
-            <button onclick="openPartnerHubModal()" class="hidden lg:block font-label-md text-label-md btn-secondary px-6 py-2 rounded-lg scale-95 active:scale-90 transition-transform">Partner Hub</button>
-            <a href="#nominate" class="font-label-md text-label-md btn-primary px-5 md:px-6 py-2 rounded-lg scale-95 active:scale-90 transition-transform font-bold tracking-wide flex items-center justify-center">Nominate Now</a>
-            
-            <!-- Mobile Menu Toggle Button -->
-            <button onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" class="md:hidden text-on-surface p-2 rounded-lg hover:bg-surface-variant focus:outline-none">
-                <span class="material-symbols-outlined text-2xl" id="menuIcon">menu</span>
-            </button>
-        </div>
-    </div>
-    
-    <!-- Mobile Drawer -->
-    <div id="mobileMenu" class="hidden md:hidden bg-surface-container-high/95 backdrop-blur-2xl border-b border-outline-variant/30 px-6 py-6 transition-all duration-300">
-        <div class="flex flex-col gap-4">
-            <a onclick="toggleMobileMenu()" class="font-label-md text-body-lg text-on-surface-variant hover:text-primary py-2 border-b border-outline-variant/20" href="#vault">Episode</a>
-            <a onclick="toggleMobileMenu()" class="font-label-md text-body-lg text-on-surface-variant hover:text-primary py-2 border-b border-outline-variant/20" href="#sponsorship">Partnerships</a>
-            <a onclick="toggleMobileMenu()" class="font-label-md text-body-lg text-primary font-bold py-2 border-b border-outline-variant/20" href="#season2">Season 2 Spotlight</a>
-            <a onclick="toggleMobileMenu()" class="font-label-md text-body-lg text-on-surface-variant hover:text-primary py-2 border-b border-outline-variant/20" href="#impact">Coming Soon</a>
-            <button onclick="toggleMobileMenu(); openPartnerHubModal();" class="btn-secondary w-full py-3 rounded-lg mt-2 font-semibold text-center">Partner Hub & Deck</button>
-        </div>
-    </div>
-</nav>
+  <!-- TopNavBar -->
+  <nav
+    class="bg-surface/80 backdrop-blur-xl docked full-width top-0 sticky z-50 border-b border-outline-variant/20 shadow-lg shadow-primary/10">
+    <div
+      class="flex justify-between items-center w-full px-4 md:px-margin-desktop py-unit max-w-container-max mx-auto h-20">
+      <a href="#hero" class="flex items-center gap-4 group">
+        <img alt="Bharat Brand Stories official logo"
+          class="h-12 w-auto object-contain transition-transform group-hover:scale-105"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE7vDYkase1T2gBG6IVuZoqnCYNr0adqcQ8nGzFg8nCcxrK8VA-ftcfgiEWatYNOMPdPmTz2a44TUM5KtwJafSI4bBfVk5dgR2CpN9SIUFLCknGfFGJfMKidFnXM-pwFBpjB9O4aGMnWen28JYHARqCa2FIrSoECIES9mfVDSTokXvTVpd1guEg7EqUTik03jSy_GLsxv_qFPMfEQu8eBhZtmyz5T9O7hf4SNfzAwL8OxE5mIj4CGAHv9hFiOuVPBZbFc" />
+        <span
+          class="font-headline-md text-headline-md font-bold bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent hidden sm:block tracking-wide">
+          Bharat Brand Stories
+        </span>
+      </a>
 
-<!-- Hero Section with Scroll-Driven 90-Frame Logo Animation -->
-<header id="hero" class="relative h-[250vh] w-full">
+      <div class="hidden md:flex items-center gap-6 lg:gap-8">
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:bg-primary/10 hover:text-primary rounded-lg px-3 py-2 transition-all"
+          href="#vault">Episode</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:bg-primary/10 hover:text-primary rounded-lg px-3 py-2 transition-all"
+          href="#sponsorship">Partnerships</a>
+        <a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1"
+          href="#season2">Season 2</a>
+      </div>
+
+      <div class="flex items-center gap-3 md:gap-4">
+        <button onclick="openPartnerHubModal()"
+          class="hidden lg:block font-label-md text-label-md btn-secondary px-6 py-2 rounded-lg scale-95 active:scale-90 transition-transform">Partner
+          Hub</button>
+        <a href="#nominate"
+          class="font-label-md text-label-md btn-primary px-5 md:px-6 py-2 rounded-lg scale-95 active:scale-90 transition-transform font-bold tracking-wide flex items-center justify-center">Nominate
+          Now</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu"
+          class="md:hidden text-on-surface p-2 rounded-lg hover:bg-surface-variant focus:outline-none">
+          <span class="material-symbols-outlined text-2xl" id="menuIcon">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu"
+      class="hidden md:hidden bg-surface-container-high/95 backdrop-blur-2xl border-b border-outline-variant/30 px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col gap-4">
+        <a onclick="toggleMobileMenu()"
+          class="font-label-md text-body-lg text-on-surface-variant hover:text-primary py-2 border-b border-outline-variant/20"
+          href="#vault">Episode</a>
+        <a onclick="toggleMobileMenu()"
+          class="font-label-md text-body-lg text-on-surface-variant hover:text-primary py-2 border-b border-outline-variant/20"
+          href="#sponsorship">Partnerships</a>
+        <a onclick="toggleMobileMenu()"
+          class="font-label-md text-body-lg text-primary font-bold py-2 border-b border-outline-variant/20"
+          href="#season2">Season 2 Spotlight</a>
+        <a onclick="toggleMobileMenu()"
+          class="font-label-md text-body-lg text-on-surface-variant hover:text-primary py-2 border-b border-outline-variant/20"
+          href="#impact">Coming Soon</a>
+        <button onclick="toggleMobileMenu(); openPartnerHubModal();"
+          class="btn-secondary w-full py-3 rounded-lg mt-2 font-semibold text-center">Partner Hub & Deck</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Scroll-Driven 90-Frame Logo Animation -->
+  <header id="hero" class="relative h-[250vh] w-full">
     <!-- Sticky viewport container -->
     <div class="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
-        <!-- Canvas for logo frame sequence animation -->
-        <canvas id="heroCanvas" class="absolute inset-0 w-full h-full object-cover z-0 filter brightness-110 contrast-110 transition-opacity duration-300 opacity-90"></canvas>
-        
-        <!-- Ambient background glows -->
-        <div class="tiranga-glow top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] opacity-60 pointer-events-none z-0"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-[#16130b] via-[#16130b]/30 to-[#16130b]/70 z-[5] pointer-events-none"></div>
+      <!-- Canvas for logo frame sequence animation -->
+      <canvas id="heroCanvas"
+        class="absolute inset-0 w-full h-full object-cover z-0 filter brightness-110 contrast-110 transition-opacity duration-300 opacity-90"></canvas>
 
-        <!-- Overlay Text & Content -->
-        <div class="relative z-10 w-full max-w-container-max mx-auto px-4 md:px-margin-desktop text-center flex flex-col items-center justify-center min-h-[70vh]">
-            <!-- Header Text Content (Visible until 15%, then fades away) -->
-            <div id="heroHeaderContent" class="flex flex-col items-center gap-4 sm:gap-6 transition-opacity duration-300">
-                <!-- Broadcast Badge -->
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/40 bg-surface-container-high/80 backdrop-blur-md text-primary font-label-sm text-xs uppercase tracking-widest shadow-lg animate-fade-in">
-                    <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
-                    <span>Republic Bharat Broadcast Series</span>
-                </div>
+      <!-- Ambient background glows -->
+      <div
+        class="tiranga-glow top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] opacity-60 pointer-events-none z-0">
+      </div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-[#16130b] via-[#16130b]/30 to-[#16130b]/70 z-[5] pointer-events-none">
+      </div>
 
-                <!-- Main Headline -->
-                <h1 class="font-headline-display text-headline-lg-mobile md:text-headline-display text-on-surface max-w-4xl tracking-tight leading-tight drop-shadow-xl">
-                    Celebrating the Legends Building <span class="bg-gradient-to-r from-primary via-tertiary to-primary bg-clip-text text-transparent">Modern Bharat</span>
-                </h1>
+      <!-- Overlay Text & Content -->
+      <div
+        class="relative z-10 w-full max-w-container-max mx-auto px-4 md:px-margin-desktop text-center flex flex-col items-center justify-center min-h-[70vh]">
+        <!-- Header Text Content (Visible until 15%, then fades away) -->
+        <div id="heroHeaderContent" class="flex flex-col items-center gap-4 sm:gap-6 transition-opacity duration-300">
+          <!-- Broadcast Badge -->
+          <div
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/40 bg-surface-container-high/80 backdrop-blur-md text-primary font-label-sm text-xs uppercase tracking-widest shadow-lg animate-fade-in">
+            <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+            <span>Republic Bharat Broadcast Series</span>
+          </div>
 
-                <!-- Subtitle -->
-                <p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed drop-shadow-md">
-                    15 Iconic Journeys of Grit & Glory.<br/>
-                    <span class="text-tertiary font-semibold">Season 1 Concluded</span> | <span class="text-primary font-semibold">Season 2 Unveiling Soon on Republic Bharat.</span>
-                </p>
-            </div>
+          <!-- Main Headline -->
+          <h1
+            class="font-headline-display text-headline-lg-mobile md:text-headline-display text-on-surface max-w-4xl tracking-tight leading-tight drop-shadow-xl">
+            Celebrating the Legends Building <span
+              class="bg-gradient-to-r from-primary via-tertiary to-primary bg-clip-text text-transparent">Modern
+              Bharat</span>
+          </h1>
 
-            <!-- Call to Actions Bar (Slides down to 80% bottom position after 15%) -->
-            <div id="heroCtaBar" class="mt-6 md:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-6 py-3 rounded-2xl transition-all duration-300 ease-out z-20">
-                <button onclick="openVideoModal('Season 1 Highlights Showcase', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')" class="btn-primary font-label-md text-label-md px-8 py-3.5 rounded-xl flex items-center justify-center gap-2 font-bold text-base md:text-lg cursor-pointer shadow-xl hover:scale-105 transition-transform">
-                    <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-                    Watch Season 1 Highlights
-                </button>
-                <a href="#nominate" class="btn-secondary font-label-md text-label-md px-8 py-3.5 rounded-xl flex items-center justify-center gap-2 font-bold text-base md:text-lg hover:scale-105 transition-transform">
-                    Apply for Season 2
-                    <span class="material-symbols-outlined">arrow_forward</span>
-                </a>
-            </div>
-
-            <!-- Scroll Indicator -->
-            <div id="scrollHint" class="absolute bottom-6 flex flex-col items-center gap-1.5 text-on-surface-variant/80 text-xs font-semibold tracking-wider uppercase transition-opacity duration-300">
-                <span>Scroll to Animate Logo</span>
-                <span class="material-symbols-outlined animate-bounce text-primary text-xl">expand_more</span>
-            </div>
+          <!-- Subtitle -->
+          <p
+            class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed drop-shadow-md">
+            15 Iconic Journeys of Grit & Glory.<br />
+            <span class="text-tertiary font-semibold">Season 1 Concluded</span> | <span
+              class="text-primary font-semibold">Season 2 Unveiling Soon on Republic Bharat.</span>
+          </p>
         </div>
+
+        <!-- Call to Actions Bar (Slides down to 80% bottom position after 15%) -->
+        <div id="heroCtaBar"
+          class="mt-6 md:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-6 py-3 rounded-2xl transition-all duration-300 ease-out z-20">
+          <button
+            onclick="openVideoModal('Season 1 Highlights Showcase', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')"
+            class="btn-primary font-label-md text-label-md px-8 py-3.5 rounded-xl flex items-center justify-center gap-2 font-bold text-base md:text-lg cursor-pointer shadow-xl hover:scale-105 transition-transform">
+            <span class="material-symbols-outlined text-2xl"
+              style="font-variation-settings: 'FILL' 1;">play_circle</span>
+            Watch Season 1 Highlights
+          </button>
+          <a href="#nominate"
+            class="btn-secondary font-label-md text-label-md px-8 py-3.5 rounded-xl flex items-center justify-center gap-2 font-bold text-base md:text-lg hover:scale-105 transition-transform">
+            Apply for Season 2
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div id="scrollHint"
+          class="absolute bottom-6 flex flex-col items-center gap-1.5 text-on-surface-variant/80 text-xs font-semibold tracking-wider uppercase transition-opacity duration-300">
+          <span>Scroll to Animate Logo</span>
+          <span class="material-symbols-outlined animate-bounce text-primary text-xl">expand_more</span>
+        </div>
+      </div>
     </div>
-</header>
+  </header>
 
-<div class="divider-fade max-w-container-max mx-auto"></div>
+  <div class="divider-fade max-w-container-max mx-auto"></div>
 
-<!-- Impact Stats Section -->
-<section id="impact" class="py-stack-lg px-4 md:px-margin-desktop relative">
-    <div class="max-w-container-max mx-auto glass-panel rounded-xl p-6 md:p-10 gold-border jaali-watermark relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent skew-x-[-20deg] animate-pulse"></div>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center relative z-10">
-            <div class="flex flex-col gap-2 p-2">
-                <span class="font-headline-lg text-headline-lg text-primary font-extrabold">15+</span>
-                <span class="font-label-md text-label-sm md:text-label-md text-on-surface-variant uppercase tracking-widest">National Success Stories</span>
-            </div>
-            <div class="flex flex-col gap-2 p-2">
-                <span class="font-headline-lg text-headline-lg text-secondary font-extrabold">1</span>
-                <span class="font-label-md text-label-sm md:text-label-md text-on-surface-variant uppercase tracking-widest">Landmark Season</span>
-            </div>
-            <div class="flex flex-col gap-2 p-2">
-                <span class="font-headline-lg text-headline-lg text-tertiary font-extrabold">100M+</span>
-                <span class="font-label-md text-label-sm md:text-label-md text-on-surface-variant uppercase tracking-widest">Viewers Reached</span>
-            </div>
-            <div class="flex flex-col gap-2 p-2">
-                <span class="font-headline-lg text-headline-lg text-primary font-extrabold">Prime</span>
-                <span class="font-label-md text-label-sm md:text-label-md text-on-surface-variant uppercase tracking-widest">Sunday Slot</span>
-            </div>
+  <!-- Impact Stats Section -->
+  <section id="impact" class="py-stack-lg px-4 md:px-margin-desktop relative">
+    <div
+      class="max-w-container-max mx-auto glass-panel rounded-xl p-6 md:p-10 gold-border jaali-watermark relative overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent skew-x-[-20deg] animate-pulse">
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center relative z-10">
+        <div class="flex flex-col gap-2 p-2">
+          <span class="font-headline-lg text-headline-lg text-primary font-extrabold">15+</span>
+          <span
+            class="font-label-md text-label-sm md:text-label-md text-on-surface-variant uppercase tracking-widest">National
+            Success Stories</span>
         </div>
+        <div class="flex flex-col gap-2 p-2">
+          <span class="font-headline-lg text-headline-lg text-secondary font-extrabold">1</span>
+          <span
+            class="font-label-md text-label-sm md:text-label-md text-on-surface-variant uppercase tracking-widest">Landmark
+            Season</span>
+        </div>
+        <div class="flex flex-col gap-2 p-2">
+          <span class="font-headline-lg text-headline-lg text-tertiary font-extrabold">100M+</span>
+          <span
+            class="font-label-md text-label-sm md:text-label-md text-on-surface-variant uppercase tracking-widest">Viewers
+            Reached</span>
+        </div>
+        <div class="flex flex-col gap-2 p-2">
+          <span class="font-headline-lg text-headline-lg text-primary font-extrabold">Prime</span>
+          <span
+            class="font-label-md text-label-sm md:text-label-md text-on-surface-variant uppercase tracking-widest">Sunday
+            Slot</span>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Season 2 Spotlight Banner -->
-<section id="season2" class="py-6 px-4 md:px-margin-desktop max-w-container-max mx-auto">
-    <div class="glass-panel rounded-xl p-6 md:p-8 gold-border flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden bg-gradient-to-r from-surface-container-high/90 via-surface/80 to-surface-container-high/90">
-        <div class="flex items-center gap-5 z-10">
-            <div class="w-14 h-14 rounded-full bg-primary/20 border border-primary flex items-center justify-center shrink-0">
-                <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">stars</span>
-            </div>
-            <div>
-                <div class="inline-block px-3 py-0.5 rounded-full border border-primary/50 text-primary font-label-sm text-xs mb-1 bg-primary/10">Coming Q3 2026</div>
-                <h3 class="font-headline-md text-headline-md text-on-surface font-bold">Season 2: The Next Horizon</h3>
-                <p class="font-body-md text-on-surface-variant text-sm md:text-base">Featuring 20 visionary founders across DeepTech, Clean Energy, EV, and Heritage Brands.</p>
-            </div>
+  <!-- Season 2 Spotlight Banner -->
+  <section id="season2" class="py-6 px-4 md:px-margin-desktop max-w-container-max mx-auto">
+    <div
+      class="glass-panel rounded-xl p-6 md:p-8 gold-border flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden bg-gradient-to-r from-surface-container-high/90 via-surface/80 to-surface-container-high/90">
+      <div class="flex items-center gap-5 z-10">
+        <div
+          class="w-14 h-14 rounded-full bg-primary/20 border border-primary flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-primary text-3xl"
+            style="font-variation-settings: 'FILL' 1;">stars</span>
         </div>
-        <div class="flex gap-4 shrink-0 w-full md:w-auto z-10">
-            <a href="#nominate" class="btn-primary px-6 py-3 rounded-lg font-bold text-center w-full md:w-auto">Nominate Founder</a>
-            <button onclick="openPartnerHubModal()" class="btn-secondary px-6 py-3 rounded-lg font-semibold text-center w-full md:w-auto">Sponsorship Tiers</button>
-        </div>
-    </div>
-</section>
-
-<!-- Episode Vault Section (Bento Grid) -->
-<section id="vault" class="py-stack-lg px-4 md:px-margin-desktop max-w-container-max mx-auto">
-    <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 gap-6">
         <div>
-            <div class="flex items-center gap-2 text-primary font-label-md mb-2">
-                <span class="material-symbols-outlined text-base">movie</span>
-                <span>ARCHIVAL CATALOGUE</span>
-            </div>
-            <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-3">The Episode Vault</h2>
-            <p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant max-w-2xl">Witness the cinematic journeys of founders who redefined their industries. Handpicked stories of resilience, scale, and uncompromising vision.</p>
+          <div
+            class="inline-block px-3 py-0.5 rounded-full border border-primary/50 text-primary font-label-sm text-xs mb-1 bg-primary/10">
+            Coming Q3 2026</div>
+          <h3 class="font-headline-md text-headline-md text-on-surface font-bold">Season 2: The Next Horizon</h3>
+          <p class="font-body-md text-on-surface-variant text-sm md:text-base">Featuring 20 visionary founders across
+            DeepTech, Clean Energy, EV, and Heritage Brands.</p>
         </div>
-        <button onclick="openAllEpisodesModal()" class="btn-secondary font-label-md text-label-md px-6 py-3 rounded-lg whitespace-nowrap flex items-center gap-2">
-            <span>View All 15 Episodes</span>
-            <span class="material-symbols-outlined text-sm">grid_view</span>
-        </button>
+      </div>
+      <div class="flex gap-4 shrink-0 w-full md:w-auto z-10">
+        <a href="#nominate" class="btn-primary px-6 py-3 rounded-lg font-bold text-center w-full md:w-auto">Nominate
+          Founder</a>
+        <button onclick="openPartnerHubModal()"
+          class="btn-secondary px-6 py-3 rounded-lg font-semibold text-center w-full md:w-auto">Sponsorship
+          Tiers</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Episode Vault Section (Bento Grid) -->
+  <section id="vault" class="py-stack-lg px-4 md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 gap-6">
+      <div>
+        <div class="flex items-center gap-2 text-primary font-label-md mb-2">
+          <span class="material-symbols-outlined text-base">movie</span>
+          <span>ARCHIVAL CATALOGUE</span>
+        </div>
+        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-3">The Episode Vault
+        </h2>
+        <p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant max-w-2xl">Witness the cinematic
+          journeys of founders who redefined their industries. Handpicked stories of resilience, scale, and
+          uncompromising vision.</p>
+      </div>
+      <button onclick="openAllEpisodesModal()"
+        class="btn-secondary font-label-md text-label-md px-6 py-3 rounded-lg whitespace-nowrap flex items-center gap-2">
+        <span>View All 15 Episodes</span>
+        <span class="material-symbols-outlined text-sm">grid_view</span>
+      </button>
     </div>
 
     <!-- Category Filter Chips -->
     <div class="flex flex-wrap gap-2 mb-8" id="categoryFilterContainer">
-        <button onclick="filterVault('all')" class="category-btn active px-4 py-1.5 rounded-full text-label-sm font-semibold bg-primary text-on-primary-fixed transition-all" data-category="all">All Stories</button>
-        <button onclick="filterVault('tech')" class="category-btn px-4 py-1.5 rounded-full text-label-sm font-semibold bg-surface-container border border-outline-variant/40 text-on-surface-variant hover:text-on-surface transition-all" data-category="tech">DeepTech</button>
-        <button onclick="filterVault('manufacturing')" class="category-btn px-4 py-1.5 rounded-full text-label-sm font-semibold bg-surface-container border border-outline-variant/40 text-on-surface-variant hover:text-on-surface transition-all" data-category="manufacturing">Manufacturing</button>
-        <button onclick="filterVault('agritech')" class="category-btn px-4 py-1.5 rounded-full text-label-sm font-semibold bg-surface-container border border-outline-variant/40 text-on-surface-variant hover:text-on-surface transition-all" data-category="agritech">Agritech</button>
-        <button onclick="filterVault('d2c')" class="category-btn px-4 py-1.5 rounded-full text-label-sm font-semibold bg-surface-container border border-outline-variant/40 text-on-surface-variant hover:text-on-surface transition-all" data-category="d2c">D2C & FMCG</button>
+      <button onclick="filterVault('all')"
+        class="category-btn active px-4 py-1.5 rounded-full text-label-sm font-semibold bg-primary text-on-primary-fixed transition-all"
+        data-category="all">All Stories</button>
+      <button onclick="filterVault('tech')"
+        class="category-btn px-4 py-1.5 rounded-full text-label-sm font-semibold bg-surface-container border border-outline-variant/40 text-on-surface-variant hover:text-on-surface transition-all"
+        data-category="tech">DeepTech</button>
+      <button onclick="filterVault('manufacturing')"
+        class="category-btn px-4 py-1.5 rounded-full text-label-sm font-semibold bg-surface-container border border-outline-variant/40 text-on-surface-variant hover:text-on-surface transition-all"
+        data-category="manufacturing">Manufacturing</button>
+      <button onclick="filterVault('agritech')"
+        class="category-btn px-4 py-1.5 rounded-full text-label-sm font-semibold bg-surface-container border border-outline-variant/40 text-on-surface-variant hover:text-on-surface transition-all"
+        data-category="agritech">Agritech</button>
+      <button onclick="filterVault('d2c')"
+        class="category-btn px-4 py-1.5 rounded-full text-label-sm font-semibold bg-surface-container border border-outline-variant/40 text-on-surface-variant hover:text-on-surface transition-all"
+        data-category="d2c">D2C & FMCG</button>
     </div>
 
     <!-- Bento Grid Container -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[320px]" id="bentoGrid">
-        <!-- Featured Large Card -->
-        <div data-cat="tech" onclick="openEpisodeDetail(0)" class="md:col-span-2 md:row-span-2 glass-panel rounded-xl overflow-hidden group relative gold-border cursor-pointer transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.25)]">
-            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-60" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAtGM5nGe1HmTnjM0wXxSV1QokA0abz3OOsmmn6rjWXkR1LBLitrgA75ECdDVASgOx-HgJYN_lcsshfbsH908yBX9xSq3P-LldQFqmcaXGcqybOugmErDM7SDDFw0lRCLnuJqErGe6j-Wxp-f5E0Q0YHTTz7gSA2PJt3A6LNu87V_kUYEbWdxN7tZ-jCaWBXEU6UHdHzSDjzKIjKnU3ph78AlzE-4rGoWmfhuLhHH5FHgSunD51pDWCpQ')"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
-            <div class="absolute inset-0 border border-transparent group-hover:border-[#ff9933]/50 transition-colors duration-300 rounded-xl"></div>
-            <div class="absolute bottom-0 left-0 p-6 md:p-8 w-full">
-                <div class="inline-block px-3 py-1 rounded-full border border-[#ff9933] text-[#ff9933] font-label-sm text-label-sm mb-3 bg-black/50 backdrop-blur-sm font-semibold">Season Finale Spotlight • DeepTech</div>
-                <h3 class="font-headline-md text-headline-md md:text-3xl text-on-surface font-bold mb-2 group-hover:text-primary transition-colors">Visionary Technologies Pvt Ltd</h3>
-                <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 max-w-xl">"From a garage in Bengaluru to a global quantum computing powerhouse serving 40+ enterprises."</p>
-                <div class="flex items-center gap-4 mt-6">
-                    <div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden shrink-0">
-                        <img class="w-full h-full object-cover" alt="Rohan Mehta headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzNGygYHDEUlCXhazqdp5CrTF6xsaNrQVJpI1zDKvFwJtb3I0yc-QTBvN42ajclzJMSqDcx3--R3HYazbYnDwQ_E8CBGZ1cMHRTFwgo-GRaH5E9rzLMd82VhLbZZBBok4K0hAQxnRQ8pxowMFaAlvv6J4D7s-7XJw171K_T2j8MLCconR5VvEqSjktKD1bf8p5gIkSLr9smpyR-YHgJOMIOMqzWBkL83pKrIULrKcLjdBS8HPoL-WT7A"/>
-                    </div>
-                    <div>
-                        <p class="font-label-md text-label-md text-on-surface font-bold">Rohan Mehta</p>
-                        <p class="font-label-sm text-label-sm text-on-surface-variant">Founder & CEO</p>
-                    </div>
-                    <span class="material-symbols-outlined ml-auto text-primary text-3xl opacity-80 group-hover:opacity-100 transition-all transform group-hover:translate-x-2 duration-300" style="font-variation-settings: 'FILL' 1;">arrow_circle_right</span>
-                </div>
-            </div>
+      <!-- Featured Large Card -->
+      <div data-cat="tech" onclick="openEpisodeDetail(0)"
+        class="md:col-span-2 md:row-span-2 glass-panel rounded-xl overflow-hidden group relative gold-border cursor-pointer transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.25)]">
+        <div
+          class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-60"
+          style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAtGM5nGe1HmTnjM0wXxSV1QokA0abz3OOsmmn6rjWXkR1LBLitrgA75ECdDVASgOx-HgJYN_lcsshfbsH908yBX9xSq3P-LldQFqmcaXGcqybOugmErDM7SDDFw0lRCLnuJqErGe6j-Wxp-f5E0Q0YHTTz7gSA2PJt3A6LNu87V_kUYEbWdxN7tZ-jCaWBXEU6UHdHzSDjzKIjKnU3ph78AlzE-4rGoWmfhuLhHH5FHgSunD51pDWCpQ')">
         </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+        <div
+          class="absolute inset-0 border border-transparent group-hover:border-[#ff9933]/50 transition-colors duration-300 rounded-xl">
+        </div>
+        <div class="absolute bottom-0 left-0 p-6 md:p-8 w-full">
+          <div
+            class="inline-block px-3 py-1 rounded-full border border-[#ff9933] text-[#ff9933] font-label-sm text-label-sm mb-3 bg-black/50 backdrop-blur-sm font-semibold">
+            Season Finale Spotlight • DeepTech</div>
+          <h3
+            class="font-headline-md text-headline-md md:text-3xl text-on-surface font-bold mb-2 group-hover:text-primary transition-colors">
+            Visionary Technologies Pvt Ltd</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 max-w-xl">"From a garage in Bengaluru
+            to a global quantum computing powerhouse serving 40+ enterprises."</p>
+          <div class="flex items-center gap-4 mt-6">
+            <div class="w-12 h-12 rounded-full border-2 border-primary overflow-hidden shrink-0">
+              <img class="w-full h-full object-cover" alt="Rohan Mehta headshot"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzNGygYHDEUlCXhazqdp5CrTF6xsaNrQVJpI1zDKvFwJtb3I0yc-QTBvN42ajclzJMSqDcx3--R3HYazbYnDwQ_E8CBGZ1cMHRTFwgo-GRaH5E9rzLMd82VhLbZZBBok4K0hAQxnRQ8pxowMFaAlvv6J4D7s-7XJw171K_T2j8MLCconR5VvEqSjktKD1bf8p5gIkSLr9smpyR-YHgJOMIOMqzWBkL83pKrIULrKcLjdBS8HPoL-WT7A" />
+            </div>
+            <div>
+              <p class="font-label-md text-label-md text-on-surface font-bold">Rohan Mehta</p>
+              <p class="font-label-sm text-label-sm text-on-surface-variant">Founder & CEO</p>
+            </div>
+            <span
+              class="material-symbols-outlined ml-auto text-primary text-3xl opacity-80 group-hover:opacity-100 transition-all transform group-hover:translate-x-2 duration-300"
+              style="font-variation-settings: 'FILL' 1;">arrow_circle_right</span>
+          </div>
+        </div>
+      </div>
 
-        <!-- Standard Card 1 -->
-        <div data-cat="manufacturing" onclick="openEpisodeDetail(1)" class="glass-panel rounded-xl overflow-hidden group relative silver-border cursor-pointer transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">
-            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-40 mix-blend-luminosity" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZVjYF3XEqS5QfEm92xX5v_Y94PQpBU91ZT0K9yLvIvyc-ySQyVhlDKwJWaTbklL0hcC8eZFb142TjAWI8Oanku6cCqUWYW8wKbfmxoSaBhJTf1W1kphDP5lOK0_r6P09_MM9E9Hf2upqM1yIPfnWxTQticoD2zkUU4PR7gSjX0FpHJOnsM_LbWGee-HgXT1sb3b8VcI6RsFqGw706Y_t2DUzCIOE-V-pYjO7t1lTQ4GukhUMMZNQs1Q')"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
-            <div class="absolute inset-0 border border-transparent group-hover:border-primary/50 transition-colors duration-300 rounded-xl"></div>
-            <div class="absolute bottom-0 left-0 p-6 w-full">
-                <span class="text-xs text-primary font-bold uppercase tracking-wider block mb-1">Episode 02 • Manufacturing</span>
-                <h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-1 text-lg group-hover:text-primary transition-colors">Apex Manufacturing</h3>
-                <p class="font-label-sm text-label-sm text-on-surface-variant italic mb-4">"Building the high-precision infrastructure of tomorrow."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-full border border-secondary overflow-hidden shrink-0">
-                        <img class="w-full h-full object-cover" alt="Priya Sharma headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrih54VRaAH-aBumGR4E06U8mBf3NxVBkyYxK9URBRFQvBUrlTLA1oydpBaWrV_kVqa1-q7-_ib_JmgZ11w-w-w-yJPfc2lekBAwoTnYoPAzYorg4zs36Dg4z2NGZADI0qLz4Qdd7vzSMoTIHuPB0ZTzfSv5aoud43qwMqdQGeAd3Yixziq5E9Gqf3e1E3QsjlylWbYtUNj6J1Mr7hxGGN7L68COISRnU2oJDBT6onqUMIYq5mHhQzgw"/>
-                    </div>
-                    <p class="font-label-sm text-label-sm text-on-surface font-bold">Priya Sharma</p>
-                    <span class="material-symbols-outlined ml-auto text-secondary group-hover:text-primary text-xl">play_circle</span>
-                </div>
-            </div>
+      <!-- Standard Card 1 -->
+      <div data-cat="manufacturing" onclick="openEpisodeDetail(1)"
+        class="glass-panel rounded-xl overflow-hidden group relative silver-border cursor-pointer transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.15)]">
+        <div
+          class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-40 mix-blend-luminosity"
+          style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZVjYF3XEqS5QfEm92xX5v_Y94PQpBU91ZT0K9yLvIvyc-ySQyVhlDKwJWaTbklL0hcC8eZFb142TjAWI8Oanku6cCqUWYW8wKbfmxoSaBhJTf1W1kphDP5lOK0_r6P09_MM9E9Hf2upqM1yIPfnWxTQticoD2zkUU4PR7gSjX0FpHJOnsM_LbWGee-HgXT1sb3b8VcI6RsFqGw706Y_t2DUzCIOE-V-pYjO7t1lTQ4GukhUMMZNQs1Q')">
         </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+        <div
+          class="absolute inset-0 border border-transparent group-hover:border-primary/50 transition-colors duration-300 rounded-xl">
+        </div>
+        <div class="absolute bottom-0 left-0 p-6 w-full">
+          <span class="text-xs text-primary font-bold uppercase tracking-wider block mb-1">Episode 02 •
+            Manufacturing</span>
+          <h3
+            class="font-headline-md text-headline-md text-on-surface font-bold mb-1 text-lg group-hover:text-primary transition-colors">
+            Apex Manufacturing</h3>
+          <p class="font-label-sm text-label-sm text-on-surface-variant italic mb-4">"Building the high-precision
+            infrastructure of tomorrow."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full border border-secondary overflow-hidden shrink-0">
+              <img class="w-full h-full object-cover" alt="Priya Sharma headshot"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrih54VRaAH-aBumGR4E06U8mBf3NxVBkyYxK9URBRFQvBUrlTLA1oydpBaWrV_kVqa1-q7-_ib_JmgZ11w-w-w-yJPfc2lekBAwoTnYoPAzYorg4zs36Dg4z2NGZADI0qLz4Qdd7vzSMoTIHuPB0ZTzfSv5aoud43qwMqdQGeAd3Yixziq5E9Gqf3e1E3QsjlylWbYtUNj6J1Mr7hxGGN7L68COISRnU2oJDBT6onqUMIYq5mHhQzgw" />
+            </div>
+            <p class="font-label-sm text-label-sm text-on-surface font-bold">Priya Sharma</p>
+            <span
+              class="material-symbols-outlined ml-auto text-secondary group-hover:text-primary text-xl">play_circle</span>
+          </div>
+        </div>
+      </div>
 
-        <!-- Standard Card 2 -->
-        <div data-cat="agritech" onclick="openEpisodeDetail(2)" class="glass-panel rounded-xl overflow-hidden group relative silver-border cursor-pointer transition-all duration-300 hover:shadow-[0_0_20px_rgba(19,136,8,0.2)]">
-            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-40 mix-blend-luminosity" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQCMOiGQqhSoXVwrg5lF6Mme7s7Zfy3IYR7aXlbyTrUhBqcs4WQco7kfvU4HQtPD7LhH-1h2EwEV__rtVEBAadV7vlFfaE18PpfNQDLKdSzJ_dsYe5Q4-mKzh6LKFnKEVPb0E9XCWHgwfQPHuPPCD9_WeEucHD0Hrup00AMuQo65txoez6QR9T5lKAizYEmdFfuETlL-lLUFmR36Z853BF9_Nal_I5K3_tesct85BnpoqYo2EerZ-J1Q')"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
-            <div class="absolute inset-0 border border-transparent group-hover:border-[#138808]/50 transition-colors duration-300 rounded-xl"></div>
-            <div class="absolute bottom-0 left-0 p-6 w-full">
-                <span class="text-xs text-green-400 font-bold uppercase tracking-wider block mb-1">Episode 03 • Agritech</span>
-                <h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-1 text-lg group-hover:text-primary transition-colors">GreenEarth Organics</h3>
-                <p class="font-label-sm text-label-sm text-on-surface-variant italic mb-4">"Rooted in Indian soil, scaling organic exports globally."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-full border border-secondary overflow-hidden shrink-0">
-                        <img class="w-full h-full object-cover" alt="Vikram Singh headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-xwI4f4fZX0U7aa59Rg_QKdIAsE1QBehdmLRDmUa9LX5eJAKzEB5Uo8yRhL22rActnbaw2Xkv-HUgbnl_2dKVuuZObKRdx9vcVlRaZSQu8sppZ2T15iT_yUbAdT8yqdZIj9mN52xZm1glpu4ZJaJjm3n8VLSr0Li_jAXdPV7KC9oFret9l_dvcw4egXUEz358ju_Tx-9bI-TQiBTyw8uYMBgGegPshi2zheCzkCMkJeiu3AzjbqRY4g"/>
-                    </div>
-                    <p class="font-label-sm text-label-sm text-on-surface font-bold">Vikram Singh</p>
-                    <span class="material-symbols-outlined ml-auto text-secondary group-hover:text-primary text-xl">play_circle</span>
-                </div>
-            </div>
+      <!-- Standard Card 2 -->
+      <div data-cat="agritech" onclick="openEpisodeDetail(2)"
+        class="glass-panel rounded-xl overflow-hidden group relative silver-border cursor-pointer transition-all duration-300 hover:shadow-[0_0_20px_rgba(19,136,8,0.2)]">
+        <div
+          class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-40 mix-blend-luminosity"
+          style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQCMOiGQqhSoXVwrg5lF6Mme7s7Zfy3IYR7aXlbyTrUhBqcs4WQco7kfvU4HQtPD7LhH-1h2EwEV__rtVEBAadV7vlFfaE18PpfNQDLKdSzJ_dsYe5Q4-mKzh6LKFnKEVPb0E9XCWHgwfQPHuPPCD9_WeEucHD0Hrup00AMuQo65txoez6QR9T5lKAizYEmdFfuETlL-lLUFmR36Z853BF9_Nal_I5K3_tesct85BnpoqYo2EerZ-J1Q')">
         </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+        <div
+          class="absolute inset-0 border border-transparent group-hover:border-[#138808]/50 transition-colors duration-300 rounded-xl">
+        </div>
+        <div class="absolute bottom-0 left-0 p-6 w-full">
+          <span class="text-xs text-green-400 font-bold uppercase tracking-wider block mb-1">Episode 03 •
+            Agritech</span>
+          <h3
+            class="font-headline-md text-headline-md text-on-surface font-bold mb-1 text-lg group-hover:text-primary transition-colors">
+            GreenEarth Organics</h3>
+          <p class="font-label-sm text-label-sm text-on-surface-variant italic mb-4">"Rooted in Indian soil, scaling
+            organic exports globally."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full border border-secondary overflow-hidden shrink-0">
+              <img class="w-full h-full object-cover" alt="Vikram Singh headshot"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-xwI4f4fZX0U7aa59Rg_QKdIAsE1QBehdmLRDmUa9LX5eJAKzEB5Uo8yRhL22rActnbaw2Xkv-HUgbnl_2dKVuuZObKRdx9vcVlRaZSQu8sppZ2T15iT_yUbAdT8yqdZIj9mN52xZm1glpu4ZJaJjm3n8VLSr0Li_jAXdPV7KC9oFret9l_dvcw4egXUEz358ju_Tx-9bI-TQiBTyw8uYMBgGegPshi2zheCzkCMkJeiu3AzjbqRY4g" />
+            </div>
+            <p class="font-label-sm text-label-sm text-on-surface font-bold">Vikram Singh</p>
+            <span
+              class="material-symbols-outlined ml-auto text-secondary group-hover:text-primary text-xl">play_circle</span>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<div class="divider-fade max-w-container-max mx-auto my-8"></div>
+  <div class="divider-fade max-w-container-max mx-auto my-8"></div>
 
-<!-- Dual Form Section (Sponsorship & Nomination) -->
-<section id="sponsorship" class="py-stack-lg px-4 md:px-margin-desktop max-w-container-max mx-auto scroll-mt-24">
+  <!-- Dual Form Section (Sponsorship & Nomination) -->
+  <section id="sponsorship" class="py-stack-lg px-4 md:px-margin-desktop max-w-container-max mx-auto scroll-mt-24">
     <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
-        <!-- Sponsorship Hub Form -->
-        <div class="glass-panel rounded-2xl p-6 md:p-12 silver-border relative overflow-hidden group">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-[#c6c6c6] opacity-5 blur-[100px] rounded-full group-hover:opacity-10 transition-opacity"></div>
-            <div class="flex items-center gap-4 mb-4 md:mb-6">
-                <span class="material-symbols-outlined text-4xl text-secondary">handshake</span>
-                <h2 class="font-headline-md text-headline-md text-on-surface">Partner with Bharat’s Premier Business Platform</h2>
-            </div>
-            <p class="font-body-md text-body-md text-on-surface-variant mb-6 md:mb-8">Align your brand with the nation's most prestigious business storytelling platform on Republic Bharat. Secure your tier for Season 2.</p>
-            
-            <div class="flex flex-wrap gap-2.5 mb-6 md:mb-8">
-                <span class="px-3.5 py-1 rounded-full border border-[#ff9933] text-[#ff9933] font-label-sm text-xs md:text-label-sm bg-black/40 font-semibold">Title Sponsor</span>
-                <span class="px-3.5 py-1 rounded-full border border-secondary text-secondary font-label-sm text-xs md:text-label-sm bg-black/40 font-semibold">Powered By</span>
-                <span class="px-3.5 py-1 rounded-full border border-[#138808] text-[#138808] font-label-sm text-xs md:text-label-sm bg-black/40 font-semibold">Associate Partners</span>
-            </div>
-            
-            <form id="sponsorshipForm" onsubmit="handleSponsorshipSubmit(event)" class="flex flex-col gap-4 md:gap-5 relative z-10">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
-                    <input required class="input-field rounded-lg px-4 py-3 font-body-md w-full" placeholder="Full Name *" type="text" name="name"/>
-                    <input required class="input-field rounded-lg px-4 py-3 font-body-md w-full" placeholder="Brand Name *" type="text" name="brand"/>
-                </div>
-                <input required class="input-field rounded-lg px-4 py-3 font-body-md w-full" placeholder="Corporate Email Address *" type="email" name="email"/>
-                <select required class="input-field rounded-lg px-4 py-3 font-body-md w-full appearance-none" name="tier">
-                    <option value="" disabled selected>Select Partnership Tier *</option>
-                    <option value="title">Title Sponsor (Sole Branding)</option>
-                    <option value="powered">Powered By Partner</option>
-                    <option value="associate">Associate Partner</option>
-                    <option value="digital">Digital & Social Partner</option>
-                </select>
-                <div class="flex flex-col sm:flex-row gap-4 mt-2">
-                    <button type="button" onclick="openPartnerHubModal()" class="btn-secondary font-label-md text-label-md px-6 py-3 rounded-lg flex-1 font-semibold flex justify-center items-center gap-2">
-                        <span class="material-symbols-outlined text-sm">download</span> Media Kit Deck
-                    </button>
-                    <button type="submit" id="sponsorSubmitBtn" class="btn-primary font-label-md text-label-md px-6 py-3 rounded-lg flex-1 font-bold">Submit Pitch</button>
-                </div>
-            </form>
+      <!-- Sponsorship Hub Form -->
+      <div class="glass-panel rounded-2xl p-6 md:p-12 silver-border relative overflow-hidden group">
+        <div
+          class="absolute top-0 right-0 w-64 h-64 bg-[#c6c6c6] opacity-5 blur-[100px] rounded-full group-hover:opacity-10 transition-opacity">
+        </div>
+        <div class="flex items-center gap-4 mb-4 md:mb-6">
+          <span class="material-symbols-outlined text-4xl text-secondary">handshake</span>
+          <h2 class="font-headline-md text-headline-md text-on-surface">Partner with Bharat’s Premier Business Platform
+          </h2>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-6 md:mb-8">Align your brand with the nation's
+          most prestigious business storytelling platform on Republic Bharat. Secure your tier for Season 2.</p>
+
+        <div class="flex flex-wrap gap-2.5 mb-6 md:mb-8">
+          <span
+            class="px-3.5 py-1 rounded-full border border-[#ff9933] text-[#ff9933] font-label-sm text-xs md:text-label-sm bg-black/40 font-semibold">Title
+            Sponsor</span>
+          <span
+            class="px-3.5 py-1 rounded-full border border-secondary text-secondary font-label-sm text-xs md:text-label-sm bg-black/40 font-semibold">Powered
+            By</span>
+          <span
+            class="px-3.5 py-1 rounded-full border border-[#138808] text-[#138808] font-label-sm text-xs md:text-label-sm bg-black/40 font-semibold">Associate
+            Partners</span>
         </div>
 
-        <!-- Get Featured / Story Nomination Form -->
-        <div id="nominate" class="glass-panel rounded-2xl p-6 md:p-12 gold-border relative overflow-hidden group jaali-watermark scroll-mt-24">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-primary opacity-5 blur-[100px] rounded-full group-hover:opacity-10 transition-opacity"></div>
-            <div class="flex items-center gap-4 mb-4 md:mb-6">
-                <span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
-                <h2 class="font-headline-md text-headline-md text-on-surface">Are You the Next Brand Story of Bharat?</h2>
-            </div>
-            <p class="font-body-md text-body-md text-on-surface-variant mb-6 md:mb-8">We are searching for Season 2's legends. If you've built a scalable, impactful business that defines modern India, nominate your story.</p>
-            
-            <form id="nominationForm" onsubmit="handleNominationSubmit(event)" class="flex flex-col gap-4 md:gap-5 relative z-10">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
-                    <input required class="input-field rounded-lg px-4 py-3 font-body-md w-full" placeholder="Founder Name(s) *" type="text" name="founderName"/>
-                    <input required class="input-field rounded-lg px-4 py-3 font-body-md w-full" placeholder="Company Name *" type="text" name="companyName"/>
-                </div>
-                <select required class="input-field rounded-lg px-4 py-3 font-body-md w-full appearance-none" name="revenue">
-                    <option value="" disabled selected>Current Revenue Scale *</option>
-                    <option value="10-50">₹10Cr - ₹50Cr</option>
-                    <option value="50-100">₹50Cr - ₹100Cr</option>
-                    <option value="100+">₹100Cr+</option>
-                </select>
-                <textarea required class="input-field rounded-lg px-4 py-3 font-body-md w-full resize-none" placeholder="What was the biggest hurdle you overcame to build this brand? (Max 50 words) *" rows="3" name="hurdle"></textarea>
-                <button type="submit" id="nominateSubmitBtn" class="btn-primary font-label-md text-label-md px-6 py-4 rounded-lg w-full font-bold mt-2 text-lg shadow-[0_0_20px_rgba(212,175,55,0.2)]">Nominate Story for Season 2</button>
-            </form>
+        <form id="sponsorshipForm" onsubmit="handleSponsorshipSubmit(event)"
+          class="flex flex-col gap-4 md:gap-5 relative z-10">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+            <input required class="input-field rounded-lg px-4 py-3 font-body-md w-full" placeholder="Full Name *"
+              type="text" name="name" />
+            <input required class="input-field rounded-lg px-4 py-3 font-body-md w-full" placeholder="Brand Name *"
+              type="text" name="brand" />
+          </div>
+          <input required class="input-field rounded-lg px-4 py-3 font-body-md w-full"
+            placeholder="Corporate Email Address *" type="email" name="email" />
+          <select required class="input-field rounded-lg px-4 py-3 font-body-md w-full appearance-none" name="tier">
+            <option value="" disabled selected>Select Partnership Tier *</option>
+            <option value="title">Title Sponsor (Sole Branding)</option>
+            <option value="powered">Powered By Partner</option>
+            <option value="associate">Associate Partner</option>
+            <option value="digital">Digital & Social Partner</option>
+          </select>
+          <div class="flex flex-col sm:flex-row gap-4 mt-2">
+            <button type="button" onclick="openPartnerHubModal()"
+              class="btn-secondary font-label-md text-label-md px-6 py-3 rounded-lg flex-1 font-semibold flex justify-center items-center gap-2">
+              <span class="material-symbols-outlined text-sm">download</span> Media Kit Deck
+            </button>
+            <button type="submit" id="sponsorSubmitBtn"
+              class="btn-primary font-label-md text-label-md px-6 py-3 rounded-lg flex-1 font-bold">Submit
+              Pitch</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Get Featured / Story Nomination Form -->
+      <div id="nominate"
+        class="glass-panel rounded-2xl p-6 md:p-12 gold-border relative overflow-hidden group jaali-watermark scroll-mt-24">
+        <div
+          class="absolute top-0 right-0 w-64 h-64 bg-primary opacity-5 blur-[100px] rounded-full group-hover:opacity-10 transition-opacity">
         </div>
+        <div class="flex items-center gap-4 mb-4 md:mb-6">
+          <span class="material-symbols-outlined text-4xl text-primary"
+            style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+          <h2 class="font-headline-md text-headline-md text-on-surface">Are You the Next Brand Story of Bharat?</h2>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-6 md:mb-8">We are searching for Season 2's
+          legends. If you've built a scalable, impactful business that defines modern India, nominate your story.</p>
+
+        <form id="nominationForm" onsubmit="handleNominationSubmit(event)"
+          class="flex flex-col gap-4 md:gap-5 relative z-10">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+            <input required class="input-field rounded-lg px-4 py-3 font-body-md w-full" placeholder="Founder Name(s) *"
+              type="text" name="founderName" />
+            <input required class="input-field rounded-lg px-4 py-3 font-body-md w-full" placeholder="Company Name *"
+              type="text" name="companyName" />
+          </div>
+          <select required class="input-field rounded-lg px-4 py-3 font-body-md w-full appearance-none" name="revenue">
+            <option value="" disabled selected>Current Revenue Scale *</option>
+            <option value="10-50">₹10Cr - ₹50Cr</option>
+            <option value="50-100">₹50Cr - ₹100Cr</option>
+            <option value="100+">₹100Cr+</option>
+          </select>
+          <textarea required class="input-field rounded-lg px-4 py-3 font-body-md w-full resize-none"
+            placeholder="What was the biggest hurdle you overcame to build this brand? (Max 50 words) *" rows="3"
+            name="hurdle"></textarea>
+          <button type="submit" id="nominateSubmitBtn"
+            class="btn-primary font-label-md text-label-md px-6 py-4 rounded-lg w-full font-bold mt-2 text-lg shadow-[0_0_20px_rgba(212,175,55,0.2)]">Nominate
+            Story for Season 2</button>
+        </form>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer class="bg-surface-container-lowest full-width py-stack-lg border-t border-outline-variant/30 flex flex-col items-center gap-stack-md px-4 md:px-margin-desktop w-full max-w-container-max mx-auto mt-stack-lg relative overflow-hidden">
+  <!-- Footer -->
+  <footer
+    class="bg-surface-container-lowest full-width py-stack-lg border-t border-outline-variant/30 flex flex-col items-center gap-stack-md px-4 md:px-margin-desktop w-full max-w-container-max mx-auto mt-stack-lg relative overflow-hidden">
     <div class="absolute bottom-0 w-full h-1.5 bg-gradient-to-r from-[#ff9933] via-white to-[#138808] opacity-70"></div>
     <a href="#hero" class="flex flex-col items-center gap-3 group">
-        <img alt="Bharat Brand Stories official logo" class="h-16 w-auto object-contain mb-2 filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQZFFjeoDc92tYuWAH_PN0gttIx99jpb3B6PxwTDgbNYTSYifbMvWbK80gWxVO6_efTgHiRUb9779Ec2FKDiMpqUyT2-W6fVHZ1ryuvlAFH8ULiD5X71JpCJ-qPu8XspRlNFYmGBJoE9xlG_5BYRx20R8HHBjHtHMDonJUC4p_NVYb8Iv5rQzfmtqvR4ArwtSXqWae08Whx_UnNku-XkIDsttb_mj7TwBLxkTiolKcA8d8rqZk4C6xa04oZHlJ62tZX4M"/>
-        <span class="font-headline-md text-headline-md text-on-surface">Bharat Brand Stories</span>
+      <img alt="Bharat Brand Stories official logo"
+        class="h-16 w-auto object-contain mb-2 filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQZFFjeoDc92tYuWAH_PN0gttIx99jpb3B6PxwTDgbNYTSYifbMvWbK80gWxVO6_efTgHiRUb9779Ec2FKDiMpqUyT2-W6fVHZ1ryuvlAFH8ULiD5X71JpCJ-qPu8XspRlNFYmGBJoE9xlG_5BYRx20R8HHBjHtHMDonJUC4p_NVYb8Iv5rQzfmtqvR4ArwtSXqWae08Whx_UnNku-XkIDsttb_mj7TwBLxkTiolKcA8d8rqZk4C6xa04oZHlJ62tZX4M" />
+      <span class="font-headline-md text-headline-md text-on-surface">Bharat Brand Stories</span>
     </a>
-    
+
     <div class="flex flex-wrap justify-center gap-6 md:gap-8 my-4">
-        <button onclick="showToast('Privacy Policy: All submitted founder and partnership data is handled strictly confidentially.')" class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100">Privacy Policy</button>
-        <button onclick="showToast('Terms of Service: Bharat Brand Stories is broadcast exclusively on Republic Bharat.')" class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100">Terms of Service</button>
-        <button onclick="openPartnerHubModal()" class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100">Press Kit</button>
-        <a href="#sponsorship" class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100">Contact Us</a>
+      <button
+        onclick="showToast('Privacy Policy: All submitted founder and partnership data is handled strictly confidentially.')"
+        class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100">Privacy
+        Policy</button>
+      <button onclick="showToast('Terms of Service: Bharat Brand Stories is broadcast exclusively on Republic Bharat.')"
+        class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100">Terms
+        of Service</button>
+      <button onclick="openPartnerHubModal()"
+        class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100">Press
+        Kit</button>
+      <a href="#sponsorship"
+        class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100">Contact
+        Us</a>
     </div>
-    
+
     <p class="font-body-md text-body-md text-secondary opacity-60 text-center text-sm md:text-base pb-4">
-        © 2026 Bharat Brand Stories. A Tribute to Indian Excellence & Entrepreneurship.
+      © 2026 Bharat Brand Stories. A Tribute to Indian Excellence & Entrepreneurship.
     </p>
-</footer>
+  </footer>
 
-<!-- MODALS -->
+  <!-- MODALS -->
 
-<!-- 1. Video Highlights Modal -->
-<div id="videoModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 modal-backdrop">
-    <div class="glass-panel gold-border rounded-2xl w-full max-w-4xl overflow-hidden shadow-2xl animate-fade-in relative">
-        <div class="flex items-center justify-between px-6 py-4 border-b border-outline-variant/30 bg-surface-container-high/90">
-            <h3 id="videoModalTitle" class="font-headline-md text-lg md:text-xl text-primary font-bold">Season 1 Highlights</h3>
-            <button onclick="closeVideoModal()" class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg hover:bg-surface-variant">
-                <span class="material-symbols-outlined text-2xl">close</span>
-            </button>
-        </div>
-        <div class="relative aspect-video w-full bg-black flex items-center justify-center">
-            <iframe id="videoIframe" class="w-full h-full border-0" src="" title="Video Player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="p-6 bg-surface-container/90 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <div>
-                <p class="font-body-md text-on-surface text-sm md:text-base font-semibold">Broadcasting on Republic Bharat TV & Republic Digital</p>
-                <p class="text-xs text-on-surface-variant">Sunday Prime Time 11:30 AM IST</p>
-            </div>
-            <a href="#nominate" onclick="closeVideoModal()" class="btn-primary px-6 py-2 rounded-lg font-bold text-sm">Nominate Your Brand</a>
-        </div>
-    </div>
-</div>
-
-<!-- 2. Episode Detail Lightbox Modal -->
-<div id="episodeModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 modal-backdrop">
-    <div class="glass-panel gold-border rounded-2xl w-full max-w-3xl overflow-hidden shadow-2xl animate-fade-in relative max-h-[90vh] flex flex-col">
-        <div class="flex items-center justify-between px-6 py-4 border-b border-outline-variant/30 bg-surface-container-high/90 shrink-0">
-            <span id="epModalCategory" class="px-3 py-1 rounded-full text-xs font-bold border border-primary text-primary bg-primary/10">Category</span>
-            <button onclick="closeEpisodeModal()" class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg hover:bg-surface-variant">
-                <span class="material-symbols-outlined text-2xl">close</span>
-            </button>
-        </div>
-        <div class="p-6 md:p-8 overflow-y-auto space-y-6">
-            <div class="flex flex-col md:flex-row gap-6 items-center">
-                <img id="epModalFounderImg" class="w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-primary object-cover shrink-0 shadow-lg" src="" alt="Founder Image"/>
-                <div>
-                    <h3 id="epModalCompany" class="font-headline-md text-2xl md:text-3xl text-on-surface font-bold mb-1">Company Name</h3>
-                    <p id="epModalTagline" class="text-tertiary font-body-lg text-lg italic mb-3">"Company Tagline"</p>
-                    <div class="flex items-center gap-3 text-sm text-on-surface-variant">
-                        <span class="font-bold text-on-surface" id="epModalFounderName">Founder Name</span>
-                        <span>•</span>
-                        <span id="epModalRole">Founder & CEO</span>
-                    </div>
-                </div>
-            </div>
-            <div class="divider-fade"></div>
-            <div>
-                <h4 class="font-label-md text-xs text-primary uppercase tracking-widest mb-2">The Legacy Story</h4>
-                <p id="epModalStory" class="font-body-md text-on-surface-variant leading-relaxed">Story description goes here...</p>
-            </div>
-            <div class="grid grid-cols-3 gap-4 p-4 rounded-xl bg-surface-container-high/60 border border-outline-variant/20 text-center">
-                <div>
-                    <span class="text-xs text-on-surface-variant block">Impact Metric</span>
-                    <span id="epMetric1" class="font-headline-md text-lg md:text-xl text-primary font-bold">100+ Cr</span>
-                </div>
-                <div>
-                    <span class="text-xs text-on-surface-variant block">Global Markets</span>
-                    <span id="epMetric2" class="font-headline-md text-lg md:text-xl text-secondary font-bold">18 Countries</span>
-                </div>
-                <div>
-                    <span class="text-xs text-on-surface-variant block">Employees</span>
-                    <span id="epMetric3" class="font-headline-md text-lg md:text-xl text-tertiary font-bold">1,200+</span>
-                </div>
-            </div>
-        </div>
-        <div class="p-6 bg-surface-container/90 border-t border-outline-variant/30 flex justify-between items-center shrink-0">
-            <button onclick="openVideoModal('Episode Preview', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')" class="btn-primary px-6 py-2.5 rounded-lg font-bold text-sm flex items-center gap-2">
-                <span class="material-symbols-outlined text-xl">play_circle</span> Watch Episode Teaser
-            </button>
-            <button onclick="closeEpisodeModal()" class="btn-secondary px-6 py-2.5 rounded-lg font-semibold text-sm">Close</button>
-        </div>
-    </div>
-</div>
-
-<!-- 3. All 15 Episodes Gallery Modal -->
-<div id="allEpisodesModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 modal-backdrop">
-    <div class="glass-panel gold-border rounded-2xl w-full max-w-5xl overflow-hidden shadow-2xl animate-fade-in max-h-[90vh] flex flex-col">
-        <div class="flex items-center justify-between px-6 py-5 border-b border-outline-variant/30 bg-surface-container-high/90 shrink-0">
-            <div>
-                <h3 class="font-headline-md text-xl md:text-2xl text-on-surface font-bold">Season 1: Complete 15 Episode Vault</h3>
-                <p class="text-xs text-on-surface-variant">Select any episode to view full founder details & cinematic highlights.</p>
-            </div>
-            <button onclick="closeAllEpisodesModal()" class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg hover:bg-surface-variant">
-                <span class="material-symbols-outlined text-2xl">close</span>
-            </button>
-        </div>
-        <div class="p-6 overflow-y-auto flex-1">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="allEpisodesGrid">
-                <!-- Injected via JavaScript -->
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- 4. Partner Hub & Media Kit Modal -->
-<div id="partnerHubModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-xl animate-fade-in overflow-y-auto">
-    <div class="relative w-full max-w-3xl bg-[#16130b] glass-panel gold-border rounded-2xl overflow-hidden shadow-2xl my-auto text-[#eae1d4] p-6 sm:p-8 space-y-6" onclick="event.stopPropagation()">
-        <!-- Close Button -->
-        <button onclick="closePartnerHubModal()" class="absolute top-4 right-4 p-2 rounded-full bg-black/60 text-[#eae1d4] hover:text-[#f2ca50] transition-colors border border-[#f2ca50]/30 cursor-pointer">
-            <span class="material-symbols-outlined text-xl block">close</span>
+  <!-- 1. Video Highlights Modal -->
+  <div id="videoModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 modal-backdrop">
+    <div
+      class="glass-panel gold-border rounded-2xl w-full max-w-4xl overflow-hidden shadow-2xl animate-fade-in relative">
+      <div
+        class="flex items-center justify-between px-6 py-4 border-b border-outline-variant/30 bg-surface-container-high/90">
+        <h3 id="videoModalTitle" class="font-headline-md text-lg md:text-xl text-primary font-bold">Season 1 Highlights
+        </h3>
+        <button onclick="closeVideoModal()"
+          class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg hover:bg-surface-variant">
+          <span class="material-symbols-outlined text-2xl">close</span>
         </button>
-
-        <!-- Modal Header -->
-        <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-[#f2ca50]/20 text-[#f2ca50] flex items-center justify-center border border-[#f2ca50]/40 shrink-0">
-                <span class="material-symbols-outlined text-xl">handshake</span>
-            </div>
-            <div>
-                <h2 class="font-headline text-2xl font-bold text-[#eae1d4]">
-                    Partner Hub & Official Media Kit
-                </h2>
-                <p class="text-xs text-[#d0c5af]">
-                    Republic Bharat Broadcast & Digital Partnership Deck 2024
-                </p>
-            </div>
+      </div>
+      <div class="relative aspect-video w-full bg-black flex items-center justify-center">
+        <iframe id="videoIframe" class="w-full h-full border-0" src="" title="Video Player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <div
+        class="p-6 bg-surface-container/90 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div>
+          <p class="font-body-md text-on-surface text-sm md:text-base font-semibold">Broadcasting on Republic Bharat TV
+            & Republic Digital</p>
+          <p class="text-xs text-on-surface-variant">Sunday Prime Time 11:30 AM IST</p>
         </div>
-
-        <!-- Key Broadcast Metrics -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-xl bg-[#1d190f] border border-[#4d4635]/30 text-center">
-            <div class="space-y-0.5">
-                <span class="font-headline font-extrabold text-lg sm:text-xl text-[#f2ca50] block">100M+</span>
-                <span class="text-[10px] text-[#d0c5af] uppercase tracking-wider block">TV & Digital Reach</span>
-            </div>
-            <div class="space-y-0.5">
-                <span class="font-headline font-extrabold text-lg sm:text-xl text-[#f2ca50] block">15</span>
-                <span class="text-[10px] text-[#d0c5af] uppercase tracking-wider block">Broadcast Episodes</span>
-            </div>
-            <div class="space-y-0.5">
-                <span class="font-headline font-extrabold text-lg sm:text-xl text-[#f2ca50] block">4.8/5</span>
-                <span class="text-[10px] text-[#d0c5af] uppercase tracking-wider block">Sponsor Satisfaction</span>
-            </div>
-            <div class="space-y-0.5">
-                <span class="font-headline font-extrabold text-lg sm:text-xl text-[#f2ca50] block">85%</span>
-                <span class="text-[10px] text-[#d0c5af] uppercase tracking-wider block">Executive Audience</span>
-            </div>
-        </div>
-
-        <!-- Media Kit PDF Download Card -->
-        <div class="p-6 rounded-xl bg-[#1f1b13] border border-[#f2ca50]/30 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-3 text-left">
-                <span class="material-symbols-outlined text-3xl text-[#f2ca50] shrink-0">description</span>
-                <div>
-                    <h4 class="font-headline font-bold text-sm text-[#eae1d4]">
-                        Bharat Brand Stories — Official Media Kit 2024.pdf
-                    </h4>
-                    <p class="text-xs text-[#99907c]">
-                        Includes TV ad rate cards, demographic breakdowns & Season 2 schedule (12.4 MB)
-                    </p>
-                </div>
-            </div>
-
-            <button id="pdfDownloadBtn" onclick="handleDownloadKit()" class="btn-primary px-6 py-2.5 rounded-xl font-bold text-xs flex items-center gap-2 shrink-0 cursor-pointer shadow-md">
-                <span id="pdfDownloadIcon" class="material-symbols-outlined text-base">download</span>
-                <span id="pdfDownloadText">Download PDF</span>
-            </button>
-        </div>
-
-        <!-- Tier Overview List -->
-        <div class="space-y-3">
-            <h4 class="text-xs font-bold text-[#f2ca50] uppercase tracking-wider">
-                Available Sponsorship Tiers
-            </h4>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="p-3.5 rounded-xl bg-[#231f17] border border-[#4d4635]/30 space-y-1">
-                    <span class="font-headline font-bold text-sm text-[#eae1d4] block">Title Sponsor</span>
-                    <p class="text-[11px] text-[#d0c5af] line-clamp-2">Prime Airtime & Exclusive Logo Branding</p>
-                </div>
-                <div class="p-3.5 rounded-xl bg-[#231f17] border border-[#4d4635]/30 space-y-1">
-                    <span class="font-headline font-bold text-sm text-[#eae1d4] block">Powered By</span>
-                    <p class="text-[11px] text-[#d0c5af] line-clamp-2">In-Episode Integration & Digital Rights</p>
-                </div>
-                <div class="p-3.5 rounded-xl bg-[#231f17] border border-[#4d4635]/30 space-y-1">
-                    <span class="font-headline font-bold text-sm text-[#eae1d4] block">Associate Partner</span>
-                    <p class="text-[11px] text-[#d0c5af] line-clamp-2">Segment Sponsor & Social Amplification</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Bureau -->
-        <div class="pt-4 border-t border-[#4d4635]/30 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
-            <div class="flex flex-wrap items-center gap-4 text-[#d0c5af]">
-                <span class="flex items-center gap-1.5">
-                    <span class="material-symbols-outlined text-sm text-[#f2ca50]">mail</span>
-                    partnerships@bharatbrandstories.com
-                </span>
-                <span class="flex items-center gap-1.5">
-                    <span class="material-symbols-outlined text-sm text-[#f2ca50]">call</span>
-                    +91 (022) 4000 8888
-                </span>
-            </div>
-
-            <button onclick="closePartnerHubModal(); document.getElementById('sponsorship').scrollIntoView({behavior: 'smooth'});" class="btn-secondary px-4 py-2 rounded-lg font-bold text-xs cursor-pointer hover:border-[#f2ca50]">
-                Apply for Sponsorship →
-            </button>
-        </div>
+        <a href="#nominate" onclick="closeVideoModal()"
+          class="btn-primary px-6 py-2 rounded-lg font-bold text-sm">Nominate Your Brand</a>
+      </div>
     </div>
-</div>
+  </div>
 
-<!-- Toast Notification Popup -->
-<div id="toastNotification" class="fixed bottom-6 right-6 z-[120] hidden glass-panel gold-border px-6 py-4 rounded-xl shadow-2xl items-center gap-3 animate-fade-in max-w-md">
+  <!-- 2. Episode Detail Lightbox Modal -->
+  <div id="episodeModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 modal-backdrop">
+    <div
+      class="glass-panel gold-border rounded-2xl w-full max-w-3xl overflow-hidden shadow-2xl animate-fade-in relative max-h-[90vh] flex flex-col">
+      <div
+        class="flex items-center justify-between px-6 py-4 border-b border-outline-variant/30 bg-surface-container-high/90 shrink-0">
+        <span id="epModalCategory"
+          class="px-3 py-1 rounded-full text-xs font-bold border border-primary text-primary bg-primary/10">Category</span>
+        <button onclick="closeEpisodeModal()"
+          class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg hover:bg-surface-variant">
+          <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+      </div>
+      <div class="p-6 md:p-8 overflow-y-auto space-y-6">
+        <div class="flex flex-col md:flex-row gap-6 items-center">
+          <img id="epModalFounderImg"
+            class="w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-primary object-cover shrink-0 shadow-lg"
+            src="" alt="Founder Image" />
+          <div>
+            <h3 id="epModalCompany" class="font-headline-md text-2xl md:text-3xl text-on-surface font-bold mb-1">Company
+              Name</h3>
+            <p id="epModalTagline" class="text-tertiary font-body-lg text-lg italic mb-3">"Company Tagline"</p>
+            <div class="flex items-center gap-3 text-sm text-on-surface-variant">
+              <span class="font-bold text-on-surface" id="epModalFounderName">Founder Name</span>
+              <span>•</span>
+              <span id="epModalRole">Founder & CEO</span>
+            </div>
+          </div>
+        </div>
+        <div class="divider-fade"></div>
+        <div>
+          <h4 class="font-label-md text-xs text-primary uppercase tracking-widest mb-2">The Legacy Story</h4>
+          <p id="epModalStory" class="font-body-md text-on-surface-variant leading-relaxed">Story description goes
+            here...</p>
+        </div>
+        <div
+          class="grid grid-cols-3 gap-4 p-4 rounded-xl bg-surface-container-high/60 border border-outline-variant/20 text-center">
+          <div>
+            <span class="text-xs text-on-surface-variant block">Impact Metric</span>
+            <span id="epMetric1" class="font-headline-md text-lg md:text-xl text-primary font-bold">100+ Cr</span>
+          </div>
+          <div>
+            <span class="text-xs text-on-surface-variant block">Global Markets</span>
+            <span id="epMetric2" class="font-headline-md text-lg md:text-xl text-secondary font-bold">18
+              Countries</span>
+          </div>
+          <div>
+            <span class="text-xs text-on-surface-variant block">Employees</span>
+            <span id="epMetric3" class="font-headline-md text-lg md:text-xl text-tertiary font-bold">1,200+</span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="p-6 bg-surface-container/90 border-t border-outline-variant/30 flex justify-between items-center shrink-0">
+        <button onclick="openVideoModal('Episode Preview', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')"
+          class="btn-primary px-6 py-2.5 rounded-lg font-bold text-sm flex items-center gap-2">
+          <span class="material-symbols-outlined text-xl">play_circle</span> Watch Episode Teaser
+        </button>
+        <button onclick="closeEpisodeModal()"
+          class="btn-secondary px-6 py-2.5 rounded-lg font-semibold text-sm">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. All 15 Episodes Gallery Modal -->
+  <div id="allEpisodesModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 modal-backdrop">
+    <div
+      class="glass-panel gold-border rounded-2xl w-full max-w-5xl overflow-hidden shadow-2xl animate-fade-in max-h-[90vh] flex flex-col">
+      <div
+        class="flex items-center justify-between px-6 py-5 border-b border-outline-variant/30 bg-surface-container-high/90 shrink-0">
+        <div>
+          <h3 class="font-headline-md text-xl md:text-2xl text-on-surface font-bold">Season 1: Complete 15 Episode Vault
+          </h3>
+          <p class="text-xs text-on-surface-variant">Select any episode to view full founder details & cinematic
+            highlights.</p>
+        </div>
+        <button onclick="closeAllEpisodesModal()"
+          class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg hover:bg-surface-variant">
+          <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+      </div>
+      <div class="p-6 overflow-y-auto flex-1">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="allEpisodesGrid">
+          <!-- Injected via JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Partner Hub & Media Kit Modal -->
+  <div id="partnerHubModal"
+    class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-xl animate-fade-in overflow-y-auto">
+    <div
+      class="relative w-full max-w-3xl bg-[#16130b] glass-panel gold-border rounded-2xl overflow-hidden shadow-2xl my-auto text-[#eae1d4] p-6 sm:p-8 space-y-6"
+      onclick="event.stopPropagation()">
+      <!-- Close Button -->
+      <button onclick="closePartnerHubModal()"
+        class="absolute top-4 right-4 p-2 rounded-full bg-black/60 text-[#eae1d4] hover:text-[#f2ca50] transition-colors border border-[#f2ca50]/30 cursor-pointer">
+        <span class="material-symbols-outlined text-xl block">close</span>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="flex items-center gap-3">
+        <div
+          class="w-10 h-10 rounded-xl bg-[#f2ca50]/20 text-[#f2ca50] flex items-center justify-center border border-[#f2ca50]/40 shrink-0">
+          <span class="material-symbols-outlined text-xl">handshake</span>
+        </div>
+        <div>
+          <h2 class="font-headline text-2xl font-bold text-[#eae1d4]">
+            Partner Hub & Official Media Kit
+          </h2>
+          <p class="text-xs text-[#d0c5af]">
+            Republic Bharat Broadcast & Digital Partnership Deck 2024
+          </p>
+        </div>
+      </div>
+
+      <!-- Key Broadcast Metrics -->
+      <div
+        class="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-xl bg-[#1d190f] border border-[#4d4635]/30 text-center">
+        <div class="space-y-0.5">
+          <span class="font-headline font-extrabold text-lg sm:text-xl text-[#f2ca50] block">100M+</span>
+          <span class="text-[10px] text-[#d0c5af] uppercase tracking-wider block">TV & Digital Reach</span>
+        </div>
+        <div class="space-y-0.5">
+          <span class="font-headline font-extrabold text-lg sm:text-xl text-[#f2ca50] block">15</span>
+          <span class="text-[10px] text-[#d0c5af] uppercase tracking-wider block">Broadcast Episodes</span>
+        </div>
+        <div class="space-y-0.5">
+          <span class="font-headline font-extrabold text-lg sm:text-xl text-[#f2ca50] block">4.8/5</span>
+          <span class="text-[10px] text-[#d0c5af] uppercase tracking-wider block">Sponsor Satisfaction</span>
+        </div>
+        <div class="space-y-0.5">
+          <span class="font-headline font-extrabold text-lg sm:text-xl text-[#f2ca50] block">85%</span>
+          <span class="text-[10px] text-[#d0c5af] uppercase tracking-wider block">Executive Audience</span>
+        </div>
+      </div>
+
+      <!-- Media Kit PDF Download Card -->
+      <div
+        class="p-6 rounded-xl bg-[#1f1b13] border border-[#f2ca50]/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3 text-left">
+          <span class="material-symbols-outlined text-3xl text-[#f2ca50] shrink-0">description</span>
+          <div>
+            <h4 class="font-headline font-bold text-sm text-[#eae1d4]">
+              Bharat Brand Stories — Official Media Kit 2024.pdf
+            </h4>
+            <p class="text-xs text-[#99907c]">
+              Includes TV ad rate cards, demographic breakdowns & Season 2 schedule (12.4 MB)
+            </p>
+          </div>
+        </div>
+
+        <button id="pdfDownloadBtn" onclick="handleDownloadKit()"
+          class="btn-primary px-6 py-2.5 rounded-xl font-bold text-xs flex items-center gap-2 shrink-0 cursor-pointer shadow-md">
+          <span id="pdfDownloadIcon" class="material-symbols-outlined text-base">download</span>
+          <span id="pdfDownloadText">Download PDF</span>
+        </button>
+      </div>
+
+      <!-- Tier Overview List -->
+      <div class="space-y-3">
+        <h4 class="text-xs font-bold text-[#f2ca50] uppercase tracking-wider">
+          Available Sponsorship Tiers
+        </h4>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div class="p-3.5 rounded-xl bg-[#231f17] border border-[#4d4635]/30 space-y-1">
+            <span class="font-headline font-bold text-sm text-[#eae1d4] block">Title Sponsor</span>
+            <p class="text-[11px] text-[#d0c5af] line-clamp-2">Prime Airtime & Exclusive Logo Branding</p>
+          </div>
+          <div class="p-3.5 rounded-xl bg-[#231f17] border border-[#4d4635]/30 space-y-1">
+            <span class="font-headline font-bold text-sm text-[#eae1d4] block">Powered By</span>
+            <p class="text-[11px] text-[#d0c5af] line-clamp-2">In-Episode Integration & Digital Rights</p>
+          </div>
+          <div class="p-3.5 rounded-xl bg-[#231f17] border border-[#4d4635]/30 space-y-1">
+            <span class="font-headline font-bold text-sm text-[#eae1d4] block">Associate Partner</span>
+            <p class="text-[11px] text-[#d0c5af] line-clamp-2">Segment Sponsor & Social Amplification</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Bureau -->
+      <div
+        class="pt-4 border-t border-[#4d4635]/30 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+        <div class="flex flex-wrap items-center gap-4 text-[#d0c5af]">
+          <span class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-sm text-[#f2ca50]">mail</span>
+            partnerships@bharatbrandstories.com
+          </span>
+          <span class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-sm text-[#f2ca50]">call</span>
+            +91 (022) 4000 8888
+          </span>
+        </div>
+
+        <button
+          onclick="closePartnerHubModal(); document.getElementById('sponsorship').scrollIntoView({behavior: 'smooth'});"
+          class="btn-secondary px-4 py-2 rounded-lg font-bold text-xs cursor-pointer hover:border-[#f2ca50]">
+          Apply for Sponsorship →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Popup -->
+  <div id="toastNotification"
+    class="fixed bottom-6 right-6 z-[120] hidden glass-panel gold-border px-6 py-4 rounded-xl shadow-2xl items-center gap-3 animate-fade-in max-w-md">
     <span class="material-symbols-outlined text-primary text-2xl" id="toastIcon">check_circle</span>
     <p id="toastMessage" class="text-sm text-on-surface font-semibold">Action completed successfully.</p>
-</div>
+  </div>
 
-<!-- JavaScript Logic -->
-<script>
+  <!-- JavaScript Logic -->
+  <script>
     // 15 Complete Episodes Dataset
     const EPISODES = [
-        {
-            id: 0,
-            company: "Visionary Technologies Pvt Ltd",
-            tagline: "From a garage in Bengaluru to a global quantum tech powerhouse.",
-            category: "DeepTech",
-            catKey: "tech",
-            founder: "Rohan Mehta",
-            role: "Founder & CEO",
-            img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCzNGygYHDEUlCXhazqdp5CrTF6xsaNrQVJpI1zDKvFwJtb3I0yc-QTBvN42ajclzJMSqDcx3--R3HYazbYnDwQ_E8CBGZ1cMHRTFwgo-GRaH5E9rzLMd82VhLbZZBBok4K0hAQxnRQ8pxowMFaAlvv6J4D7s-7XJw171K_T2j8MLCconR5VvEqSjktKD1bf8p5gIkSLr9smpyR-YHgJOMIOMqzWBkL83pKrIULrKcLjdBS8HPoL-WT7A",
-            bgImg: "https://lh3.googleusercontent.com/aida-public/AB6AXuAtGM5nGe1HmTnjM0wXxSV1QokA0abz3OOsmmn6rjWXkR1LBLitrgA75ECdDVASgOx-HgJYN_lcsshfbsH908yBX9xSq3P-LldQFqmcaXGcqybOugmErDM7SDDFw0lRCLnuJqErGe6j-Wxp-f5E0Q0YHTTz7gSA2PJt3A6LNu87V_kUYEbWdxN7tZ-jCaWBXEU6UHdHzSDjzKIjKnU3ph78AlzE-4rGoWmfhuLhHH5FHgSunD51pDWCpQ",
-            story: "Rohan Mehta pioneered enterprise artificial intelligence algorithms tuned for Indian languages and logistics. Today, Visionary Tech powers 40% of India's top telecom & banking infrastructure.",
-            metric1: "₹2,400 Cr",
-            metric2: "28 Countries",
-            metric3: "3,500+"
-        },
-        {
-            id: 1,
-            company: "Apex Manufacturing",
-            tagline: "Building the high-precision infrastructure of tomorrow.",
-            category: "Manufacturing",
-            catKey: "manufacturing",
-            founder: "Priya Sharma",
-            role: "Managing Director",
-            img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDrih54VRaAH-aBumGR4E06U8mBf3NxVBkyYxK9URBRFQvBUrlTLA1oydpBaWrV_kVqa1-q7-_ib_JmgZ11w-w-w-yJPfc2lekBAwoTnYoPAzYorg4zs36Dg4z2NGZADI0qLz4Qdd7vzSMoTIHuPB0ZTzfSv5aoud43qwMqdQGeAd3Yixziq5E9Gqf3e1E3QsjlylWbYtUNj6J1Mr7hxGGN7L68COISRnU2oJDBT6onqUMIYq5mHhQzgw",
-            bgImg: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZVjYF3XEqS5QfEm92xX5v_Y94PQpBU91ZT0K9yLvIvyc-ySQyVhlDKwJWaTbklL0hcC8eZFb142TjAWI8Oanku6cCqUWYW8wKbfmxoSaBhJTf1W1kphDP5lOK0_r6P09_MM9E9Hf2upqM1yIPfnWxTQticoD2zkUU4PR7gSjX0FpHJOnsM_LbWGee-HgXT1sb3b8VcI6RsFqGw706Y_t2DUzCIOE-V-pYjO7t1lTQ4GukhUMMZNQs1Q",
-            story: "Overcoming severe capital constraints, Priya Sharma transformed a small tooling shop into a defense and aerospace components powerhouse in Pune, producing aerospace alloy parts.",
-            metric1: "₹850 Cr",
-            metric2: "14 Countries",
-            metric3: "1,800+"
-        },
-        {
-            id: 2,
-            company: "GreenEarth Organics",
-            tagline: "Rooted in Indian soil, scaling organic exports globally.",
-            category: "Agritech",
-            catKey: "agritech",
-            founder: "Vikram Singh",
-            role: "Co-Founder",
-            img: "https://lh3.googleusercontent.com/aida-public/AB6AXuD-xwI4f4fZX0U7aa59Rg_QKdIAsE1QBehdmLRDmUa9LX5eJAKzEB5Uo8yRhL22rActnbaw2Xkv-HUgbnl_2dKVuuZObKRdx9vcVlRaZSQu8sppZ2T15iT_yUbAdT8yqdZIj9mN52xZm1glpu4ZJaJjm3n8VLSr0Li_jAXdPV7KC9oFret9l_dvcw4egXUEz358ju_Tx-9bI-TQiBTyw8uYMBgGegPshi2zheCzkCMkJeiu3AzjbqRY4g",
-            bgImg: "https://lh3.googleusercontent.com/aida-public/AB6AXuCQCMOiGQqhSoXVwrg5lF6Mme7s7Zfy3IYR7aXlbyTrUhBqcs4WQco7kfvU4HQtPD7LhH-1h2EwEV__rtVEBAadV7vlFfaE18PpfNQDLKdSzJ_dsYe5Q4-mKzh6LKFnKEVPb0E9XCWHgwfQPHuPPCD9_WeEucHD0Hrup00AMuQo65txoez6QR9T5lKAizYEmdFfuETlL-lLUFmR36Z853BF9_Nal_I5K3_tesct85BnpoqYo2EerZ-J1Q",
-            story: "Connecting 50,000+ organic farmers across Punjab and Himachal directly to international markets, ensuring 3x better farmgate yields and zero-chemical soil health.",
-            metric1: "50K Farmers",
-            metric2: "22 Nations",
-            metric3: "900+"
-        },
-        {
-            id: 3,
-            company: "Swadeshi Health & Care",
-            tagline: "Ayurvedic wisdom meets clinical modern science.",
-            category: "D2C & FMCG",
-            catKey: "d2c",
-            founder: "Ananya Roy",
-            role: "Founder",
-            img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCzNGygYHDEUlCXhazqdp5CrTF6xsaNrQVJpI1zDKvFwJtb3I0yc-QTBvN42ajclzJMSqDcx3--R3HYazbYnDwQ_E8CBGZ1cMHRTFwgo-GRaH5E9rzLMd82VhLbZZBBok4K0hAQxnRQ8pxowMFaAlvv6J4D7s-7XJw171K_T2j8MLCconR5VvEqSjktKD1bf8p5gIkSLr9smpyR-YHgJOMIOMqzWBkL83pKrIULrKcLjdBS8HPoL-WT7A",
-            bgImg: "https://lh3.googleusercontent.com/aida-public/AB6AXuAtGM5nGe1HmTnjM0wXxSV1QokA0abz3OOsmmn6rjWXkR1LBLitrgA75ECdDVASgOx-HgJYN_lcsshfbsH908yBX9xSq3P-LldQFqmcaXGcqybOugmErDM7SDDFw0lRCLnuJqErGe6j-Wxp-f5E0Q0YHTTz7gSA2PJt3A6LNu87V_kUYEbWdxN7tZ-jCaWBXEU6UHdHzSDjzKIjKnU3ph78AlzE-4rGoWmfhuLhHH5FHgSunD51pDWCpQ",
-            story: "Built a ₹500 Cr wellness brand by modernizing ancient herbal formulations with peer-reviewed clinical validations and sustainable glass packaging.",
-            metric1: "₹500 Cr",
-            metric2: "10 Million+",
-            metric3: "450+"
-        },
-        {
-            id: 4,
-            company: "BharatPay Mobility",
-            tagline: "Democratizing EV transit infrastructure for Tier 2 & Tier 3 cities.",
-            category: "Clean Tech",
-            catKey: "tech",
-            founder: "Karan Verma",
-            role: "CEO & Co-Founder",
-            img: "https://lh3.googleusercontent.com/aida-public/AB6AXuD-xwI4f4fZX0U7aa59Rg_QKdIAsE1QBehdmLRDmUa9LX5eJAKzEB5Uo8yRhL22rActnbaw2Xkv-HUgbnl_2dKVuuZObKRdx9vcVlRaZSQu8sppZ2T15iT_yUbAdT8yqdZIj9mN52xZm1glpu4ZJaJjm3n8VLSr0Li_jAXdPV7KC9oFret9l_dvcw4egXUEz358ju_Tx-9bI-TQiBTyw8uYMBgGegPshi2zheCzkCMkJeiu3AzjbqRY4g",
-            bgImg: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZVjYF3XEqS5QfEm92xX5v_Y94PQpBU91ZT0K9yLvIvyc-ySQyVhlDKwJWaTbklL0hcC8eZFb142TjAWI8Oanku6cCqUWYW8wKbfmxoSaBhJTf1W1kphDP5lOK0_r6P09_MM9E9Hf2upqM1yIPfnWxTQticoD2zkUU4PR7gSjX0FpHJOnsM_LbWGee-HgXT1sb3b8VcI6RsFqGw706Y_t2DUzCIOE-V-pYjO7t1lTQ4GukhUMMZNQs1Q",
-            story: "Deployed 12,000 fast-charging stations across small-town highways, enabling seamless green transit for last-mile logistics fleets.",
-            metric1: "12,000 Grid",
-            metric2: "180 Cities",
-            metric3: "1,100+"
-        },
-        {
-            id: 5,
-            company: "SolarGrid Power India",
-            tagline: "Harnessing the Indian sun to energize rural industrial hubs.",
-            category: "Clean Tech",
-            catKey: "tech",
-            founder: "Rajesh Kulkarni",
-            role: "Chairman",
-            img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDrih54VRaAH-aBumGR4E06U8mBf3NxVBkyYxK9URBRFQvBUrlTLA1oydpBaWrV_kVqa1-q7-_ib_JmgZ11w-w-w-yJPfc2lekBAwoTnYoPAzYorg4zs36Dg4z2NGZADI0qLz4Qdd7vzSMoTIHuPB0ZTzfSv5aoud43qwMqdQGeAd3Yixziq5E9Gqf3e1E3QsjlylWbYtUNj6J1Mr7hxGGN7L68COISRnU2oJDBT6onqUMIYq5mHhQzgw",
-            bgImg: "https://lh3.googleusercontent.com/aida-public/AB6AXuCQCMOiGQqhSoXVwrg5lF6Mme7s7Zfy3IYR7aXlbyTrUhBqcs4WQco7kfvU4HQtPD7LhH-1h2EwEV__rtVEBAadV7vlFfaE18PpfNQDLKdSzJ_dsYe5Q4-mKzh6LKFnKEVPb0E9XCWHgwfQPHuPPCD9_WeEucHD0Hrup00AMuQo65txoez6QR9T5lKAizYEmdFfuETlL-lLUFmR36Z853BF9_Nal_I5K3_tesct85BnpoqYo2EerZ-J1Q",
-            story: "Pioneered micro-grid solar power installations powering 250+ manufacturing clusters without carbon footprint.",
-            metric1: "1.2 Gigawatts",
-            metric2: "250 Hubs",
-            metric3: "2,200+"
-        }
+      {
+        id: 0,
+        company: "Visionary Technologies Pvt Ltd",
+        tagline: "From a garage in Bengaluru to a global quantum tech powerhouse.",
+        category: "DeepTech",
+        catKey: "tech",
+        founder: "Rohan Mehta",
+        role: "Founder & CEO",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCzNGygYHDEUlCXhazqdp5CrTF6xsaNrQVJpI1zDKvFwJtb3I0yc-QTBvN42ajclzJMSqDcx3--R3HYazbYnDwQ_E8CBGZ1cMHRTFwgo-GRaH5E9rzLMd82VhLbZZBBok4K0hAQxnRQ8pxowMFaAlvv6J4D7s-7XJw171K_T2j8MLCconR5VvEqSjktKD1bf8p5gIkSLr9smpyR-YHgJOMIOMqzWBkL83pKrIULrKcLjdBS8HPoL-WT7A",
+        bgImg: "https://lh3.googleusercontent.com/aida-public/AB6AXuAtGM5nGe1HmTnjM0wXxSV1QokA0abz3OOsmmn6rjWXkR1LBLitrgA75ECdDVASgOx-HgJYN_lcsshfbsH908yBX9xSq3P-LldQFqmcaXGcqybOugmErDM7SDDFw0lRCLnuJqErGe6j-Wxp-f5E0Q0YHTTz7gSA2PJt3A6LNu87V_kUYEbWdxN7tZ-jCaWBXEU6UHdHzSDjzKIjKnU3ph78AlzE-4rGoWmfhuLhHH5FHgSunD51pDWCpQ",
+        story: "Rohan Mehta pioneered enterprise artificial intelligence algorithms tuned for Indian languages and logistics. Today, Visionary Tech powers 40% of India's top telecom & banking infrastructure.",
+        metric1: "₹2,400 Cr",
+        metric2: "28 Countries",
+        metric3: "3,500+"
+      },
+      {
+        id: 1,
+        company: "Apex Manufacturing",
+        tagline: "Building the high-precision infrastructure of tomorrow.",
+        category: "Manufacturing",
+        catKey: "manufacturing",
+        founder: "Priya Sharma",
+        role: "Managing Director",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDrih54VRaAH-aBumGR4E06U8mBf3NxVBkyYxK9URBRFQvBUrlTLA1oydpBaWrV_kVqa1-q7-_ib_JmgZ11w-w-w-yJPfc2lekBAwoTnYoPAzYorg4zs36Dg4z2NGZADI0qLz4Qdd7vzSMoTIHuPB0ZTzfSv5aoud43qwMqdQGeAd3Yixziq5E9Gqf3e1E3QsjlylWbYtUNj6J1Mr7hxGGN7L68COISRnU2oJDBT6onqUMIYq5mHhQzgw",
+        bgImg: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZVjYF3XEqS5QfEm92xX5v_Y94PQpBU91ZT0K9yLvIvyc-ySQyVhlDKwJWaTbklL0hcC8eZFb142TjAWI8Oanku6cCqUWYW8wKbfmxoSaBhJTf1W1kphDP5lOK0_r6P09_MM9E9Hf2upqM1yIPfnWxTQticoD2zkUU4PR7gSjX0FpHJOnsM_LbWGee-HgXT1sb3b8VcI6RsFqGw706Y_t2DUzCIOE-V-pYjO7t1lTQ4GukhUMMZNQs1Q",
+        story: "Overcoming severe capital constraints, Priya Sharma transformed a small tooling shop into a defense and aerospace components powerhouse in Pune, producing aerospace alloy parts.",
+        metric1: "₹850 Cr",
+        metric2: "14 Countries",
+        metric3: "1,800+"
+      },
+      {
+        id: 2,
+        company: "GreenEarth Organics",
+        tagline: "Rooted in Indian soil, scaling organic exports globally.",
+        category: "Agritech",
+        catKey: "agritech",
+        founder: "Vikram Singh",
+        role: "Co-Founder",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuD-xwI4f4fZX0U7aa59Rg_QKdIAsE1QBehdmLRDmUa9LX5eJAKzEB5Uo8yRhL22rActnbaw2Xkv-HUgbnl_2dKVuuZObKRdx9vcVlRaZSQu8sppZ2T15iT_yUbAdT8yqdZIj9mN52xZm1glpu4ZJaJjm3n8VLSr0Li_jAXdPV7KC9oFret9l_dvcw4egXUEz358ju_Tx-9bI-TQiBTyw8uYMBgGegPshi2zheCzkCMkJeiu3AzjbqRY4g",
+        bgImg: "https://lh3.googleusercontent.com/aida-public/AB6AXuCQCMOiGQqhSoXVwrg5lF6Mme7s7Zfy3IYR7aXlbyTrUhBqcs4WQco7kfvU4HQtPD7LhH-1h2EwEV__rtVEBAadV7vlFfaE18PpfNQDLKdSzJ_dsYe5Q4-mKzh6LKFnKEVPb0E9XCWHgwfQPHuPPCD9_WeEucHD0Hrup00AMuQo65txoez6QR9T5lKAizYEmdFfuETlL-lLUFmR36Z853BF9_Nal_I5K3_tesct85BnpoqYo2EerZ-J1Q",
+        story: "Connecting 50,000+ organic farmers across Punjab and Himachal directly to international markets, ensuring 3x better farmgate yields and zero-chemical soil health.",
+        metric1: "50K Farmers",
+        metric2: "22 Nations",
+        metric3: "900+"
+      },
+      {
+        id: 3,
+        company: "Swadeshi Health & Care",
+        tagline: "Ayurvedic wisdom meets clinical modern science.",
+        category: "D2C & FMCG",
+        catKey: "d2c",
+        founder: "Ananya Roy",
+        role: "Founder",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCzNGygYHDEUlCXhazqdp5CrTF6xsaNrQVJpI1zDKvFwJtb3I0yc-QTBvN42ajclzJMSqDcx3--R3HYazbYnDwQ_E8CBGZ1cMHRTFwgo-GRaH5E9rzLMd82VhLbZZBBok4K0hAQxnRQ8pxowMFaAlvv6J4D7s-7XJw171K_T2j8MLCconR5VvEqSjktKD1bf8p5gIkSLr9smpyR-YHgJOMIOMqzWBkL83pKrIULrKcLjdBS8HPoL-WT7A",
+        bgImg: "https://lh3.googleusercontent.com/aida-public/AB6AXuAtGM5nGe1HmTnjM0wXxSV1QokA0abz3OOsmmn6rjWXkR1LBLitrgA75ECdDVASgOx-HgJYN_lcsshfbsH908yBX9xSq3P-LldQFqmcaXGcqybOugmErDM7SDDFw0lRCLnuJqErGe6j-Wxp-f5E0Q0YHTTz7gSA2PJt3A6LNu87V_kUYEbWdxN7tZ-jCaWBXEU6UHdHzSDjzKIjKnU3ph78AlzE-4rGoWmfhuLhHH5FHgSunD51pDWCpQ",
+        story: "Built a ₹500 Cr wellness brand by modernizing ancient herbal formulations with peer-reviewed clinical validations and sustainable glass packaging.",
+        metric1: "₹500 Cr",
+        metric2: "10 Million+",
+        metric3: "450+"
+      },
+      {
+        id: 4,
+        company: "BharatPay Mobility",
+        tagline: "Democratizing EV transit infrastructure for Tier 2 & Tier 3 cities.",
+        category: "Clean Tech",
+        catKey: "tech",
+        founder: "Karan Verma",
+        role: "CEO & Co-Founder",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuD-xwI4f4fZX0U7aa59Rg_QKdIAsE1QBehdmLRDmUa9LX5eJAKzEB5Uo8yRhL22rActnbaw2Xkv-HUgbnl_2dKVuuZObKRdx9vcVlRaZSQu8sppZ2T15iT_yUbAdT8yqdZIj9mN52xZm1glpu4ZJaJjm3n8VLSr0Li_jAXdPV7KC9oFret9l_dvcw4egXUEz358ju_Tx-9bI-TQiBTyw8uYMBgGegPshi2zheCzkCMkJeiu3AzjbqRY4g",
+        bgImg: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZVjYF3XEqS5QfEm92xX5v_Y94PQpBU91ZT0K9yLvIvyc-ySQyVhlDKwJWaTbklL0hcC8eZFb142TjAWI8Oanku6cCqUWYW8wKbfmxoSaBhJTf1W1kphDP5lOK0_r6P09_MM9E9Hf2upqM1yIPfnWxTQticoD2zkUU4PR7gSjX0FpHJOnsM_LbWGee-HgXT1sb3b8VcI6RsFqGw706Y_t2DUzCIOE-V-pYjO7t1lTQ4GukhUMMZNQs1Q",
+        story: "Deployed 12,000 fast-charging stations across small-town highways, enabling seamless green transit for last-mile logistics fleets.",
+        metric1: "12,000 Grid",
+        metric2: "180 Cities",
+        metric3: "1,100+"
+      },
+      {
+        id: 5,
+        company: "SolarGrid Power India",
+        tagline: "Harnessing the Indian sun to energize rural industrial hubs.",
+        category: "Clean Tech",
+        catKey: "tech",
+        founder: "Rajesh Kulkarni",
+        role: "Chairman",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDrih54VRaAH-aBumGR4E06U8mBf3NxVBkyYxK9URBRFQvBUrlTLA1oydpBaWrV_kVqa1-q7-_ib_JmgZ11w-w-w-yJPfc2lekBAwoTnYoPAzYorg4zs36Dg4z2NGZADI0qLz4Qdd7vzSMoTIHuPB0ZTzfSv5aoud43qwMqdQGeAd3Yixziq5E9Gqf3e1E3QsjlylWbYtUNj6J1Mr7hxGGN7L68COISRnU2oJDBT6onqUMIYq5mHhQzgw",
+        bgImg: "https://lh3.googleusercontent.com/aida-public/AB6AXuCQCMOiGQqhSoXVwrg5lF6Mme7s7Zfy3IYR7aXlbyTrUhBqcs4WQco7kfvU4HQtPD7LhH-1h2EwEV__rtVEBAadV7vlFfaE18PpfNQDLKdSzJ_dsYe5Q4-mKzh6LKFnKEVPb0E9XCWHgwfQPHuPPCD9_WeEucHD0Hrup00AMuQo65txoez6QR9T5lKAizYEmdFfuETlL-lLUFmR36Z853BF9_Nal_I5K3_tesct85BnpoqYo2EerZ-J1Q",
+        story: "Pioneered micro-grid solar power installations powering 250+ manufacturing clusters without carbon footprint.",
+        metric1: "1.2 Gigawatts",
+        metric2: "250 Hubs",
+        metric3: "2,200+"
+      }
     ];
 
     // Mobile Navigation Drawer Toggle
     function toggleMobileMenu() {
-        const menu = document.getElementById('mobileMenu');
-        const icon = document.getElementById('menuIcon');
-        if (menu.classList.contains('hidden')) {
-            menu.classList.remove('hidden');
-            icon.innerText = 'close';
-        } else {
-            menu.classList.add('hidden');
-            icon.innerText = 'menu';
-        }
+      const menu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('menuIcon');
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        icon.innerText = 'close';
+      } else {
+        menu.classList.add('hidden');
+        icon.innerText = 'menu';
+      }
     }
 
     // Filter Bento Grid Cards
     function filterVault(category) {
-        const buttons = document.querySelectorAll('.category-btn');
-        buttons.forEach(btn => {
-            if (btn.dataset.category === category) {
-                btn.className = 'category-btn active px-4 py-1.5 rounded-full text-label-sm font-semibold bg-primary text-on-primary-fixed transition-all';
-            } else {
-                btn.className = 'category-btn px-4 py-1.5 rounded-full text-label-sm font-semibold bg-surface-container border border-outline-variant/40 text-on-surface-variant hover:text-on-surface transition-all';
-            }
-        });
+      const buttons = document.querySelectorAll('.category-btn');
+      buttons.forEach(btn => {
+        if (btn.dataset.category === category) {
+          btn.className = 'category-btn active px-4 py-1.5 rounded-full text-label-sm font-semibold bg-primary text-on-primary-fixed transition-all';
+        } else {
+          btn.className = 'category-btn px-4 py-1.5 rounded-full text-label-sm font-semibold bg-surface-container border border-outline-variant/40 text-on-surface-variant hover:text-on-surface transition-all';
+        }
+      });
 
-        const cards = document.querySelectorAll('#bentoGrid > div');
-        cards.forEach(card => {
-            if (category === 'all' || card.dataset.cat === category) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
+      const cards = document.querySelectorAll('#bentoGrid > div');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.cat === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
     }
 
     // Video Player Modal
     function openVideoModal(title, videoSrc) {
-        document.getElementById('videoModalTitle').innerText = title;
-        document.getElementById('videoIframe').src = videoSrc;
-        const modal = document.getElementById('videoModal');
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
+      document.getElementById('videoModalTitle').innerText = title;
+      document.getElementById('videoIframe').src = videoSrc;
+      const modal = document.getElementById('videoModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
     }
 
     function closeVideoModal() {
-        document.getElementById('videoIframe').src = '';
-        const modal = document.getElementById('videoModal');
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
+      document.getElementById('videoIframe').src = '';
+      const modal = document.getElementById('videoModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
     }
 
     // Episode Detail Lightbox Modal
     function openEpisodeDetail(index) {
-        const ep = EPISODES[index] || EPISODES[0];
-        document.getElementById('epModalCategory').innerText = ep.category;
-        document.getElementById('epModalCompany').innerText = ep.company;
-        document.getElementById('epModalTagline').innerText = `"${ep.tagline}"`;
-        document.getElementById('epModalFounderName').innerText = ep.founder;
-        document.getElementById('epModalRole').innerText = ep.role;
-        document.getElementById('epModalStory').innerText = ep.story;
-        document.getElementById('epModalFounderImg').src = ep.img;
-        document.getElementById('epMetric1').innerText = ep.metric1;
-        document.getElementById('epMetric2').innerText = ep.metric2;
-        document.getElementById('epMetric3').innerText = ep.metric3;
+      const ep = EPISODES[index] || EPISODES[0];
+      document.getElementById('epModalCategory').innerText = ep.category;
+      document.getElementById('epModalCompany').innerText = ep.company;
+      document.getElementById('epModalTagline').innerText = `"${ep.tagline}"`;
+      document.getElementById('epModalFounderName').innerText = ep.founder;
+      document.getElementById('epModalRole').innerText = ep.role;
+      document.getElementById('epModalStory').innerText = ep.story;
+      document.getElementById('epModalFounderImg').src = ep.img;
+      document.getElementById('epMetric1').innerText = ep.metric1;
+      document.getElementById('epMetric2').innerText = ep.metric2;
+      document.getElementById('epMetric3').innerText = ep.metric3;
 
-        const modal = document.getElementById('episodeModal');
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
+      const modal = document.getElementById('episodeModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
     }
 
     function closeEpisodeModal() {
-        const modal = document.getElementById('episodeModal');
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
+      const modal = document.getElementById('episodeModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
     }
 
     // All Episodes Modal Gallery
     function openAllEpisodesModal() {
-        const grid = document.getElementById('allEpisodesGrid');
-        grid.innerHTML = EPISODES.map((ep, idx) => `
+      const grid = document.getElementById('allEpisodesGrid');
+      grid.innerHTML = EPISODES.map((ep, idx) => `
             <div onclick="closeAllEpisodesModal(); openEpisodeDetail(${idx})" class="glass-panel rounded-xl p-5 border border-outline-variant/30 hover:border-primary cursor-pointer transition-all hover:scale-[1.02] flex flex-col justify-between">
                 <div>
                     <span class="text-xs font-bold text-primary uppercase block mb-1">${ep.category}</span>
@@ -942,275 +1170,276 @@
             </div>
         `).join('');
 
-        const modal = document.getElementById('allEpisodesModal');
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
+      const modal = document.getElementById('allEpisodesModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
     }
 
     function closeAllEpisodesModal() {
-        const modal = document.getElementById('allEpisodesModal');
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
+      const modal = document.getElementById('allEpisodesModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
     }
 
     // Partner Hub / Media Kit Modal
     function openPartnerHubModal() {
-        const modal = document.getElementById('partnerHubModal');
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
+      const modal = document.getElementById('partnerHubModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
     }
 
     function closePartnerHubModal() {
-        const modal = document.getElementById('partnerHubModal');
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
+      const modal = document.getElementById('partnerHubModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
     }
 
     let isDownloadingKit = false;
     function handleDownloadKit() {
-        if (isDownloadingKit) return;
-        isDownloadingKit = true;
+      if (isDownloadingKit) return;
+      isDownloadingKit = true;
 
-        const btn = document.getElementById('pdfDownloadBtn');
-        const text = document.getElementById('pdfDownloadText');
-        const icon = document.getElementById('pdfDownloadIcon');
+      const btn = document.getElementById('pdfDownloadBtn');
+      const text = document.getElementById('pdfDownloadText');
+      const icon = document.getElementById('pdfDownloadIcon');
 
-        btn.disabled = true;
-        text.innerText = 'Preparing PDF...';
-        icon.innerText = 'sync';
-        icon.classList.add('animate-spin');
+      btn.disabled = true;
+      text.innerText = 'Preparing PDF...';
+      icon.innerText = 'sync';
+      icon.classList.add('animate-spin');
+
+      setTimeout(() => {
+        downloadMediaKit();
+        text.innerText = 'Downloaded!';
+        icon.innerText = 'check_circle';
+        icon.classList.remove('animate-spin');
 
         setTimeout(() => {
-            downloadMediaKit();
-            text.innerText = 'Downloaded!';
-            icon.innerText = 'check_circle';
-            icon.classList.remove('animate-spin');
-            
-            setTimeout(() => {
-                text.innerText = 'Download PDF';
-                icon.innerText = 'download';
-                btn.disabled = false;
-                isDownloadingKit = false;
-            }, 3000);
-        }, 1500);
+          text.innerText = 'Download PDF';
+          icon.innerText = 'download';
+          btn.disabled = false;
+          isDownloadingKit = false;
+        }, 3000);
+      }, 1500);
     }
 
     function downloadMediaKit() {
-        showToast('Downloading Season 2 Official Media Kit & Rate Card...');
-        const element = document.createElement('a');
-        const fileContent = "BHARAT BRAND STORIES - SEASON 2 MEDIA KIT & SPONSORSHIP DECK\n\nBroadcasting Channel: Republic Bharat\nSlots: Title Sponsor, Powered By, Associate Partner\nReach: 100M+ Viewers Across TV & Digital\n\nFor inquiries contact: partnerships@bharatbrandstories.com\nPhone: +91 (022) 4000 8888";
-        const file = new Blob([fileContent], {type: 'text/plain'});
-        element.href = URL.createObjectURL(file);
-        element.download = "Bharat_Brand_Stories_Season2_MediaKit.pdf";
-        document.body.appendChild(element);
-        element.click();
-        document.body.removeChild(element);
+      showToast('Downloading Season 2 Official Media Kit & Rate Card...');
+      const element = document.createElement('a');
+      const fileContent = "BHARAT BRAND STORIES - SEASON 2 MEDIA KIT & SPONSORSHIP DECK\n\nBroadcasting Channel: Republic Bharat\nSlots: Title Sponsor, Powered By, Associate Partner\nReach: 100M+ Viewers Across TV & Digital\n\nFor inquiries contact: partnerships@bharatbrandstories.com\nPhone: +91 (022) 4000 8888";
+      const file = new Blob([fileContent], { type: 'text/plain' });
+      element.href = URL.createObjectURL(file);
+      element.download = "Bharat_Brand_Stories_Season2_MediaKit.pdf";
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
     }
 
     // Toast Notification System
     function showToast(message, icon = 'check_circle') {
-        const toast = document.getElementById('toastNotification');
-        document.getElementById('toastMessage').innerText = message;
-        document.getElementById('toastIcon').innerText = icon;
-        toast.classList.remove('hidden');
-        toast.classList.add('flex');
+      const toast = document.getElementById('toastNotification');
+      document.getElementById('toastMessage').innerText = message;
+      document.getElementById('toastIcon').innerText = icon;
+      toast.classList.remove('hidden');
+      toast.classList.add('flex');
 
-        setTimeout(() => {
-            toast.classList.add('hidden');
-            toast.classList.remove('flex');
-        }, 4000);
+      setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('flex');
+      }, 4000);
     }
 
     // Form Submit Handlers
     function handleSponsorshipSubmit(event) {
-        event.preventDefault();
-        const btn = document.getElementById('sponsorSubmitBtn');
-        const origText = btn.innerText;
-        btn.innerText = 'Submitting Pitch...';
-        btn.disabled = true;
+      event.preventDefault();
+      const btn = document.getElementById('sponsorSubmitBtn');
+      const origText = btn.innerText;
+      btn.innerText = 'Submitting Pitch...';
+      btn.disabled = true;
 
-        setTimeout(() => {
-            btn.innerText = origText;
-            btn.disabled = false;
-            document.getElementById('sponsorshipForm').reset();
-            showToast('Partnership pitch received! Our media director will contact you in 24 hrs.');
-        }, 1200);
+      setTimeout(() => {
+        btn.innerText = origText;
+        btn.disabled = false;
+        document.getElementById('sponsorshipForm').reset();
+        showToast('Partnership pitch received! Our media director will contact you in 24 hrs.');
+      }, 1200);
     }
 
     function handleNominationSubmit(event) {
-        event.preventDefault();
-        const btn = document.getElementById('nominateSubmitBtn');
-        const origText = btn.innerText;
-        btn.innerText = 'Submitting Nomination...';
-        btn.disabled = true;
+      event.preventDefault();
+      const btn = document.getElementById('nominateSubmitBtn');
+      const origText = btn.innerText;
+      btn.innerText = 'Submitting Nomination...';
+      btn.disabled = true;
 
-        setTimeout(() => {
-            btn.innerText = origText;
-            btn.disabled = false;
-            document.getElementById('nominationForm').reset();
-            const refId = 'BBS-2026-N' + Math.floor(1000 + Math.random() * 9000);
-            showToast(`Nomination Submitted! Reference ID: ${refId}`, 'verified');
-        }, 1200);
+      setTimeout(() => {
+        btn.innerText = origText;
+        btn.disabled = false;
+        document.getElementById('nominationForm').reset();
+        const refId = 'BBS-2026-N' + Math.floor(1000 + Math.random() * 9000);
+        showToast(`Nomination Submitted! Reference ID: ${refId}`, 'verified');
+      }, 1200);
     }
 
     // Hero Scroll Canvas Animation (90 Frames)
     (function initHeroScrollAnimation() {
-        const frameCount = 90;
-        const frames = [];
-        const canvas = document.getElementById('heroCanvas');
-        if (!canvas) return;
+      const frameCount = 90;
+      const frames = [];
+      const canvas = document.getElementById('heroCanvas');
+      if (!canvas) return;
 
-        const ctx = canvas.getContext('2d');
-        let currentFrameIndex = 0;
-        let imagesLoaded = 0;
+      const ctx = canvas.getContext('2d');
+      let currentFrameIndex = 0;
+      let imagesLoaded = 0;
 
-        function padZero(num, size) {
-            let s = num + "";
-            while (s.length < size) s = "0" + s;
-            return s;
-        }
+      function padZero(num, size) {
+        let s = num + "";
+        while (s.length < size) s = "0" + s;
+        return s;
+      }
 
-        // Preload all 90 frame images
-        for (let i = 1; i <= frameCount; i++) {
-            const img = new Image();
-            const frameNum = padZero(i, 3);
-            img.src = `assets/logo-frames/ezgif-frame-${frameNum}.jpg`;
-            img.onload = () => {
-                imagesLoaded++;
-                if (imagesLoaded === 1 || indexMatchesCurrent(i - 1)) {
-                    renderFrame(currentFrameIndex);
-                }
-            };
-            frames.push(img);
-        }
-
-        function indexMatchesCurrent(idx) {
-            return idx === currentFrameIndex;
-        }
-
-        function renderFrame(index) {
-            const img = frames[index];
-            if (!img || !img.complete || img.naturalWidth === 0) return;
-
-            const w = canvas.width;
-            const h = canvas.height;
-            ctx.clearRect(0, 0, w, h);
-
-            // Preserve aspect ratio
-            const imgAspect = img.width / img.height;
-            const canvasAspect = w / h;
-            let renderW, renderH, x, y;
-
-            if (canvasAspect > imgAspect) {
-                renderH = h;
-                renderW = h * imgAspect;
-                x = (w - renderW) / 2;
-                y = 0;
-            } else {
-                renderW = w;
-                renderH = w / imgAspect;
-                x = 0;
-                y = (h - renderH) / 2;
-            }
-
-            ctx.drawImage(img, x, y, renderW, renderH);
-        }
-
-        function resizeCanvas() {
-            const dpr = window.devicePixelRatio || 1;
-            const parent = canvas.parentElement;
-            if (!parent) return;
-            canvas.width = parent.clientWidth * dpr;
-            canvas.height = parent.clientHeight * dpr;
+      // Preload all 90 frame images
+      for (let i = 1; i <= frameCount; i++) {
+        const img = new Image();
+        const frameNum = padZero(i, 3);
+        img.src = `assets/logo-frames/ezgif-frame-${frameNum}.jpg`;
+        img.onload = () => {
+          imagesLoaded++;
+          if (imagesLoaded === 1 || indexMatchesCurrent(i - 1)) {
             renderFrame(currentFrameIndex);
+          }
+        };
+        frames.push(img);
+      }
+
+      function indexMatchesCurrent(idx) {
+        return idx === currentFrameIndex;
+      }
+
+      function renderFrame(index) {
+        const img = frames[index];
+        if (!img || !img.complete || img.naturalWidth === 0) return;
+
+        const w = canvas.width;
+        const h = canvas.height;
+        ctx.clearRect(0, 0, w, h);
+
+        // Preserve aspect ratio
+        const imgAspect = img.width / img.height;
+        const canvasAspect = w / h;
+        let renderW, renderH, x, y;
+
+        if (canvasAspect > imgAspect) {
+          renderH = h;
+          renderW = h * imgAspect;
+          x = (w - renderW) / 2;
+          y = 0;
+        } else {
+          renderW = w;
+          renderH = w / imgAspect;
+          x = 0;
+          y = (h - renderH) / 2;
         }
 
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
+        ctx.drawImage(img, x, y, renderW, renderH);
+      }
 
-        let ticking = false;
+      function resizeCanvas() {
+        const dpr = window.devicePixelRatio || 1;
+        const parent = canvas.parentElement;
+        if (!parent) return;
+        canvas.width = parent.clientWidth * dpr;
+        canvas.height = parent.clientHeight * dpr;
+        renderFrame(currentFrameIndex);
+      }
 
-        function updateScroll() {
-            const heroSection = document.getElementById('hero');
-            if (!heroSection) return;
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
 
-            const rect = heroSection.getBoundingClientRect();
-            const totalScrollableHeight = heroSection.clientHeight - window.innerHeight;
-            
-            if (totalScrollableHeight > 0) {
-                let progress = -rect.top / totalScrollableHeight;
-                progress = Math.max(0, Math.min(1, progress));
-                
-                const frameIndex = Math.min(frameCount - 1, Math.floor(progress * frameCount));
-                if (frameIndex !== currentFrameIndex) {
-                    currentFrameIndex = frameIndex;
-                    renderFrame(currentFrameIndex);
-                }
+      let ticking = false;
 
-                const scrollHint = document.getElementById('scrollHint');
-                if (scrollHint) {
-                    scrollHint.style.opacity = progress > 0.08 ? '0' : '1';
-                }
+      function updateScroll() {
+        const heroSection = document.getElementById('hero');
+        if (!heroSection) return;
 
-                // Header Text stays visible until 15% video completion, then fades away completely
-                const headerContent = document.getElementById('heroHeaderContent');
-                if (headerContent) {
-                    let headerOpacity = 1;
-                    if (progress <= 0.15) {
-                        headerOpacity = 1;
-                    } else if (progress <= 0.28) {
-                        headerOpacity = 1 - ((progress - 0.15) / 0.13);
-                    } else {
-                        headerOpacity = 0;
-                    }
-                    headerContent.style.opacity = headerOpacity.toFixed(2);
-                    headerContent.style.pointerEvents = headerOpacity < 0.1 ? 'none' : 'auto';
-                }
+        const rect = heroSection.getBoundingClientRect();
+        const totalScrollableHeight = heroSection.clientHeight - window.innerHeight;
 
-                // CTA Buttons Bar ("Season 1 Highlights" & "Apply for Season 2") slides down to 85% bottom position after 15% progress
-                const ctaBar = document.getElementById('heroCtaBar');
-                if (ctaBar) {
-                    let slideFactor = 0;
-                    if (progress <= 0.15) {
-                        slideFactor = 0;
-                    } else if (progress <= 0.28) {
-                        slideFactor = (progress - 0.15) / 0.13;
-                    } else {
-                        slideFactor = 1;
-                    }
+        if (totalScrollableHeight > 0) {
+          let progress = -rect.top / totalScrollableHeight;
+          progress = Math.max(0, Math.min(1, progress));
 
-                    // Slide down to 85% bottom position of video viewport (~220px displacement)
-                    const translateY = Math.round(slideFactor * 220);
-                    ctaBar.style.transform = `translateY(${translateY}px)`;
-                    
-                    if (slideFactor > 0.3) {
-                        ctaBar.classList.add('bg-surface-container-high/95', 'backdrop-blur-2xl', 'border', 'border-primary/40', 'shadow-2xl', 'scale-95');
-                    } else {
-                        ctaBar.classList.remove('bg-surface-container-high/95', 'backdrop-blur-2xl', 'border', 'border-primary/40', 'shadow-2xl', 'scale-95');
-                    }
+          const frameIndex = Math.min(frameCount - 1, Math.floor(progress * frameCount));
+          if (frameIndex !== currentFrameIndex) {
+            currentFrameIndex = frameIndex;
+            renderFrame(currentFrameIndex);
+          }
 
-                    // Only CTA bar remains visible during video animation; fades out when exiting hero section (>88%)
-                    if (progress > 0.88) {
-                        const exitOpacity = Math.max(0, 1 - ((progress - 0.88) / 0.12));
-                        ctaBar.style.opacity = exitOpacity.toFixed(2);
-                        ctaBar.style.pointerEvents = exitOpacity < 0.1 ? 'none' : 'auto';
-                    } else {
-                        ctaBar.style.opacity = '1';
-                        ctaBar.style.pointerEvents = 'auto';
-                    }
-                }
+          const scrollHint = document.getElementById('scrollHint');
+          if (scrollHint) {
+            scrollHint.style.opacity = progress > 0.08 ? '0' : '1';
+          }
+
+          // Header Text stays visible until 15% video completion, then fades away completely
+          const headerContent = document.getElementById('heroHeaderContent');
+          if (headerContent) {
+            let headerOpacity = 1;
+            if (progress <= 0.15) {
+              headerOpacity = 1;
+            } else if (progress <= 0.28) {
+              headerOpacity = 1 - ((progress - 0.15) / 0.13);
+            } else {
+              headerOpacity = 0;
             }
-            ticking = false;
+            headerContent.style.opacity = headerOpacity.toFixed(2);
+            headerContent.style.pointerEvents = headerOpacity < 0.1 ? 'none' : 'auto';
+          }
+
+          // CTA Buttons Bar ("Season 1 Highlights" & "Apply for Season 2") slides down to 85% bottom position after 15% progress
+          const ctaBar = document.getElementById('heroCtaBar');
+          if (ctaBar) {
+            let slideFactor = 0;
+            if (progress <= 0.15) {
+              slideFactor = 0;
+            } else if (progress <= 0.28) {
+              slideFactor = (progress - 0.15) / 0.13;
+            } else {
+              slideFactor = 1;
+            }
+
+            // Slide down to 85% bottom position of video viewport (~220px displacement)
+            const translateY = Math.round(slideFactor * 220);
+            ctaBar.style.transform = `translateY(${translateY}px)`;
+
+            if (slideFactor > 0.3) {
+              ctaBar.classList.add('bg-surface-container-high/95', 'backdrop-blur-2xl', 'border', 'border-primary/40', 'shadow-2xl', 'scale-95');
+            } else {
+              ctaBar.classList.remove('bg-surface-container-high/95', 'backdrop-blur-2xl', 'border', 'border-primary/40', 'shadow-2xl', 'scale-95');
+            }
+
+            // Only CTA bar remains visible during video animation; fades out when exiting hero section (>88%)
+            if (progress > 0.88) {
+              const exitOpacity = Math.max(0, 1 - ((progress - 0.88) / 0.12));
+              ctaBar.style.opacity = exitOpacity.toFixed(2);
+              ctaBar.style.pointerEvents = exitOpacity < 0.1 ? 'none' : 'auto';
+            } else {
+              ctaBar.style.opacity = '1';
+              ctaBar.style.pointerEvents = 'auto';
+            }
+          }
         }
+        ticking = false;
+      }
 
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(updateScroll);
-                ticking = true;
-            }
-        }, { passive: true });
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(updateScroll);
+          ticking = true;
+        }
+      }, { passive: true });
     })();
-</script>
+  </script>
 
 </body>
+
 </html>
