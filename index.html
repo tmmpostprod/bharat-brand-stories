@@ -1567,7 +1567,7 @@
       });
     }
 
-    // Hero Scroll Canvas Animation (150 Frames 1080p HD)
+    // Hero Scroll Canvas Animation (150 HD Logo Frames)
     (function initHeroScrollAnimation() {
       const frameCount = 150;
       const frames = [];
@@ -1576,7 +1576,6 @@
 
       const ctx = canvas.getContext('2d');
       let currentFrameIndex = 0;
-      let imagesLoaded = 0;
 
       function padZero(num, size) {
         let s = num + "";
@@ -1584,36 +1583,24 @@
         return s;
       }
 
-      // Preload all 90 frame images
-      for (let i = 1; i <= frameCount; i++) {
-        const img = new Image();
-        const frameNum = padZero(i, 3);
-        img.src = `assets/logo-frames/ezgif-frame-${frameNum}.jpg`;
-        img.onload = () => {
-          imagesLoaded++;
-          if (imagesLoaded === 1 || indexMatchesCurrent(i - 1)) {
-            renderFrame(currentFrameIndex);
-          }
-        };
-        frames.push(img);
-      }
-
-      function indexMatchesCurrent(idx) {
-        return idx === currentFrameIndex;
-      }
-
       function renderFrame(index) {
-        const img = frames[index];
+        let img = frames[index];
+        // If target frame is not loaded yet, fallback to the nearest available loaded frame
+        if (!img || !img.complete || img.naturalWidth === 0) {
+          for (let offset = 1; offset < frameCount; offset++) {
+            const prev = frames[Math.max(0, index - offset)];
+            if (prev && prev.complete && prev.naturalWidth > 0) { img = prev; break; }
+            const next = frames[Math.min(frameCount - 1, index + offset)];
+            if (next && next.complete && next.naturalWidth > 0) { img = next; break; }
+          }
+        }
         if (!img || !img.complete || img.naturalWidth === 0) return;
 
-        const w = canvas.width;
-        const h = canvas.height;
+        const w = canvas.width || (window.innerWidth * 2);
+        const h = canvas.height || (window.innerHeight * 2);
         ctx.clearRect(0, 0, w, h);
-
-        // Zero blur image rendering - disable canvas blur smoothing
         ctx.imageSmoothingEnabled = false;
 
-        // Crisp cover ratio calculation (fills full viewport without distortion or blur)
         const imgAspect = img.naturalWidth / img.naturalHeight;
         const canvasAspect = w / h;
         let renderW, renderH, x, y;
@@ -1635,15 +1622,26 @@
 
       function resizeCanvas() {
         const dpr = Math.max(window.devicePixelRatio || 1, 2);
-        const parent = canvas.parentElement;
-        if (!parent) return;
-        canvas.width = Math.round(parent.clientWidth * dpr);
-        canvas.height = Math.round(parent.clientHeight * dpr);
+        const parent = canvas.parentElement || document.body;
+        const width = parent.clientWidth || window.innerWidth;
+        const height = parent.clientHeight || window.innerHeight;
+        canvas.width = Math.round(width * dpr);
+        canvas.height = Math.round(height * dpr);
         renderFrame(currentFrameIndex);
       }
 
-      window.addEventListener('resize', resizeCanvas);
-      resizeCanvas();
+      // Preload all 150 frame images
+      for (let i = 1; i <= frameCount; i++) {
+        const img = new Image();
+        const frameNum = padZero(i, 3);
+        img.src = `assets/logo-frames/ezgif-frame-${frameNum}.jpg`;
+        img.onload = () => {
+          if (i - 1 === currentFrameIndex || i === 1) {
+            renderFrame(currentFrameIndex);
+          }
+        };
+        frames.push(img);
+      }
 
       let ticking = false;
 
@@ -1696,7 +1694,6 @@
               slideFactor = 1;
             }
 
-            // Slide down to 85% bottom position of video viewport (~220px displacement)
             const translateY = Math.round(slideFactor * 220);
             ctaBar.style.transform = `translateY(${translateY}px)`;
 
@@ -1706,7 +1703,6 @@
               ctaBar.classList.remove('bg-surface-container-high/95', 'backdrop-blur-2xl', 'border', 'border-primary/40', 'shadow-2xl', 'scale-95');
             }
 
-            // Only CTA bar remains visible during video animation; fades out when exiting hero section (>88%)
             if (progress > 0.88) {
               const exitOpacity = Math.max(0, 1 - ((progress - 0.88) / 0.12));
               ctaBar.style.opacity = exitOpacity.toFixed(2);
@@ -1726,6 +1722,13 @@
           ticking = true;
         }
       }, { passive: true });
+
+      window.addEventListener('resize', () => { resizeCanvas(); updateScroll(); });
+      window.addEventListener('load', () => { resizeCanvas(); updateScroll(); });
+      document.addEventListener('DOMContentLoaded', () => { resizeCanvas(); updateScroll(); });
+
+      resizeCanvas();
+      updateScroll();
     })();
   </script>
 
