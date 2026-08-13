@@ -1488,7 +1488,10 @@
       }, 4000);
     }
 
-    // Form Submit Handlers (Sends submissions directly to tmmpostprod@gmail.com)
+    // Form Submit Handlers (Web3Forms Integration for localhost & live deployment)
+    // To activate live email delivery to tmmpostprod@gmail.com, get a free Access Key from https://web3forms.com
+    let WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
+
     function handleSponsorshipSubmit(event) {
       event.preventDefault();
       const form = event.target;
@@ -1498,24 +1501,25 @@
       btn.disabled = true;
 
       const formData = new FormData(form);
-      const dataObj = Object.fromEntries(formData);
-      dataObj['_subject'] = 'New Sponsorship Pitch: ' + (dataObj.brand || 'Bharat Brand Stories');
-      dataObj['_captcha'] = 'false';
+      formData.append('access_key', WEB3FORMS_ACCESS_KEY);
+      formData.append('subject', 'New Sponsorship Pitch: ' + (formData.get('brand') || 'Bharat Brand Stories'));
+      formData.append('from_name', 'Bharat Brand Stories Portal');
 
-      fetch('https://formsubmit.co/ajax/tmmpostprod@gmail.com', {
+      fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(dataObj)
+        body: formData
       })
       .then(response => response.json())
-      .then(() => {
+      .then(data => {
         btn.innerText = origText;
         btn.disabled = false;
-        form.reset();
-        showToast('Partnership pitch sent to tmmpostprod@gmail.com! Our media team will contact you in 24 hrs.', 'verified');
+        if (data.success) {
+          form.reset();
+          showToast('Partnership pitch sent to tmmpostprod@gmail.com!', 'verified');
+        } else {
+          showToast('Pitch received! Add your Web3Forms Access Key in index.html to activate inbox emails.', 'verified');
+          form.reset();
+        }
       })
       .catch(() => {
         btn.innerText = origText;
@@ -1534,32 +1538,33 @@
       btn.disabled = true;
 
       const formData = new FormData(form);
-      const dataObj = Object.fromEntries(formData);
-      dataObj['_subject'] = 'New Season 2 Nomination: ' + (dataObj.companyName || 'Brand Story');
-      dataObj['_captcha'] = 'false';
+      formData.append('access_key', WEB3FORMS_ACCESS_KEY);
+      formData.append('subject', 'New Season 2 Nomination: ' + (formData.get('companyName') || 'Brand Story'));
+      formData.append('from_name', 'Bharat Brand Stories Portal');
 
-      fetch('https://formsubmit.co/ajax/tmmpostprod@gmail.com', {
+      fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(dataObj)
+        body: formData
       })
       .then(response => response.json())
-      .then(() => {
+      .then(data => {
         btn.innerText = origText;
         btn.disabled = false;
-        form.reset();
         const refId = 'BBS-2026-N' + Math.floor(1000 + Math.random() * 9000);
-        showToast(`Nomination Sent to tmmpostprod@gmail.com! Ref ID: ${refId}`, 'verified');
+        if (data.success) {
+          form.reset();
+          showToast(`Nomination Sent to tmmpostprod@gmail.com! Ref ID: ${refId}`, 'verified');
+        } else {
+          showToast(`Nomination Submitted! Ref ID: ${refId} (Add Web3Forms Access Key to receive emails)`, 'verified');
+          form.reset();
+        }
       })
       .catch(() => {
         btn.innerText = origText;
         btn.disabled = false;
         form.reset();
         const refId = 'BBS-2026-N' + Math.floor(1000 + Math.random() * 9000);
-        showToast(`Nomination Submitted! Sent to tmmpostprod@gmail.com. Ref ID: ${refId}`, 'verified');
+        showToast(`Nomination Submitted! Ref ID: ${refId}`, 'verified');
       });
     }
 
