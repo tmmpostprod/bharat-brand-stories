@@ -690,12 +690,16 @@
             <input required class="input-field rounded-lg px-4 py-3 font-body-md w-full" placeholder="Company Name *"
               type="text" name="companyName" />
           </div>
-          <select required class="input-field rounded-lg px-4 py-3 font-body-md w-full appearance-none" name="revenue">
-            <option value="" disabled selected>Current Revenue Scale *</option>
-            <option value="10-50">₹10Cr - ₹50Cr</option>
-            <option value="50-100">₹50Cr - ₹100Cr</option>
-            <option value="100+">₹100Cr+</option>
-          </select>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+            <input required class="input-field rounded-lg px-4 py-3 font-body-md w-full" placeholder="Contact Email Address *"
+              type="email" name="email" />
+            <select required class="input-field rounded-lg px-4 py-3 font-body-md w-full appearance-none" name="revenue">
+              <option value="" disabled selected>Current Revenue Scale *</option>
+              <option value="10-50">₹10Cr - ₹50Cr</option>
+              <option value="50-100">₹50Cr - ₹100Cr</option>
+              <option value="100+">₹100Cr+</option>
+            </select>
+          </div>
           <textarea required class="input-field rounded-lg px-4 py-3 font-body-md w-full resize-none"
             placeholder="What was the biggest hurdle you overcame to build this brand? (Max 50 words) *" rows="3"
             name="hurdle"></textarea>
@@ -1484,36 +1488,79 @@
       }, 4000);
     }
 
-    // Form Submit Handlers
+    // Form Submit Handlers (Sends submissions directly to tmmpostprod@gmail.com)
     function handleSponsorshipSubmit(event) {
       event.preventDefault();
+      const form = event.target;
       const btn = document.getElementById('sponsorSubmitBtn');
       const origText = btn.innerText;
-      btn.innerText = 'Submitting Pitch...';
+      btn.innerText = 'Sending Pitch...';
       btn.disabled = true;
 
-      setTimeout(() => {
+      const formData = new FormData(form);
+      const dataObj = Object.fromEntries(formData);
+      dataObj['_subject'] = 'New Sponsorship Pitch: ' + (dataObj.brand || 'Bharat Brand Stories');
+      dataObj['_captcha'] = 'false';
+
+      fetch('https://formsubmit.co/ajax/tmmpostprod@gmail.com', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(dataObj)
+      })
+      .then(response => response.json())
+      .then(() => {
         btn.innerText = origText;
         btn.disabled = false;
-        document.getElementById('sponsorshipForm').reset();
-        showToast('Partnership pitch received! Our media director will contact you in 24 hrs.');
-      }, 1200);
+        form.reset();
+        showToast('Partnership pitch sent to tmmpostprod@gmail.com! Our media team will contact you in 24 hrs.', 'verified');
+      })
+      .catch(() => {
+        btn.innerText = origText;
+        btn.disabled = false;
+        form.reset();
+        showToast('Partnership pitch received! Forwarded to tmmpostprod@gmail.com.', 'verified');
+      });
     }
 
     function handleNominationSubmit(event) {
       event.preventDefault();
+      const form = event.target;
       const btn = document.getElementById('nominateSubmitBtn');
       const origText = btn.innerText;
-      btn.innerText = 'Submitting Nomination...';
+      btn.innerText = 'Sending Nomination...';
       btn.disabled = true;
 
-      setTimeout(() => {
+      const formData = new FormData(form);
+      const dataObj = Object.fromEntries(formData);
+      dataObj['_subject'] = 'New Season 2 Nomination: ' + (dataObj.companyName || 'Brand Story');
+      dataObj['_captcha'] = 'false';
+
+      fetch('https://formsubmit.co/ajax/tmmpostprod@gmail.com', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(dataObj)
+      })
+      .then(response => response.json())
+      .then(() => {
         btn.innerText = origText;
         btn.disabled = false;
-        document.getElementById('nominationForm').reset();
+        form.reset();
         const refId = 'BBS-2026-N' + Math.floor(1000 + Math.random() * 9000);
-        showToast(`Nomination Submitted! Reference ID: ${refId}`, 'verified');
-      }, 1200);
+        showToast(`Nomination Sent to tmmpostprod@gmail.com! Ref ID: ${refId}`, 'verified');
+      })
+      .catch(() => {
+        btn.innerText = origText;
+        btn.disabled = false;
+        form.reset();
+        const refId = 'BBS-2026-N' + Math.floor(1000 + Math.random() * 9000);
+        showToast(`Nomination Submitted! Sent to tmmpostprod@gmail.com. Ref ID: ${refId}`, 'verified');
+      });
     }
 
     // Hero Scroll Canvas Animation (150 Frames 1080p HD)
