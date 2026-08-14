@@ -735,9 +735,6 @@
         Kit</button>
       <a href="#sponsorship"
         class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100">Contact
-        Us</a>
-    </div>
-
     <p class="font-body-md text-body-md text-secondary opacity-60 text-center text-sm md:text-base pb-4">
       © 2026 Bharat Brand Stories. A Tribute to Indian Excellence & Entrepreneurship.
     </p>
@@ -745,8 +742,8 @@
 
   <!-- MODALS -->
 
-  <!-- 1. Video Highlights Modal -->
-  <div id="videoModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 modal-backdrop">
+  <!-- 1. Video Highlights Modal (z-[300] Topmost Layer) -->
+  <div id="videoModal" class="fixed inset-0 z-[300] hidden items-center justify-center p-4 modal-backdrop">
     <div
       class="glass-panel gold-border rounded-2xl w-full max-w-4xl overflow-hidden shadow-2xl animate-fade-in relative">
       <div
@@ -776,8 +773,8 @@
     </div>
   </div>
 
-  <!-- 2. Episode Detail Lightbox Modal -->
-  <div id="episodeModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 modal-backdrop">
+  <!-- 2. Episode Detail Lightbox Modal (z-[200] Mid Layer) -->
+  <div id="episodeModal" class="fixed inset-0 z-[200] hidden items-center justify-center p-4 modal-backdrop">
     <div
       class="glass-panel gold-border rounded-2xl w-full max-w-3xl overflow-hidden shadow-2xl animate-fade-in relative max-h-[90vh] flex flex-col">
       <div
@@ -793,8 +790,9 @@
         <div class="flex flex-col md:flex-row gap-6 items-center">
           <img id="epModalFounderImg"
             class="w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-primary object-cover shrink-0 shadow-lg"
-            src="" alt="Founder Image" />
+            alt="Founder Headshot" src="" />
           <div>
+            <span class="text-xs font-bold text-primary uppercase tracking-widest block mb-1">Featured Founder</span>
             <h3 id="epModalCompany" class="font-headline-md text-2xl md:text-3xl text-on-surface font-bold mb-1">Company
               Name</h3>
             <p id="epModalTagline" class="text-tertiary font-body-lg text-lg italic mb-3">"Company Tagline"</p>
@@ -848,8 +846,8 @@
     </div>
   </div>
 
-  <!-- 3. All 15 Episodes Gallery Modal -->
-  <div id="allEpisodesModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 modal-backdrop">
+  <!-- 3. All 15 Episodes Gallery Modal (z-[150] Base Layer) -->
+  <div id="allEpisodesModal" class="fixed inset-0 z-[150] hidden items-center justify-center p-4 modal-backdrop">
     <div
       class="glass-panel gold-border rounded-2xl w-full max-w-5xl overflow-hidden shadow-2xl animate-fade-in max-h-[90vh] flex flex-col">
       <div
@@ -858,7 +856,7 @@
           <h3 class="font-headline-md text-xl md:text-2xl text-on-surface font-bold">Season 1: Complete 15 Episode Vault
           </h3>
           <p class="text-xs text-on-surface-variant">Select any episode to view full founder details & cinematic
-            highlights.</p>
+            showcase</p>
         </div>
         <button onclick="closeAllEpisodesModal()"
           class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg hover:bg-surface-variant">
@@ -873,9 +871,9 @@
     </div>
   </div>
 
-  <!-- 4. Partner Hub & Media Kit Modal -->
+  <!-- 4. Partner Hub & Media Kit Modal (z-[150] Base Layer) -->
   <div id="partnerHubModal"
-    class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-xl animate-fade-in overflow-y-auto">
+    class="fixed inset-0 z-[150] hidden items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-xl animate-fade-in overflow-y-auto">
     <div
       class="relative w-full max-w-3xl bg-[#16130b] glass-panel gold-border rounded-2xl overflow-hidden shadow-2xl my-auto text-[#eae1d4] p-6 sm:p-8 space-y-6"
       onclick="event.stopPropagation()">
