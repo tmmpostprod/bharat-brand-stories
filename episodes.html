@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Episode Vault — Bharat Brand Stories | Republic Bharat</title>
+  <meta name="description"
+    content="Explore all 15 iconic brand stories of Season 1 broadcasting on Republic Bharat. Discover visionary founders building modern India." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Google Fonts & Material Symbols -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-variant": "#38342b",
+            "on-background": "#eae1d4",
+            "secondary": "#c6c6c6",
+            "surface": "#16130b",
+            "primary": "#f2ca50",
+            "primary-container": "#d4af37",
+            "on-surface-variant": "#d0c5af",
+            "on-surface": "#eae1d4",
+          },
+          fontFamily: {
+            "label-sm": ["Manrope", "sans-serif"],
+            "label-md": ["Manrope", "sans-serif"],
+            "headline-lg": ["Montserrat", "sans-serif"],
+            "body-lg": ["Manrope", "sans-serif"],
+            "body-md": ["Manrope", "sans-serif"],
+            "headline-md": ["Montserrat", "sans-serif"],
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #0A0A0B;
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(255, 153, 51, 0.06) 0%, transparent 45%),
+        radial-gradient(circle at 90% 80%, rgba(19, 136, 8, 0.06) 0%, transparent 45%);
+      background-attachment: fixed;
+      color: #eae1d4;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .glass-panel {
+      background: rgba(22, 19, 11, 0.75);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .gold-border {
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .btn-primary,
+    a.btn-primary,
+    a.btn-primary:visited,
+    button.btn-primary,
+    .btn-primary * {
+      color: #000000 !important;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, #ffe088 0%, #e9c349 100%);
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: inherit;
+    }
+
+    .btn-primary:hover::before {
+      opacity: 1;
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid rgba(198, 198, 198, 0.5);
+      color: #c6c6c6;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background: linear-gradient(135deg, rgba(198, 198, 198, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%);
+      border-color: #ffffff;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .modal-backdrop {
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(12px);
+    }
+
+    /* Thumbnail Hover Glow */
+    .card-thumb-container:hover .thumb-overlay {
+      opacity: 1;
+    }
+
+    .card-thumb-container:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0A0A0B;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #38342b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d4af37;
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-background selection:bg-primary/30 selection:text-primary min-h-screen flex flex-col justify-between">
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-50 glass-panel border-b border-outline-variant/30 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a class="flex items-center gap-3 group" href="index.html">
+        <img alt="Bharat Brand Stories Logo" class="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE7vDYkase1T2gBG6IVuZoqnCYNr0adqcQ8nGzFg8nCcxrK8VA-ftcfgiEWatYNOMPdPmTz2a44TUM5KtwJafSI4bBfVk5dgR2CpN9SIUFLCknGfFGJfMKidFnXM-pwFBpjB9O4aGMnWen28JYHARqCa2FIrSoECIES9mfVDSTokXvTVpd1guEg7EqUTik03jSy_GLsxv_qFPMfEQu8eBhZtmyz5T9O7hf4SNfzAwL8OxE5mIj4CGAHv9hFiOuVPBZbFc" />
+      </a>
+
+      <!-- Desktop Nav Menu Links -->
+      <div class="hidden md:flex items-center gap-6 lg:gap-8">
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:bg-primary/10 hover:text-primary rounded-lg px-3 py-2 transition-all"
+          href="index.html">Home</a>
+        <a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1"
+          href="episodes.html">Episodes Vault</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:bg-primary/10 hover:text-primary rounded-lg px-3 py-2 transition-all"
+          href="index.html#sponsorship">Partnerships</a>
+        <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:bg-primary/10 hover:text-primary rounded-lg px-3 py-2 transition-all"
+          href="index.html#nominate">Nominate</a>
+      </div>
+
+      <!-- Header CTAs -->
+      <div class="flex items-center gap-3 md:gap-4">
+        <a href="index.html#nominate"
+          style="color: #000000 !important;"
+          class="font-label-md text-label-md btn-primary px-5 md:px-6 py-2.5 rounded-lg scale-95 active:scale-90 transition-transform font-bold tracking-wide flex items-center justify-center">Nominate
+          Now</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu"
+          class="md:hidden text-on-surface p-2 rounded-lg hover:bg-surface-variant focus:outline-none">
+          <span class="material-symbols-outlined text-2xl" id="menuIcon">menu</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="hidden md:hidden border-t border-outline-variant/30 glass-panel animate-fade-in" id="mobileMenu">
+      <div class="px-4 pt-3 pb-6 space-y-2">
+        <a class="block px-3 py-2 rounded-lg text-base font-semibold text-on-surface-variant hover:bg-primary/10 hover:text-primary"
+          href="index.html">Home</a>
+        <a class="block px-3 py-2 rounded-lg text-base font-bold text-primary bg-primary/10"
+          href="episodes.html">Episodes Vault</a>
+        <a class="block px-3 py-2 rounded-lg text-base font-semibold text-on-surface-variant hover:bg-primary/10 hover:text-primary"
+          href="index.html#sponsorship">Partnerships</a>
+        <a class="block px-3 py-2 rounded-lg text-base font-semibold text-on-surface-variant hover:bg-primary/10 hover:text-primary"
+          href="index.html#nominate">Nominate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Main Content -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16 space-y-12">
+
+    <!-- Hero Section -->
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest">
+        <span class="material-symbols-outlined text-base">video_library</span>
+        <span>Republic Bharat Broadcast Vault</span>
+      </div>
+      <h1 class="font-headline-lg text-3xl md:text-5xl font-extrabold text-on-surface tracking-tight">
+        Season 1: Complete <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-yellow-200 to-amber-400">15 Episode Showcase</span>
+      </h1>
+      <p class="font-body-md text-on-surface-variant text-base md:text-lg leading-relaxed">
+        Watch full broadcast highlights of 15 visionary founders building high-impact, scalable enterprises across India. Filter by category or search by company name.
+      </p>
+
+      <!-- Live Search & Filter Bar -->
+      <div class="pt-6 max-w-2xl mx-auto space-y-4">
+        <div class="relative">
+          <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+          <input id="searchInput" type="text" placeholder="Search company name, founder, or keyword..."
+            oninput="filterEpisodes()"
+            class="w-full pl-12 pr-4 py-3.5 rounded-xl bg-surface-container/90 border border-outline-variant/40 focus:border-primary focus:outline-none text-on-surface placeholder:text-on-surface-variant/60 font-body-md text-sm md:text-base shadow-lg transition-all" />
+        </div>
+
+        <!-- Filter Category Tabs -->
+        <div class="flex flex-wrap justify-center gap-2 pt-2" id="filterContainer">
+          <button onclick="setCategory('all')" class="cat-btn active px-4 py-2 rounded-full text-xs font-bold bg-primary text-black transition-all">All (15)</button>
+          <button onclick="setCategory('D2C & FMCG')" class="cat-btn px-4 py-2 rounded-full text-xs font-bold bg-surface-container-high border border-outline-variant/30 text-on-surface-variant hover:text-primary transition-all">D2C & FMCG</button>
+          <button onclick="setCategory('Fintech & Loans')" class="cat-btn px-4 py-2 rounded-full text-xs font-bold bg-surface-container-high border border-outline-variant/30 text-on-surface-variant hover:text-primary transition-all">Fintech & Wealth</button>
+          <button onclick="setCategory('Healthcare & Pharma')" class="cat-btn px-4 py-2 rounded-full text-xs font-bold bg-surface-container-high border border-outline-variant/30 text-on-surface-variant hover:text-primary transition-all">Healthcare & Pharma</button>
+          <button onclick="setCategory('Manufacturing')" class="cat-btn px-4 py-2 rounded-full text-xs font-bold bg-surface-container-high border border-outline-variant/30 text-on-surface-variant hover:text-primary transition-all">Manufacturing</button>
+          <button onclick="setCategory('CleanTech & EV')" class="cat-btn px-4 py-2 rounded-full text-xs font-bold bg-surface-container-high border border-outline-variant/30 text-on-surface-variant hover:text-primary transition-all">CleanTech & EV</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Episodes Grid Container -->
+    <div id="episodesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      <!-- Injected Dynamically via JS -->
+    </div>
+
+    <!-- Bottom Nomination CTA Banner -->
+    <div class="glass-panel gold-border rounded-2xl p-8 md:p-12 text-center max-w-4xl mx-auto space-y-6 relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-3xl rounded-full pointer-events-none"></div>
+      <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/20 text-primary border border-primary/40 mb-2">
+        <span class="material-symbols-outlined text-3xl">star</span>
+      </div>
+      <h2 class="font-headline-md text-2xl md:text-4xl text-on-surface font-bold">Are You Building the Next Brand Story of Bharat?</h2>
+      <p class="font-body-md text-on-surface-variant max-w-2xl mx-auto text-sm md:text-base">
+        Nominate your business for Season 2 broadcasting prime time on Republic Bharat TV & Republic Digital. Reach millions of viewers nationwide.
+      </p>
+      <div>
+        <a href="index.html#nominate"
+          style="color: #000000 !important;"
+          class="btn-primary inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-bold text-base md:text-lg shadow-xl hover:scale-105 transition-transform">
+          <span>Nominate Your Brand for Season 2</span>
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Video Lightbox Modal (YouTube Embed) -->
+  <div id="videoModal" class="fixed inset-0 z-[250] hidden items-center justify-center p-4 modal-backdrop">
+    <div class="glass-panel gold-border rounded-2xl w-full max-w-4xl overflow-hidden shadow-2xl animate-fade-in relative flex flex-col">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-outline-variant/30 bg-surface-container-high/90">
+        <h3 id="videoModalTitle" class="font-headline-md text-lg text-on-surface font-bold">Broadcast Highlight</h3>
+        <button onclick="closeVideoModal()" class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg hover:bg-surface-variant">
+          <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+      </div>
+      <div class="relative w-full bg-black aspect-video">
+        <iframe id="videoIframe" class="w-full h-full border-0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Episode Detail Lightbox Modal -->
+  <div id="detailModal" class="fixed inset-0 z-[200] hidden items-center justify-center p-4 modal-backdrop">
+    <div class="glass-panel gold-border rounded-2xl w-full max-w-3xl overflow-hidden shadow-2xl animate-fade-in relative max-h-[90vh] flex flex-col">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-outline-variant/30 bg-surface-container-high/90 shrink-0">
+        <span id="detailCategory" class="px-3 py-1 rounded-full text-xs font-bold border border-primary text-primary bg-primary/10">Category</span>
+        <button onclick="closeDetailModal()" class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg hover:bg-surface-variant">
+          <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+      </div>
+      <div class="p-6 md:p-8 overflow-y-auto space-y-6">
+        <div class="flex flex-col md:flex-row gap-6 items-center">
+          <img id="detailFounderImg" class="w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-primary object-cover shrink-0 shadow-lg" alt="Founder Headshot" src="" />
+          <div>
+            <span class="text-xs font-bold text-primary uppercase tracking-widest block mb-1">Featured Founder</span>
+            <h3 id="detailCompany" class="font-headline-md text-2xl md:text-3xl text-on-surface font-bold mb-1">Company Name</h3>
+            <p id="detailTagline" class="text-tertiary font-body-lg text-base italic mb-3">"Company Tagline"</p>
+            <div class="flex items-center gap-3 text-sm text-on-surface-variant">
+              <span class="font-bold text-on-surface" id="detailFounderName">Founder Name</span>
+              <span>•</span>
+              <span id="detailRole">Founder & CEO</span>
+            </div>
+          </div>
+        </div>
+        <div class="h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+        <div>
+          <h4 class="font-label-md text-xs text-primary uppercase tracking-widest mb-2">The Legacy Story</h4>
+          <p id="detailStory" class="font-body-md text-on-surface-variant leading-relaxed text-sm md:text-base">Story description...</p>
+        </div>
+        <div class="grid grid-cols-3 gap-3 p-4 rounded-xl bg-surface-container-high/60 border border-outline-variant/20 text-center">
+          <div>
+            <span class="text-xs text-on-surface-variant block" id="detailMetricLabel1">Metric 1</span>
+            <span id="detailMetric1" class="font-headline-md text-sm md:text-base text-primary font-bold">18</span>
+          </div>
+          <div>
+            <span class="text-xs text-on-surface-variant block" id="detailMetricLabel2">Metric 2</span>
+            <span id="detailMetric2" class="font-headline-md text-sm md:text-base text-secondary font-bold">1,200+</span>
+          </div>
+          <div>
+            <span class="text-xs text-on-surface-variant block">Network</span>
+            <span id="detailMetric3" class="font-headline-md text-sm md:text-base text-primary font-bold">Pan-India</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-6 bg-surface-container/90 border-t border-outline-variant/30 flex justify-between items-center gap-3 shrink-0">
+        <button id="detailPreviewBtn" style="color: #000000 !important;" class="btn-primary px-5 py-2.5 rounded-lg font-bold text-sm flex items-center gap-2">
+          <span class="material-symbols-outlined text-xl">play_circle</span> Watch Broadcast
+        </button>
+        <button onclick="closeDetailModal()" class="btn-secondary px-6 py-2.5 rounded-lg font-semibold text-sm">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-outline-variant/30 bg-surface-container-lowest/80 text-on-surface-variant py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-3">
+        <img alt="Republic Bharat" class="h-8 opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE7vDYkase1T2gBG6IVuZoqnCYNr0adqcQ8nGzFg8nCcxrK8VA-ftcfgiEWatYNOMPdPmTz2a44TUM5KtwJafSI4bBfVk5dgR2CpN9SIUFLCknGfFGJfMKidFnXM-pwFBpjB9O4aGMnWen28JYHARqCa2FIrSoECIES9mfVDSTokXvTVpd1guEg7EqUTik03jSy_GLsxv_qFPMfEQu8eBhZtmyz5T9O7hf4SNfzAwL8OxE5mIj4CGAHv9hFiOuVPBZbFc" />
+        <span class="text-xs opacity-60">© 2026 Bharat Brand Stories. All rights reserved.</span>
+      </div>
+      <div class="flex items-center gap-6 text-xs">
+        <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+        <a href="episodes.html" class="text-primary font-bold">Episodes Vault</a>
+        <a href="index.html#sponsorship" class="hover:text-primary transition-colors">Partnerships</a>
+        <a href="index.html#nominate" class="hover:text-primary transition-colors">Nominate</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Complete 15 Episodes Script -->
+  <script>
+    const EPISODES = [
+      {
+        id: 0,
+        company: "Apsara Ice Creams",
+        videoUrl: "https://www.youtube.com/embed/lKQm0UpQzH8?autoplay=1",
+        tagline: "The Funky Ferrero, Blueberry Cheesecake, Guava Chilli & Kesar Pista natural ice-creams.",
+        category: "D2C & FMCG",
+        founder: "Keyur Shah",
+        role: "Managing Partner",
+        img: "assets/thumbnails/Apsara Episode 1.jpg",
+        bgImg: "assets/thumbnails/Apsara.png",
+        story: "From a single handcrafted ice cream outlet to a national D2C sensation with 100+ stores across India, serving natural artisanal ice creams.",
+        metric1: "Irresistible Flavours",
+        metric2: "100% Natural",
+        metric3: "Pan-India Stores"
+      },
+      {
+        id: 1,
+        company: "Vedika Credit Capital Limited",
+        videoUrl: "https://www.youtube.com/embed/AEexuhg0Bks?autoplay=1",
+        tagline: "Instant Business, Shopkeeper, Dairy & E-Rickshaw Micro-Loans empowering rural & urban entrepreneurs.",
+        category: "Fintech & Loans",
+        founder: "Gautam Jain",
+        role: "Managing Director",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDrih54VRaAH-aBumGR4E06U8mBf3NxVBkyYxK9URBRFQvBUrlTLA1oydpBaWrV_kVqa1-q7-_ib_JmgZ11w-w-w-yJPfc2lekBAwoTnYoPAzYorg4zs36Dg4z2NGZADI0qLz4Qdd7vzSMoTIHuPB0ZTzfSv5aoud43qwMqdQGeAd3Yixziq5E9Gqf3e1E3QsjlylWbYtUNj6J1Mr7hxGGN7L68COISRnU2oJDBT6onqUMIYq5mHhQzgw",
+        bgImg: "assets/thumbnails/Vedika Finace.png",
+        story: "Providing seamless micro-credit solutions across Eastern India to empower small merchants, farmers, and women entrepreneurs.",
+        metric1: "Instant Approval",
+        metric2: "Low Interest",
+        metric3: "Grassroots Growth"
+      },
+      {
+        id: 2,
+        company: "Consern Pharma Limited",
+        videoUrl: "https://www.youtube.com/embed/KnFbAbebPG0?autoplay=1",
+        tagline: "A quality-driven healthcare organization with 30 years of experience in specialty pharma formulations.",
+        category: "Healthcare & Pharma",
+        founder: "Kuljive Mahajan",
+        role: "Founder & Managing Director",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuD-xwI4f4fZX0U7aa59Rg_QKdIAsE1QBehdmLRDmUa9LX5eJAKzEB5Uo8yRhL22rActnbaw2Xkv-HUgbnl_2dKVuuZObKRdx9vcVlRaZSQu8sppZ2T15iT_yUbAdT8yqdZIj9mN52xZm1glpu4ZJaJjm3n8VLSr0Li_jAXdPV7KC9oFret9l_dvcw4egXUEz358ju_Tx-9bI-TQiBTyw8uYMBgGegPshi2zheCzkCMkJeiu3AzjbqRY4g",
+        bgImg: "assets/thumbnails/Consern Pharma.png",
+        story: "Pioneering high-grade neuropsychiatry and specialty pharmaceutical formulations reaching medical practitioners nationwide.",
+        metric1: "30 Years Exp",
+        metric2: "Pharma Innovation",
+        metric3: "Pan-India Supply"
+      },
+      {
+        id: 3,
+        company: "Sapras Architects & Engineers",
+        videoUrl: "https://www.youtube.com/embed/X4Y2grkGyXU?autoplay=1",
+        tagline: "Premier architectural & engineering firm widely recognized for designing luxury automobile showrooms.",
+        category: "Architecture & Design",
+        founder: "Romesh Sapra",
+        role: "Director",
+        img: "assets/founder_ananya.jpg",
+        bgImg: "assets/ep4_fintech.jpg",
+        story: "Designing landmark luxury automotive showrooms, commercial hubs, and architectural marvels across New Delhi and metro India.",
+        metric1: "Luxury Showrooms",
+        metric2: "New Delhi HQ",
+        metric3: "Design Excellence"
+      },
+      {
+        id: 4,
+        company: "Arora Engineering Works",
+        videoUrl: "https://www.youtube.com/embed/xyb1U3pXGyg?autoplay=1",
+        tagline: "Prominent Indian manufacturing, supplying, and exporting firm headquartered in Ghaziabad, UP.",
+        category: "Manufacturing",
+        founder: "Anil Kumar Arora",
+        role: "Founder & MD",
+        img: "assets/founder_aarav.jpg",
+        bgImg: "assets/ep5_ev_aerospace.jpg",
+        story: "Precision engineering, industrial component manufacturing, and global exports powering heavy industries.",
+        metric1: "Ghaziabad UP",
+        metric2: "Global Exporter",
+        metric3: "Precision Supply"
+      },
+      {
+        id: 5,
+        company: "Naik Wealth",
+        videoUrl: "https://www.youtube.com/embed/YGeVGikoUrA?autoplay=1",
+        tagline: "Demystifying wealth creation to make financial freedom straightforward and sophisticated for families.",
+        category: "Fintech & Wealth",
+        founder: "Nikhil Naik",
+        role: "Chief Growth Officer",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDrih54VRaAH-aBumGR4E06U8mBf3NxVBkyYxK9URBRFQvBUrlTLA1oydpBaWrV_kVqa1-q7-_ib_JmgZ11w-w-w-yJPfc2lekBAwoTnYoPAzYorg4zs36Dg4z2NGZADI0qLz4Qdd7vzSMoTIHuPB0ZTzfSv5aoud43qwMqdQGeAd3Yixziq5E9Gqf3e1E3QsjlylWbYtUNj6J1Mr7hxGGN7L68COISRnU2oJDBT6onqUMIYq5mHhQzgw",
+        bgImg: "assets/ep6_heritage.jpg",
+        story: "Helping thousands of retail investors and business leaders navigate financial markets with structured wealth planning.",
+        metric1: "Wealth Advisory",
+        metric2: "Sophisticated Growth",
+        metric3: "Trusted Partner"
+      },
+      {
+        id: 6,
+        company: "Natural Life Style",
+        videoUrl: "https://www.youtube.com/embed/Mju7wuaDJe4?autoplay=1",
+        tagline: "Promoting a medicine-free and surgery-free way of living based on traditional nature cure principles.",
+        category: "Wellness & Nature",
+        founder: "Mohan Gupta",
+        role: "Founder & Chairman",
+        img: "assets/founder_devendra.jpg",
+        bgImg: "assets/ep6_heritage.jpg",
+        story: "Transforming health through ancient nature cure practices, empowering thousands to live disease-free without heavy medication.",
+        metric1: "Founded 2006",
+        metric2: "Drug-Free Living",
+        metric3: "Nature Cure"
+      },
+      {
+        id: 7,
+        company: "Getmeds",
+        videoUrl: "https://www.youtube.com/embed/R19t4lubSIs?autoplay=1",
+        tagline: "International pharmaceutical and healthcare distribution company powering global medicine supplies.",
+        category: "Healthcare & Distribution",
+        founder: "Naresh Bishnoi",
+        role: "Founder & CEO",
+        img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80",
+        bgImg: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80",
+        story: "Connecting pharmaceutical manufacturers directly with healthcare providers globally with efficient supply chains.",
+        metric1: "Global Reach",
+        metric2: "Pharma Logistics",
+        metric3: "Direct Distribution"
+      },
+      {
+        id: 8,
+        company: "Udaan E Vehicles",
+        videoUrl: "https://www.youtube.com/embed/3Aq8VYVov7g?autoplay=1",
+        tagline: "Leading manufacturer and wholesaler of heavy-duty Battery E Rickshaws and Commercial Loaders.",
+        category: "CleanTech & EV",
+        founder: "Gulshan Batra",
+        role: "Managing Director",
+        img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80",
+        bgImg: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80",
+        story: "Driving India's green last-mile transportation revolution with rugged, high-capacity electric commercial vehicles.",
+        metric1: "E Rickshaws",
+        metric2: "E Loaders",
+        metric3: "Zero Emission"
+      },
+      {
+        id: 9,
+        company: "360 Design",
+        videoUrl: "https://www.youtube.com/embed/3jf8DmM2CUk?autoplay=1",
+        tagline: "Ahmedabad's premier digital agency integrating strategic branding, software, and print into a growth engine.",
+        category: "Digital & Tech",
+        founder: "Vikrant Sood",
+        role: "Founder & MD",
+        img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+        bgImg: "https://images.unsplash.com/photo-1517976487492-5750f3195933?w=800&q=80",
+        story: "Empowering modern Indian brands with 360-degree digital transformation, custom tech platforms, and high-impact branding.",
+        metric1: "Ahmedabad Leader",
+        metric2: "Branding & Tech",
+        metric3: "360 Solutions"
+      },
+      {
+        id: 10,
+        company: "Urjja One Powertech LLP",
+        videoUrl: "https://www.youtube.com/embed/7Q2yQ0BBZyU?autoplay=1",
+        tagline: "Clean energy & solar solutions based in Guwahati, Assam and UrjaOne digital platform for EV infrastructure.",
+        category: "CleanTech & EV",
+        founder: "Raj Kumar Agarwal",
+        role: "Managing Director",
+        img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+        bgImg: "https://images.unsplash.com/photo-1509391365360-2e959784a276?w=800&q=80",
+        story: "Spearheading clean energy adoption in Northeast India with solar installations and verified EV charging platforms.",
+        metric1: "Guwahati Assam",
+        metric2: "Solar Power",
+        metric3: "EV Infrastructure"
+      },
+      {
+        id: 11,
+        company: "TMT Polymers India Pvt. Ltd.",
+        videoUrl: "https://www.youtube.com/embed/TpRG0jn8YXQ?autoplay=1",
+        tagline: "Premier Indian manufacturer of industrial polymer and piping solutions based in Ambala, Haryana.",
+        category: "Manufacturing",
+        founder: "Arpan K Goel",
+        role: "Managing Director",
+        img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
+        bgImg: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?w=800&q=80",
+        story: "Manufacturing high-durability polymer pipes for agricultural irrigation and modern municipal infrastructure.",
+        metric1: "Ambala Haryana",
+        metric2: "Polymer Pipes",
+        metric3: "Infra Quality"
+      },
+      {
+        id: 12,
+        company: "Sunbaby",
+        videoUrl: "https://www.youtube.com/embed/j76_8es69rk?autoplay=1",
+        tagline: "Manufacturing ergonomic, heavy-duty, and child-safe school and playschool furniture across India.",
+        category: "Manufacturing",
+        founder: "Sonali & Sunil Aggarwal",
+        role: "CEO & Directors",
+        img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80",
+        bgImg: "https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?w=800&q=80",
+        story: "Designing child-friendly, safe, and durable furniture that equips thousands of schools and playschools nationwide.",
+        metric1: "Ergonomic Design",
+        metric2: "Child Safe",
+        metric3: "Pan-India Schools"
+      },
+      {
+        id: 13,
+        company: "Sarla Mills Pvt Ltd",
+        videoUrl: "https://www.youtube.com/embed/XGRV7U_OZ_M?autoplay=1",
+        tagline: "Active textile manufacturer in Haryana specializing in home textiles, blankets & AC comforters.",
+        category: "Manufacturing",
+        founder: "Manu & Aman Aggarwal",
+        role: "Directors",
+        img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80",
+        bgImg: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&q=80",
+        story: "Crafting premium cloud-touch blankets, quilts, and home textiles distributed through retail chains across India.",
+        metric1: "Haryana Textiles",
+        metric2: "Cloud Touch",
+        metric3: "Home Comforts"
+      },
+      {
+        id: 14,
+        company: "Eolith Group",
+        videoUrl: "https://www.youtube.com/embed/IJTTyO36EN4?autoplay=1",
+        tagline: "Supplies design-focused natural stones, treating Kota stone & limestone as architectural masterworks.",
+        category: "Manufacturing",
+        founder: "Pukhraj & Yashraj Jain",
+        role: "Director & COO",
+        img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80",
+        bgImg: "https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?w=800&q=80",
+        story: "Elevating Indian Kota stone and architectural limestone into luxury design elements for global hospitality & residences.",
+        metric1: "Kota Stone",
+        metric2: "Architectural",
+        metric3: "Luxury Finishing"
+      }
+    ];
+
+    let currentCategory = 'all';
+
+    function renderEpisodesList(list) {
+      const grid = document.getElementById('episodesGrid');
+      if (!list || list.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full text-center py-16 space-y-4">
+            <span class="material-symbols-outlined text-5xl text-on-surface-variant/40">search_off</span>
+            <h3 class="text-xl font-bold text-on-surface">No Episodes Found</h3>
+            <p class="text-sm text-on-surface-variant">Try searching for a different company or selecting another category.</p>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = list.map((ep) => `
+        <div class="glass-panel rounded-2xl overflow-hidden border border-outline-variant/30 hover:border-primary/60 transition-all duration-300 hover:-translate-y-1.5 shadow-xl flex flex-col group">
+          
+          <!-- Image Thumbnail Section -->
+          <div class="relative aspect-video overflow-hidden bg-black/60 card-thumb-container cursor-pointer" onclick="openVideoModal('${ep.company}', '${ep.videoUrl}')">
+            <img src="${ep.bgImg}" alt="${ep.company}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=800&q=80'" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+            
+            <!-- Category Badge -->
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold bg-black/70 text-primary border border-primary/40 backdrop-blur-md">
+              ${ep.category}
+            </span>
+
+            <!-- Play Icon Overlay -->
+            <div class="absolute inset-0 flex items-center justify-center opacity-80 group-hover:opacity-100 transition-opacity">
+              <div class="w-12 h-12 rounded-full bg-primary/90 text-black flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-3xl fill-current">play_arrow</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Body Content -->
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <!-- Founder Info -->
+              <div class="flex items-center gap-3">
+                <img src="${ep.img}" alt="${ep.founder}" class="w-10 h-10 rounded-full border border-primary/40 object-cover shrink-0" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80'" />
+                <div>
+                  <h4 class="text-xs font-bold text-primary uppercase tracking-wider">${ep.founder}</h4>
+                  <p class="text-[11px] text-on-surface-variant">${ep.role}</p>
+                </div>
+              </div>
+
+              <!-- Company Title & Tagline -->
+              <div>
+                <h3 class="font-headline-md text-xl font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">${ep.company}</h3>
+                <p class="font-body-md text-xs md:text-sm text-on-surface-variant/90 line-clamp-2 mt-1.5">${ep.tagline}</p>
+              </div>
+
+              <!-- Key Metrics Pills -->
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2.5 py-0.5 rounded-md bg-surface-container-high text-[11px] text-on-surface-variant border border-outline-variant/20">${ep.metric1}</span>
+                <span class="px-2.5 py-0.5 rounded-md bg-surface-container-high text-[11px] text-on-surface-variant border border-outline-variant/20">${ep.metric2}</span>
+              </div>
+            </div>
+
+            <!-- Card Actions -->
+            <div class="pt-3 border-t border-outline-variant/20 flex items-center gap-3">
+              <button onclick="openVideoModal('${ep.company}', '${ep.videoUrl}')" style="color: #000000 !important;" class="btn-primary flex-1 py-2 rounded-lg font-bold text-xs flex items-center justify-center gap-1.5 shadow-md">
+                <span class="material-symbols-outlined text-base">play_circle</span> Watch Showcase
+              </button>
+              <button onclick="openDetailModal(${ep.id})" class="btn-secondary flex-1 py-2 rounded-lg font-bold text-xs flex items-center justify-center gap-1">
+                <span>Full Story</span>
+                <span class="material-symbols-outlined text-base">visibility</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function setCategory(cat) {
+      currentCategory = cat;
+      const btns = document.querySelectorAll('.cat-btn');
+      btns.forEach(btn => {
+        if (btn.innerText.toLowerCase().includes(cat.toLowerCase()) || (cat === 'all' && btn.innerText.includes('All'))) {
+          btn.className = 'cat-btn active px-4 py-2 rounded-full text-xs font-bold bg-primary text-black transition-all';
+        } else {
+          btn.className = 'cat-btn px-4 py-2 rounded-full text-xs font-bold bg-surface-container-high border border-outline-variant/30 text-on-surface-variant hover:text-primary transition-all';
+        }
+      });
+      filterEpisodes();
+    }
+
+    function filterEpisodes() {
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+      const filtered = EPISODES.filter(ep => {
+        const matchesQuery = ep.company.toLowerCase().includes(query) ||
+                             ep.founder.toLowerCase().includes(query) ||
+                             ep.tagline.toLowerCase().includes(query) ||
+                             ep.category.toLowerCase().includes(query);
+        const matchesCat = currentCategory === 'all' || ep.category.toLowerCase().includes(currentCategory.toLowerCase());
+        return matchesQuery && matchesCat;
+      });
+      renderEpisodesList(filtered);
+    }
+
+    function openVideoModal(title, url) {
+      document.getElementById('videoModalTitle').innerText = title + " — Broadcast Showcase";
+      let embedUrl = url;
+      if (url.includes('youtu.be/')) {
+        const id = url.split('youtu.be/')[1].split('?')[0];
+        embedUrl = `https://www.youtube.com/embed/${id}?autoplay=1`;
+      } else if (url.includes('watch?v=')) {
+        const id = url.split('watch?v=')[1].split('&')[0];
+        embedUrl = `https://www.youtube.com/embed/${id}?autoplay=1`;
+      }
+      document.getElementById('videoIframe').src = embedUrl;
+      document.getElementById('videoModal').classList.remove('hidden');
+      document.getElementById('videoModal').classList.add('flex');
+    }
+
+    function closeVideoModal() {
+      document.getElementById('videoIframe').src = '';
+      document.getElementById('videoModal').classList.add('hidden');
+      document.getElementById('videoModal').classList.remove('flex');
+    }
+
+    function openDetailModal(id) {
+      const ep = EPISODES.find(e => e.id === id) || EPISODES[0];
+      document.getElementById('detailCategory').innerText = ep.category;
+      document.getElementById('detailCompany').innerText = ep.company;
+      document.getElementById('detailTagline').innerText = `"${ep.tagline}"`;
+      document.getElementById('detailFounderName').innerText = ep.founder;
+      document.getElementById('detailRole').innerText = ep.role;
+      document.getElementById('detailFounderImg').src = ep.img;
+      document.getElementById('detailStory').innerText = ep.story;
+      document.getElementById('detailMetric1').innerText = ep.metric1;
+      document.getElementById('detailMetric2').innerText = ep.metric2;
+      document.getElementById('detailMetric3').innerText = ep.metric3;
+      document.getElementById('detailPreviewBtn').onclick = () => {
+        closeDetailModal();
+        openVideoModal(ep.company, ep.videoUrl);
+      };
+      document.getElementById('detailModal').classList.remove('hidden');
+      document.getElementById('detailModal').classList.add('flex');
+    }
+
+    function closeDetailModal() {
+      document.getElementById('detailModal').classList.add('hidden');
+      document.getElementById('detailModal').classList.remove('flex');
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Initial Render
+    document.addEventListener('DOMContentLoaded', () => {
+      renderEpisodesList(EPISODES);
+    });
+  </script>
+</body>
+
+</html>
