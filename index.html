@@ -142,9 +142,16 @@
       border: 1px solid rgba(198, 198, 198, 0.3);
     }
 
+    .btn-primary,
+    a.btn-primary,
+    a.btn-primary:visited,
+    button.btn-primary,
+    .btn-primary * {
+      color: #000000 !important;
+    }
+
     .btn-primary {
       background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
-      color: #1a1c1c;
       position: relative;
       z-index: 1;
       transition: all 0.3s ease;
@@ -168,7 +175,14 @@
       opacity: 1;
     }
 
-    .btn-primary:hover {
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    a.btn-primary:hover,
+    a.btn-primary:focus,
+    a.btn-primary:active,
+    .btn-primary:hover * {
+      color: #000000 !important;
       box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
       transform: translateY(-2px);
     }
