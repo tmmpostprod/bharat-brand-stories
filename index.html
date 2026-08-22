@@ -393,7 +393,7 @@
           class="mt-6 md:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-6 py-3 rounded-2xl transition-all duration-300 ease-out z-20">
           <button
             style="color: #000000 !important;"
-            onclick="openVideoModal('Season 1 Highlights Showcase', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')"
+            onclick="openVideoModal('Season 1 Highlights Showcase', 'https://www.youtube.com/embed/45W0iJCVbDg?autoplay=1')"
             class="btn-primary font-label-md text-label-md px-8 py-3.5 rounded-xl flex items-center justify-center gap-2 font-bold text-base md:text-lg cursor-pointer shadow-xl hover:scale-105 transition-transform">
             <span class="material-symbols-outlined text-2xl"
               style="font-variation-settings: 'FILL' 1;">play_circle</span>
@@ -844,11 +844,11 @@
       <div
         class="p-6 bg-surface-container/90 border-t border-outline-variant/30 flex flex-wrap justify-between items-center gap-3 shrink-0">
         <div class="flex items-center gap-3">
-          <button id="epModalPreviewBtn" style="color: #000000 !important;" onclick="openVideoModal('Episode Preview', 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')"
+          <button id="epModalPreviewBtn" style="color: #000000 !important;" onclick="openVideoModal('Episode Preview', 'https://www.youtube.com/embed/45W0iJCVbDg?autoplay=1')"
             class="btn-primary px-5 py-2.5 rounded-lg font-bold text-sm flex items-center gap-2">
             <span class="material-symbols-outlined text-xl">play_circle</span> Preview
           </button>
-          <a id="epModalNewTabLink" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"
+          <a id="epModalNewTabLink" href="https://www.youtube.com/watch?v=45W0iJCVbDg" target="_blank"
             rel="noopener noreferrer"
             class="btn-secondary px-5 py-2.5 rounded-lg font-bold text-sm flex items-center gap-2 text-primary border border-primary/40 hover:bg-primary/10">
             <span>Watch in New Tab</span>
@@ -1402,8 +1402,8 @@
       }
 
       // Extract YouTube Video ID from any format (watch URL, embed URL, or short link)
-      let rawUrl = ep.videoUrl || "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-      let videoId = "dQw4w9WgXcQ";
+      let rawUrl = ep.videoUrl || "https://www.youtube.com/watch?v=45W0iJCVbDg";
+      let videoId = "45W0iJCVbDg";
       if (rawUrl.includes("v=")) {
         videoId = rawUrl.split("v=")[1].split("&")[0];
       } else if (rawUrl.includes("youtu.be/")) {
