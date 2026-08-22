@@ -763,9 +763,9 @@
   <!-- MODALS -->
 
   <!-- 1. Video Highlights Modal (z-[300] Topmost Layer) -->
-  <div id="videoModal" class="fixed inset-0 z-[300] hidden items-center justify-center p-4 modal-backdrop">
+  <div id="videoModal" class="fixed inset-0 z-[300] hidden items-center justify-center p-4 modal-backdrop" onclick="if(event.target === this) closeVideoModal()">
     <div
-      class="glass-panel gold-border rounded-2xl w-full max-w-4xl overflow-hidden shadow-2xl animate-fade-in relative">
+      class="glass-panel gold-border rounded-2xl w-full max-w-4xl overflow-hidden shadow-2xl animate-fade-in relative" onclick="event.stopPropagation()">
       <div
         class="flex items-center justify-between px-6 py-4 border-b border-outline-variant/30 bg-surface-container-high/90">
         <h3 id="videoModalTitle" class="font-headline-md text-lg md:text-xl text-primary font-bold">Season 1 Highlights
@@ -795,9 +795,9 @@
   </div>
 
   <!-- 2. Episode Detail Lightbox Modal (z-[200] Mid Layer) -->
-  <div id="episodeModal" class="fixed inset-0 z-[200] hidden items-center justify-center p-4 modal-backdrop">
+  <div id="episodeModal" class="fixed inset-0 z-[200] hidden items-center justify-center p-4 modal-backdrop" onclick="if(event.target === this) closeEpisodeModal()">
     <div
-      class="glass-panel gold-border rounded-2xl w-full max-w-3xl overflow-hidden shadow-2xl animate-fade-in relative max-h-[90vh] flex flex-col">
+      class="glass-panel gold-border rounded-2xl w-full max-w-3xl overflow-hidden shadow-2xl animate-fade-in relative max-h-[90vh] flex flex-col" onclick="event.stopPropagation()">
       <div
         class="flex items-center justify-between px-6 py-4 border-b border-outline-variant/30 bg-surface-container-high/90 shrink-0">
         <span id="epModalCategory"
@@ -862,9 +862,9 @@
   </div>
 
   <!-- 3. All 15 Episodes Gallery Modal (z-[150] Base Layer) -->
-  <div id="allEpisodesModal" class="fixed inset-0 z-[150] hidden items-center justify-center p-4 modal-backdrop">
+  <div id="allEpisodesModal" class="fixed inset-0 z-[150] hidden items-center justify-center p-4 modal-backdrop" onclick="if(event.target === this) closeAllEpisodesModal()">
     <div
-      class="glass-panel gold-border rounded-2xl w-full max-w-5xl overflow-hidden shadow-2xl animate-fade-in max-h-[90vh] flex flex-col">
+      class="glass-panel gold-border rounded-2xl w-full max-w-5xl overflow-hidden shadow-2xl animate-fade-in max-h-[90vh] flex flex-col" onclick="event.stopPropagation()">
       <div
         class="flex items-center justify-between px-6 py-5 border-b border-outline-variant/30 bg-surface-container-high/90 shrink-0">
         <div>
@@ -888,7 +888,7 @@
 
   <!-- 4. Partner Hub & Media Kit Modal (z-[150] Base Layer) -->
   <div id="partnerHubModal"
-    class="fixed inset-0 z-[150] hidden items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-xl animate-fade-in overflow-y-auto">
+    class="fixed inset-0 z-[150] hidden items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-xl animate-fade-in overflow-y-auto" onclick="if(event.target === this) closePartnerHubModal()">
     <div
       class="relative w-full max-w-3xl bg-[#16130b] glass-panel gold-border rounded-2xl overflow-hidden shadow-2xl my-auto text-[#eae1d4] p-6 sm:p-8 space-y-6"
       onclick="event.stopPropagation()">
@@ -1369,8 +1369,32 @@
       });
     }
 
+    // Modal State & Scroll Position Protection
+    let activeModalCount = 0;
+    let savedScrollPosition = 0;
+
+    function modalOpened() {
+      if (activeModalCount === 0) {
+        savedScrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+        document.body.style.overflow = 'hidden';
+      }
+      activeModalCount++;
+    }
+
+    function modalClosed() {
+      activeModalCount = Math.max(0, activeModalCount - 1);
+      if (activeModalCount === 0) {
+        document.body.style.overflow = '';
+        if (document.activeElement && document.activeElement !== document.body) {
+          document.activeElement.blur();
+        }
+        window.scrollTo(0, savedScrollPosition);
+      }
+    }
+
     // Video Player Modal
     function openVideoModal(title, videoSrc) {
+      modalOpened();
       document.getElementById('videoModalTitle').innerText = title;
       document.getElementById('videoIframe').src = videoSrc;
       const modal = document.getElementById('videoModal');
@@ -1379,14 +1403,19 @@
     }
 
     function closeVideoModal() {
-      document.getElementById('videoIframe').src = '';
+      const iframe = document.getElementById('videoIframe');
+      if (iframe) iframe.src = '';
       const modal = document.getElementById('videoModal');
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
+      if (modal && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modalClosed();
+      }
     }
 
     // Episode Detail Lightbox Modal
     function openEpisodeDetail(index) {
+      modalOpened();
       const ep = EPISODES[index] || EPISODES[0];
       document.getElementById('epModalCategory').innerText = ep.category;
       document.getElementById('epModalCompany').innerText = ep.company;
@@ -1434,12 +1463,16 @@
 
     function closeEpisodeModal() {
       const modal = document.getElementById('episodeModal');
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
+      if (modal && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modalClosed();
+      }
     }
 
     // All Episodes Modal Gallery (Renders all 15 episodes)
     function openAllEpisodesModal() {
+      modalOpened();
       const grid = document.getElementById('allEpisodesGrid');
       grid.innerHTML = EPISODES.map((ep, idx) => `
             <div onclick="closeAllEpisodesModal(); openEpisodeDetail(${idx})" class="glass-panel rounded-xl p-5 border border-outline-variant/30 hover:border-primary cursor-pointer transition-all hover:scale-[1.02] flex flex-col justify-between group">
@@ -1469,12 +1502,16 @@
 
     function closeAllEpisodesModal() {
       const modal = document.getElementById('allEpisodesModal');
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
+      if (modal && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modalClosed();
+      }
     }
 
     // Partner Hub / Media Kit Modal
     function openPartnerHubModal() {
+      modalOpened();
       const modal = document.getElementById('partnerHubModal');
       modal.classList.remove('hidden');
       modal.classList.add('flex');
@@ -1482,9 +1519,21 @@
 
     function closePartnerHubModal() {
       const modal = document.getElementById('partnerHubModal');
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
+      if (modal && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modalClosed();
+      }
     }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (!document.getElementById('videoModal').classList.contains('hidden')) closeVideoModal();
+        else if (!document.getElementById('episodeModal').classList.contains('hidden')) closeEpisodeModal();
+        else if (!document.getElementById('allEpisodesModal').classList.contains('hidden')) closeAllEpisodesModal();
+        else if (!document.getElementById('partnerHubModal').classList.contains('hidden')) closePartnerHubModal();
+      }
+    });
 
     let isDownloadingKit = false;
     function handleDownloadKit() {

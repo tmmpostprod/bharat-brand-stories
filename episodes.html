@@ -272,8 +272,8 @@
   </main>
 
   <!-- Video Lightbox Modal (YouTube Embed) -->
-  <div id="videoModal" class="fixed inset-0 z-[250] hidden items-center justify-center p-4 modal-backdrop">
-    <div class="glass-panel gold-border rounded-2xl w-full max-w-4xl overflow-hidden shadow-2xl animate-fade-in relative flex flex-col">
+  <div id="videoModal" class="fixed inset-0 z-[250] hidden items-center justify-center p-4 modal-backdrop" onclick="if(event.target === this) closeVideoModal()">
+    <div class="glass-panel gold-border rounded-2xl w-full max-w-4xl overflow-hidden shadow-2xl animate-fade-in relative flex flex-col" onclick="event.stopPropagation()">
       <div class="flex items-center justify-between px-6 py-4 border-b border-outline-variant/30 bg-surface-container-high/90">
         <h3 id="videoModalTitle" class="font-headline-md text-lg text-on-surface font-bold">Broadcast Highlight</h3>
         <button onclick="closeVideoModal()" class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg hover:bg-surface-variant">
@@ -287,8 +287,8 @@
   </div>
 
   <!-- Episode Detail Lightbox Modal -->
-  <div id="detailModal" class="fixed inset-0 z-[200] hidden items-center justify-center p-4 modal-backdrop">
-    <div class="glass-panel gold-border rounded-2xl w-full max-w-3xl overflow-hidden shadow-2xl animate-fade-in relative max-h-[90vh] flex flex-col">
+  <div id="detailModal" class="fixed inset-0 z-[200] hidden items-center justify-center p-4 modal-backdrop" onclick="if(event.target === this) closeDetailModal()">
+    <div class="glass-panel gold-border rounded-2xl w-full max-w-3xl overflow-hidden shadow-2xl animate-fade-in relative max-h-[90vh] flex flex-col" onclick="event.stopPropagation()">
       <div class="flex items-center justify-between px-6 py-4 border-b border-outline-variant/30 bg-surface-container-high/90 shrink-0">
         <span id="detailCategory" class="px-3 py-1 rounded-full text-xs font-bold border border-primary text-primary bg-primary/10">Category</span>
         <button onclick="closeDetailModal()" class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg hover:bg-surface-variant">
@@ -686,7 +686,31 @@
       renderEpisodesList(filtered);
     }
 
+    // Modal State & Scroll Position Protection
+    let activeModalCount = 0;
+    let savedScrollPosition = 0;
+
+    function modalOpened() {
+      if (activeModalCount === 0) {
+        savedScrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+        document.body.style.overflow = 'hidden';
+      }
+      activeModalCount++;
+    }
+
+    function modalClosed() {
+      activeModalCount = Math.max(0, activeModalCount - 1);
+      if (activeModalCount === 0) {
+        document.body.style.overflow = '';
+        if (document.activeElement && document.activeElement !== document.body) {
+          document.activeElement.blur();
+        }
+        window.scrollTo(0, savedScrollPosition);
+      }
+    }
+
     function openVideoModal(title, url) {
+      modalOpened();
       document.getElementById('videoModalTitle').innerText = title + " — Broadcast Showcase";
       let embedUrl = url;
       if (url.includes('youtu.be/')) {
@@ -697,17 +721,24 @@
         embedUrl = `https://www.youtube.com/embed/${id}?autoplay=1`;
       }
       document.getElementById('videoIframe').src = embedUrl;
-      document.getElementById('videoModal').classList.remove('hidden');
-      document.getElementById('videoModal').classList.add('flex');
+      const modal = document.getElementById('videoModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
     }
 
     function closeVideoModal() {
-      document.getElementById('videoIframe').src = '';
-      document.getElementById('videoModal').classList.add('hidden');
-      document.getElementById('videoModal').classList.remove('flex');
+      const iframe = document.getElementById('videoIframe');
+      if (iframe) iframe.src = '';
+      const modal = document.getElementById('videoModal');
+      if (modal && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modalClosed();
+      }
     }
 
     function openDetailModal(id) {
+      modalOpened();
       const ep = EPISODES.find(e => e.id === id) || EPISODES[0];
       document.getElementById('detailCategory').innerText = ep.category;
       document.getElementById('detailCompany').innerText = ep.company;
@@ -723,14 +754,26 @@
         closeDetailModal();
         openVideoModal(ep.company, ep.videoUrl);
       };
-      document.getElementById('detailModal').classList.remove('hidden');
-      document.getElementById('detailModal').classList.add('flex');
+      const modal = document.getElementById('detailModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
     }
 
     function closeDetailModal() {
-      document.getElementById('detailModal').classList.add('hidden');
-      document.getElementById('detailModal').classList.remove('flex');
+      const modal = document.getElementById('detailModal');
+      if (modal && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modalClosed();
+      }
     }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (!document.getElementById('videoModal').classList.contains('hidden')) closeVideoModal();
+        else if (!document.getElementById('detailModal').classList.contains('hidden')) closeDetailModal();
+      }
+    });
 
     function toggleMobileMenu() {
       const menu = document.getElementById('mobileMenu');
