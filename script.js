@@ -1,5 +1,5 @@
 /**
- * Bharat Brand Stories - Modern Indian Majesty
+ * Bharat Brand Stories
  * Client-side Interactive Application Logic
  */
 

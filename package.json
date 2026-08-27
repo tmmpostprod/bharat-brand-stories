@@ -1,7 +1,7 @@
 {
   "name": "bharat-brand-stories",
   "version": "1.0.0",
-  "description": "Bharat Brand Stories - Modern Indian Majesty Portal for Republic Bharat",
+  "description": "Bharat Brand Stories Portal for Republic Bharat",
   "main": "index.html",
   "scripts": {
     "start": "npx serve ."

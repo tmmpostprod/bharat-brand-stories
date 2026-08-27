@@ -1,4 +1,4 @@
-# Bharat Brand Stories - Modern Indian Majesty
+# Bharat Brand Stories
 
 An immersive, high-performance web portal celebrating the legendary journeys of 15 iconic Indian founders and enterprises on Republic Bharat.
 
